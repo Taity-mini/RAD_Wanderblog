@@ -7,7 +7,7 @@
  * Description: Main index page for WanderBlog
  */
 
-include("connect.php");
+include("includes/connect.php");
 
 echo "Home Page";
 

@@ -17,6 +17,15 @@ $db = new mysqli(
 
 );
 
-if(!$db) {
-    die('Connect Error:' .mysqli_connect_errno());
+/* check connection */
+if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}
+
+/* check if server is alive */
+if (mysqli_ping($db)) {
+    printf ("Our connection is ok!\n");
+} else {
+    printf ("Error: %s\n", mysqli_error($db));
 }

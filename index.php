@@ -12,5 +12,5 @@ include("includes/connect.php");
 echo "Home Page";
 
 $listdbtables = array_column(mysqli_fetch_all($db->query('SHOW TABLES')),0);
-
+echo $listdbtables;
 ?>

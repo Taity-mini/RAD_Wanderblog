@@ -7,7 +7,7 @@
  * Description: Main index page for WanderBlog
  */
 
-include once("includes/connect.php");
+//include("includes/connect.php");
 
 
 //$listdbtables = array_column(mysqli_fetch_all($db->query('SHOW TABLES')),0);
@@ -18,9 +18,6 @@ include once("includes/connect.php");
     <meta charset="utf-8" />
     <title>Wanderblog | Home Page</title>
     <link rel="stylesheet" href="./style.css" />
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 </head>
 <body>
 <div id="Wrapper">
@@ -55,6 +52,5 @@ include once("includes/connect.php");
     <div id ="Footer">
         <p>Footer</p>
     </div>
-</div>
 </body>
 </html>

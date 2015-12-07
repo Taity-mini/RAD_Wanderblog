@@ -39,7 +39,7 @@ body {
     border-radius:20px;
     margin-bottom:20px;
     margin-top:10px;
-
+    z-index: 100;
 }
 
 
@@ -71,6 +71,8 @@ Code obtained then modified via http://css-snippets.com/drop-down-navigation/
     clear:both;
     text-align:center;
     margin-top:20px;
+    z-index: 999;
+
 }
 
 
@@ -87,6 +89,7 @@ Code obtained then modified via http://css-snippets.com/drop-down-navigation/
     font-size: 1.2em;
     line-height: 40px;
     text-align: left;
+
 }
 
 .nav a {
@@ -96,21 +99,25 @@ Code obtained then modified via http://css-snippets.com/drop-down-navigation/
     padding-left: 15px;
     border-bottom: 1px solid #888;
     transition: .3s background-color;
+
 }
 
 .nav a:hover {
     background-color: #005f5f;
+
 }
 
 .nav a.active {
     background-color: #aaa;
     color: #444;
     cursor: default;
+
 }
 
 /* Sub Menus */
 .nav li li {
     font-size: .8em;
+
 }
 
 /*******************************************

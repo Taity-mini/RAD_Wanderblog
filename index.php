@@ -28,6 +28,12 @@
                 <li class ="Home"><a>Home</a></li>
                 <li class ="Login"><a>Login</a></li>
                 <li class ="Register"><a>Register</a></li>
+                <li class="news"><a href="#">Adventure</a>
+                    <ul>
+                        <li><a href="#">Author Search</a></li>
+                        <li><a href="#">News #3</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -50,7 +56,7 @@
 </div>
 
     <div id ="Footer">
-        <p>Footer</p>
+        <p>© <?php echo date("Y");?> RAD | <a href ="https://github.com/Taity-mini/RAD_Wanderblog" >Github Repo</a> </p>
     </div>
 </body>
 </html>

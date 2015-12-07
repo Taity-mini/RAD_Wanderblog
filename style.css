@@ -51,6 +51,7 @@ body {
     vertical-align: bottom;
     text-align: center;
     position: fixed;
+    padding: 5px 0;
     bottom: 0;
     color:#FFFFFF;
     background-color:#205b6f;

@@ -7,7 +7,7 @@
  * Description: Main index page for WanderBlog
  */
 
-//include once("includes/connect.php");
+include once("includes/connect.php");
 
 
 //$listdbtables = array_column(mysqli_fetch_all($db->query('SHOW TABLES')),0);

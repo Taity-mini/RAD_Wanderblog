@@ -50,7 +50,7 @@ body {
     clear: both;
     vertical-align: bottom;
     text-align: center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     color:#FFFFFF;
     background-color:#005f5f;

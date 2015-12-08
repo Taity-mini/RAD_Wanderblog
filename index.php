@@ -7,8 +7,8 @@
  * Description: Main index page for WanderBlog
  */
 
-include("includes/connect.php");
-
+//include("./includes/connect.php");
+include("./includes/global.php")
 
 //$listdbtables = array_column(mysqli_fetch_all($db->query('SHOW TABLES')),0);
 ?>
@@ -25,9 +25,9 @@ include("includes/connect.php");
         <p>Header image goes here!</p>
         <div class ="nav">
             <ul>
-                <li class ="Home"><a>Home</a></li>
-                <li class ="Login"><a>Login</a></li>
-                <li class ="Register"><a>Register</a></li>
+                <li class ="Home"><a href ="./">Home</a></li>
+                <li class ="Login"><a href="./?page=login">Login</a></li>
+                <li class ="Register"><a href ="./?page=register">Register</a></li>
                 <li class="news"><a href="#">Adventure</a>
                     <ul>
                         <li><a href="#">Author Search</a></li>
@@ -38,21 +38,31 @@ include("includes/connect.php");
         </div>
     </div>
     <div id ="Content">
-        <h1>Header</h1>
-        <div id ="Content-inner">
+        <?php
+        //$page = (isset($_GET['page']) ? $_GET['page'] : 'home') . '.php';
+       // $page = $_GET['page'];
+        if(isset($_GET['page'])) {
+            switch ($_GET['page']) {
 
+                case "login":
+                    $content_header = "Login";
+                    include("./login.php");
+                    break;
 
-            <p>Hello</p<br />
-            <br />
-            <ol>
-                <li></li>
-                <li></li>
-                <li>&nbsp;&nbsp;</li>
-            </ol>
-            <br />
-        </div>
-        <br />
-    </div>
+                case "register":
+                    $content_header = "Register";
+                    include("./register.php");
+                    break;
+
+            }
+        }
+        else{
+            $content_header = "Welcome";
+            include("./welcome.php");
+        }
+
+        ?>
+</div>
 </div>
 
     <div id ="Footer">

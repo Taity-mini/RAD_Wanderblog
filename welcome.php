@@ -2,16 +2,16 @@
 /**
  * Created by PhpStorm.
  * User: Andrew
- * Date: 07/12/2015
- * Time: 14:41
+ * Date: 08/12/2015
+ * Time: 11:53
  */
-?>
 
+?>
 <h1><?php echo $content_header ?></h1>
 <div id ="Content-inner">
 
 
-    <p>Register Form</p<br />
+    <p>Content Goes here!</p<br />
     <br />
     <ol>
         <li></li>

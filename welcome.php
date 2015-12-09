@@ -11,8 +11,7 @@
 <div id ="Content-inner">
 
 
-    <p>Content Goes here!</p<br />
-    <p>Git Hub Test</p>
+    <p>Content Goes here!</p<br /
     <br />
     <ol>
         <li></li>

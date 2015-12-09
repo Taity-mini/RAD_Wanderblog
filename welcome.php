@@ -11,7 +11,7 @@
 <div id ="Content-inner">
 
 
-    <p>Content Goes here gg!</p<br />
+    <p>Content Goes here!</p<br />
     <br />
     <ol>
         <li></li>

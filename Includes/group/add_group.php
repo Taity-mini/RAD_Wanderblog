@@ -2,12 +2,9 @@
 /**
  * Created by PhpStorm.
  * User: Andrew
- * Date: 07/12/2015
- * Time: 14:04
+ * Date: 09/12/2015
+ * Time: 22:11
  */
-//Main Admin Page
-
-//User Management
 
 ?>
 
@@ -15,12 +12,13 @@
 <div id ="Content-inner">
 
 
-   <h2>User Management</h2>
-
-
+    <p>Content Goes here!</p<br />
     <br />
+    <ol>
+        <li></li>
+        <li></li>
+        <li>&nbsp;&nbsp;</li>
+    </ol>
     <br />
-
-    <h2>Group Management</h2>
 </div>
 <br />

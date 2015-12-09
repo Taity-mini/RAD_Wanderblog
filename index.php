@@ -29,10 +29,16 @@ include("./includes/functions.php");
                 <li class ="Home"><a href ="./">Home</a></li>
                 <li class ="Login"><a href="./?page=login">Login</a></li>
                 <li class ="Register"><a href ="./?page=register">Register</a></li>
-                <li class="news"><a href="#">Adventure</a>
+                <li class="Adventure"><a href="#">Adventure</a>
                     <ul>
                         <li><a href="#">Author Search</a></li>
                         <li><a href="#">News #3</a></li>
+                    </ul>
+                </li>
+                <li class="Admin"><a href="#">Admin</a>
+                    <ul>
+                        <li><a href="./?page=admin">Admin Panel</a></li>
+                        <li><a href="#">User Management</a></li>
                     </ul>
                 </li>
             </ul>
@@ -54,6 +60,11 @@ include("./includes/functions.php");
                     $content_header = "Register";
                     include("./register.php");
                     break;
+                case "admin":
+                    $content_header = "Admin Panel";
+                    include("./admin.php");
+                    break;
+
 
             }
         }

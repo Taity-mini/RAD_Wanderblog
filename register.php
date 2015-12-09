@@ -54,7 +54,7 @@ if (isset($_POST["submit"]))
         $country = $data[7];
 
         //Check if userExisits
-        $userExists = "SELECT username FROM users WHERE username='$username'";
+        $userExists = "SELECT userName FROM users WHERE userName='$username'";
         $result = mysqli_query($db, $userExists);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         if (mysqli_num_rows($result) == 1) {
@@ -64,7 +64,6 @@ if (isset($_POST["submit"]))
 
         if (!$username_check) {
             //Validation checks
-
 
             //Check if passwords match
             if(!isEqual($password, $password2))
@@ -88,10 +87,14 @@ if (isset($_POST["submit"]))
 
                 //Finally add users to db
                 $insert = "INSERT INTO users (userName,password, first_Name, last_Name, country, email)VALUES ('$username','$password', '$FirstName' , '$LastName ',  '$country', '$email')";
-                $result = mysqli_query($db, $insert) or trigger_error("Query Failed! SQL: $insert - Error: " . mysqli_error($db), E_USER_ERROR);
+                $result = mysqli_query($db, $insert);
 
                 if ($result) {
                     echo "Thank You! you are now registered.";
+                }
+                else{
+                    echo "User registration failed";
+
                 }
 
             }

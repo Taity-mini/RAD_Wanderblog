@@ -8,12 +8,22 @@
  * Description: Connect to Database Script
  * 
  */
+//Live azure server
+//$db = new mysqli(
+//    "eu-cdbr-azure-north-d.cloudapp.net", //db host
+//    "b49912ac2cf930", //username
+//    "e632d092", //pw
+//    "RGU_1504693"  //db_name
+//
+//);
+
+//Localhost dev server
 
 $db = new mysqli(
-    "eu-cdbr-azure-north-d.cloudapp.net", //db host
-    "b49912ac2cf930", //username
-    "e632d092", //pw
-    "RGU_1504693"  //db_name
+    "localhost", //db host
+    "root", //username
+    "", //pw
+    "Wanderblog"  //db_name
 
 );
 

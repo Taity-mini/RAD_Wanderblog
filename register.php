@@ -11,11 +11,16 @@
     $queryCountries ="SELECT countryID, country_name FROM countries ORDER BY countryid ";
     $mainResult = $db->query($queryCountries);
 
+    //Boolean variables
+    $emailCheck = FALSE;
+    $username_check = FALSE;
+
+
     //Registration Stuff..
     if(isset($_POST["submit"])) {
         //Get data from form
 
-        $fields = array('username', 'password', 'password2', 'password', 'email', 'email2', 'FirstName', 'LastName', 'country');
+        $fields = array('username', 'password', 'password2', 'email', 'email2', 'FirstName', 'LastName', 'country');
 
         $error = false; //No errors yet
         foreach($fields AS $fieldname) { //Loop trough each field
@@ -24,14 +29,83 @@
                 $error = true; //Yup there are errors
             }
         }
+        //If all fields are filled in then proceed
 if(!$error) {
+    $data = array();
     foreach($fields AS $fieldname) { //Loop trough each field
-            $fieldname = $_POST[$fieldname];
-
-
+            $fieldname = $_POST[$fieldname]; //grab from form
+            echo $fieldname;
+            $fieldname = mysqli_real_escape_string($db, $fieldname); //prevent from SQL injection
+            $data[] = $fieldname;
         }
+
+
+    //set variables from array data
+    $username = $data[0];
+    $password = $data[1];
+    $password = md5($password);
+    $password2 = $data[2];
+    $email = $data[3];
+    $email2 = $data[4];
+    $FirstName = $data[5];
+    $LastName = $data[6];
+    $country =$data[7];
+
+
+
+
+  /*  $userExists="SELECT username FROM users WHERE username='$username'";
+    $result=mysqli_query($db,$userExists);
+    $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+    if(mysqli_num_rows($result) == 1)
+    {
+        echo "Sorry...This username already exist...";
+        $username_check = true;
     }
-    
+
+    if(!$username_check)
+    {*/
+/*        $passCheck = false;
+        //check if passwords match
+
+        if($password != $password2)
+        {
+          echo "Passwords don't match";
+          $passCheck = true;
+
+        }*/
+/*
+        if(!$passCheck)
+        {*/
+            //convert password to md5
+           // $password = md5($password);
+            //Now check email
+
+/*
+
+            if($email != $email2)
+            {
+                echo "Emails Don't match";
+                $emailcheck = true;
+            }
+
+
+            if(!$emailcheck)
+            {*/
+                //Finally add users to db
+                $insert = "INSERT INTO users (userName,password, first_Name, last_Name, country, email)VALUES ('$username','$password', '$FirstName' , '$LastName ',  '$country', '$email')";
+                $result = mysqli_query($db,$insert) or trigger_error("Query Failed! SQL: $insert - Error: ".mysqli_error(), E_USER_ERROR);
+                 //$adduser = mysqli_query($db,$insert) or die(mysqli_error($db));
+              /*  if($addUser)
+                {
+                    echo "Thank You! you are now registered.";
+                }*/
+            }
+
+
+
+
+
     }
 
 
@@ -55,14 +129,14 @@ if(!$error) {
         <td >
             Password:</td>
         <td colspan="3">
-            <input type="password" name="pass" maxlength="10">
+            <input type="password" name="password" maxlength="10">
     </tr>
     <tr>
         <td >
             Confirm Password:
         </td>
         <td colspan="3">
-           <input type="password" name="pass2" maxlength="10"></td>
+           <input type="password" name="password2" maxlength="10"></td>
     </tr>
     <tr>
         <td>
@@ -93,6 +167,7 @@ if(!$error) {
             Country</td>
         <td colspan="3">
             <select name="country">
+                <option value="" selected>Please select a country</option>
             <?php
                 while ($rowCerts = $mainResult->fetch_assoc()) {
                     echo html_entity_decode("<option value=\"{$rowCerts['countryID']}\">");

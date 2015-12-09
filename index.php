@@ -7,7 +7,7 @@
  * Description: Main index page for WanderBlog
  */
 
-//include("./includes/connect.php");
+include("./includes/connect.php");
 include("./includes/global.php")
 
 //$listdbtables = array_column(mysqli_fetch_all($db->query('SHOW TABLES')),0);
@@ -60,7 +60,6 @@ include("./includes/global.php")
             $content_header = "Welcome";
             include("./welcome.php");
         }
-
         ?>
 </div>
 </div>

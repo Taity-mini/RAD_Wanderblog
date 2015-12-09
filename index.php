@@ -8,7 +8,8 @@
  */
 
 include("./includes/connect.php");
-include("./includes/global.php")
+include("./includes/global.php");
+include("./includes/functions.php");
 
 //$listdbtables = array_column(mysqli_fetch_all($db->query('SHOW TABLES')),0);
 ?>

@@ -21,6 +21,7 @@ include("./includes/functions.php");
     <meta charset="utf-8" />
     <title>Wanderblog | Home Page</title>
     <link rel="stylesheet" href="./style.css" />
+    <script  src = "java/popup.js"></script>
 </head>
 <body>
 <div id="Wrapper">
@@ -28,6 +29,7 @@ include("./includes/functions.php");
         <p>Header image goes here!</p>
         <div class ="nav">
             <ul>
+                <li class ="Home"><a href ="./">Home</a></li>
                 <?php
 
                 if(empty($_SESSION['username'])){
@@ -46,7 +48,6 @@ include("./includes/functions.php");
 
                 <?php } ?>
 
-                <li class ="Register"><a href ="./?page=register">Register</a></li>
                 <li class="Adventure"><a href="#">Adventure</a>
                     <ul>
                         <li><a href="#">Author Search</a></li>

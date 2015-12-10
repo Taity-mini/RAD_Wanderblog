@@ -1,29 +1,45 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Andrew
- * Date: 07/12/2015
- * Time: 14:42
- */
 
-//php logic goes here..
+session_start();
+
+include("./includes/connect.php");
+
+if (isset($_POST['loginSubmit'])){
+
+	$user = $_POST['username'];
+	$pass = md5($_POST['password']);
+
+	$username = stripslashes($user);
+	$password = stripslashes($pass);
+	$password = mysql_real_escape_string($pass);
+	$password = mysql_real_escape_string($pass);
+
+	$query = "SELECT * FROM users WHERE userName = '$user' AND password = '$pass'";
+
+	$result = mysqli_query($db, $query);
+
+	$count = mysqli_num_rows($result);
+
+	echo "" + $count;
+
+	if($count==1){
+
+			$_SESSION["username"] = $user;
+			$_SESSION["password"] = $pass;
+			echo $_SESSION['username'];
+			header("Location: index.php");
+
+	}
+	else {
+
+		echo "Wrong Username or Password";
+
+	}
+
+
+}
 
 
 
-//HTML content bellow..
+
 ?>
-
-<h1><?php echo $content_header ?></h1>
-<div id ="Content-inner">
-
-
-    <p>Login Form</p<br />
-    <br />
-    <ol>
-        <li></li>
-        <li></li>
-        <li>&nbsp;&nbsp;</li>
-    </ol>
-    <br />
-</div>
-<br />

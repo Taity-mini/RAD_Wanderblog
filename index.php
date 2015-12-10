@@ -7,6 +7,8 @@
  * Description: Main index page for WanderBlog
  */
 
+session_start();
+
 include("./includes/connect.php");
 include("./includes/global.php");
 include("./includes/functions.php");
@@ -26,8 +28,24 @@ include("./includes/functions.php");
         <p>Header image goes here!</p>
         <div class ="nav">
             <ul>
-                <li class ="Home"><a href ="./">Home</a></li>
-                <li class ="Login"><a href="./?page=login">Login</a></li>
+                <?php
+
+                if(empty($_SESSION['username'])){
+
+                ?>
+
+                <li><a href="javascript:void(0)" onclick="toggle_visibility('popupBoxTwoPosition');" id = "login">Login</a></li>
+                <li class ="Register"><a href ="./?page=register">Register</a></li>
+
+                <?php }
+
+                else{
+
+                ?>
+                <li><a href="logout.php" tite="Logout" id = "logoutBtn">Log Out</a></li>
+
+                <?php } ?>
+
                 <li class ="Register"><a href ="./?page=register">Register</a></li>
                 <li class="Adventure"><a href="#">Adventure</a>
                     <ul>
@@ -51,10 +69,6 @@ include("./includes/functions.php");
         if(isset($_GET['page'])) {
             switch ($_GET['page']) {
 
-                case "login":
-                    $content_header = "Login";
-                    include("./login.php");
-                    break;
 
                 case "register":
                     $content_header = "Register";
@@ -79,5 +93,20 @@ include("./includes/functions.php");
     <div id ="Footer">
         <p>© <?php echo date("Y");?> RAD | <a href ="https://github.com/Taity-mini/RAD_Wanderblog" >Github Repo</a> </p>
     </div>
+    <div id="popupBoxTwoPosition">
+        <div class="popupBoxTwoWrapper">
+            <div class="popupBoxContent">
+                    <form id = "LoginForm" action = "login.php" method = "post">
+                        <input id = "username" type = "text" name = "username" placeholder = "Username"><br />
+                        <input id = "password" type = "password" name = "password"  placeholder = "Password"><br />
+                        <a href ="./?page=register" id = "regPage" >Register</a>
+                        <input type = "submit" name = "loginSubmit" id = "loginSubmit"/><br />
+                        <input type = "button" name = "button" href="javascript:void(0)" onclick="toggle_visibility('popupBoxTwoPosition');" id = "CloseButton" value ="Close">
+                        <div id = "d1" style="color: red"></div>
+                    </form>
+            </div>
+        </div>
+    </div>    
+</div>
 </body>
 </html>

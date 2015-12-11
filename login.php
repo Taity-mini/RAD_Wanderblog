@@ -28,7 +28,7 @@ if (isset($_POST['loginSubmit'])){
 	if($count==1){
 			
 			$groupID = mysqli_query("SELECT groupID FROM users WHERE userName = '$user' AND password = '$pass'");
-			echo "Count entered";
+			echo "" + groupID;
 			$_SESSION["username"] = $user;
 			$_SESSION["password"] = $pass;
 			$_SESSION["groupID"] = $groupID

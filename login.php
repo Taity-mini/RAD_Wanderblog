@@ -20,9 +20,6 @@ if (isset($_POST['loginSubmit'])){
 
 	$count = mysqli_num_rows($result);
 	
-	
-
-	
 	if($count==1){
 
 			$_SESSION["username"] = $user;

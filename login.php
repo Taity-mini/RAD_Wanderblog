@@ -27,13 +27,10 @@ if (isset($_POST['loginSubmit'])){
 	
 	if($count==1){
 			
-			$groupID = mysqli_query("SELECT groupID FROM users WHERE userName = '$user' AND password = '$pass'");
-			echo "" + groupID;
 			$_SESSION["username"] = $user;
 			$_SESSION["password"] = $pass;
-			$_SESSION["groupID"] = $groupID
  			echo $_SESSION['username'];
-			//header("Location: index.php");
+			header("Location: index.php");
 
 	}
 	else {

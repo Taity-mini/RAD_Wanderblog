@@ -26,6 +26,7 @@ if (isset($_POST['loginSubmit'])){
 
 			$_SESSION["username"] = $user;
 			$_SESSION["password"] = $pass;
+			$_SESSION["groupID"] = $count['groupID'];
 			echo $_SESSION['username'];
 			header("Location: index.php");
 

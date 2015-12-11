@@ -55,8 +55,9 @@ include("./includes/functions.php");
                     </ul>
                 </li>
                 <?php
-                
-                if($_SESSION["groupID"] == 1){
+                //Check if session is not empty then check if they are an admin
+                if (isset($_SESSION['groupID'])  && $_SESSION['groupID'] != null ){
+                    if($_SESSION['groupID'] == 1){
                 ?>
                     <li class="Admin"><a href="#">Admin</a>
                         <ul>
@@ -64,8 +65,8 @@ include("./includes/functions.php");
                          <li><a href="#">User Management</a></li>
                         </ul>
                     </li>
-                <?php    
-                }
+                <?php
+                     }}
                 ?>
             </ul>
         </div>
@@ -86,7 +87,6 @@ include("./includes/functions.php");
                     $content_header = "Admin Panel";
                     include("./admin.php");
                     break;
-
 
             }
         }

@@ -11,8 +11,8 @@ if (isset($_POST['loginSubmit'])){
 
 	$username = stripslashes($user);
 	$password = stripslashes($pass);
-	$password = mysql_real_escape_string($pass);
-	$password = mysql_real_escape_string($pass);
+	$password = mysqli_real_escape_string($pass);
+	$password = mysqli_real_escape_string($pass);
 
 	$query = "SELECT * FROM users WHERE userName = '$user' AND password = '$pass'";
 	$query1 = "SELECT groupID FROM users WHERE userName = '$user' AND password = '$pass'";
@@ -34,7 +34,7 @@ if (isset($_POST['loginSubmit'])){
 			$_SESSION["password"] = $pass;
 			$_SESSION["groupID"] = $groupID;
  			echo $_SESSION['username'];
- 			echo "" + gorupID;
+ 			echo "" + groupID;
 			header("Location: index.php");
 
 	}

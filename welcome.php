@@ -13,7 +13,7 @@
 
     <p>Content Goes here!</p<br /
     <br />
-    <p><?php echo $_SESSION["groupID"]; ?></p>
+    <p><?php // echo $_SESSION["groupID"]; ?></p>
     <ol>
         <li></li>
         <li></li>

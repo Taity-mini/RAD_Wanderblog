@@ -54,12 +54,18 @@ include("./includes/functions.php");
                         <li><a href="#">News #3</a></li>
                     </ul>
                 </li>
-                <li class="Admin"><a href="#">Admin</a>
-                    <ul>
-                        <li><a href="./?page=admin">Admin Panel</a></li>
-                        <li><a href="#">User Management</a></li>
-                    </ul>
-                </li>
+                <?php
+                
+                if($_SESSION["groupID"] == 1){
+                    <li class="Admin"><a href="#">Admin</a>
+                        <ul>
+                           <li><a href="./?page=admin">Admin Panel</a></li>
+                         <li><a href="#">User Management</a></li>
+                        </ul>
+                    </li>
+                    
+                }
+
             </ul>
         </div>
     </div>

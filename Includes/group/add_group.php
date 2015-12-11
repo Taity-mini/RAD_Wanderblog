@@ -140,11 +140,5 @@ if (isset($_POST["submit"]))
                 </table>
             </td>
         </tr>
-        <?php
-        $group1 = "INSERT INTO group VALUES (NULL,'a','2')";
-
-
-
-        ?>
     </table>
     </form>

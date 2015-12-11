@@ -20,11 +20,13 @@ if (isset($_POST['loginSubmit'])){
 
 	$count = mysqli_num_rows($result);
 	
+	echo "entered";
+	
 	if($count==1){
+			echo "Count entered";
 
 			$_SESSION["username"] = $user;
 			$_SESSION["password"] = $pass;
-			$_SESSION["groupID"] = $result['groupID'];
 			echo $_SESSION['username'];
 			header("Location: index.php");
 

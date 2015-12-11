@@ -35,7 +35,7 @@ if (isset($_POST['loginSubmit'])){
 			$_SESSION["groupID"] = $groupID;
  			echo $_SESSION['username'];
  			echo "" + gorupID;
-			//header("Location: index.php");
+			header("Location: index.php");
 
 	}
 	else {

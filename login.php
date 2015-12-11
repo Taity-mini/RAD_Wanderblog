@@ -14,15 +14,14 @@ if (isset($_POST['loginSubmit'])){
 	$password = mysql_real_escape_string($pass);
 	$password = mysql_real_escape_string($pass);
 
-	$query = "SELECT * FROM users WHERE userName = '$user' AND password = '$pass'";
+	$query = "SELECT groupID FROM users WHERE userName = '$user' AND password = '$pass'";
 
 	$result = mysqli_query($db, $query);
 
 	$count = mysqli_num_rows($result);
 
-	echo "" + $count;
+	echo "" + $result;
 	
-	echo "" + $count["groupID"];
 
 	if($count==1){
 

@@ -17,6 +17,8 @@ if (isset($_POST['loginSubmit'])){
 	$query = "SELECT * FROM users WHERE userName = '$user' AND password = '$pass'";
 
 	$result = mysqli_query($db, $query);
+	
+	echo "" + $result["groupID"];
 
 	$count = mysqli_num_rows($result);
 	
@@ -28,7 +30,7 @@ if (isset($_POST['loginSubmit'])){
 			$_SESSION["username"] = $user;
 			$_SESSION["password"] = $pass;
  			echo $_SESSION['username'];
-			header("Location: index.php");
+			//header("Location: index.php");
 
 	}
 	else {

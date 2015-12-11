@@ -19,6 +19,7 @@ if (isset($_POST['loginSubmit'])){
 
 	$result = mysqli_query($db, $query);
 	$groupID = mysqli_query($db, $query);
+	echo "" + groupID;
 	
 	echo "" + $result;
 

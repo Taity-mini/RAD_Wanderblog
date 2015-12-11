@@ -27,7 +27,8 @@ if (isset($_POST['loginSubmit'])){
 
 			$_SESSION["username"] = $user;
 			$_SESSION["password"] = $pass;
-			echo $_SESSION['username'];
+			$_SESSION["groupID"] = $result['groupID'];
+ 			echo $_SESSION['username'];
 			header("Location: index.php");
 
 	}

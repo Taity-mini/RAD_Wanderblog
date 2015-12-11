@@ -20,6 +20,13 @@
     }
 
 
+//Admin Panel Functions
+    //Display Country Name based on ID
 
+    function countryName($db,$id)
+    {
+        $country_query =$db->query("SELECT country_name FROM countries WHERE countryID = '$id' limit 1")->fetch_object()->country_name;
+        echo '<td>'.$country_query.'</td>';
+    }
 
 ?>

@@ -19,8 +19,6 @@ if (isset($_POST['loginSubmit'])){
 	$result = mysqli_query($db, $query);
 
 	$count = mysqli_num_rows($result);
-
-	echo "" + $count;
 	
 	echo "" + $count['groupID'];
 

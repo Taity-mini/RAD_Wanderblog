@@ -21,6 +21,8 @@ if (isset($_POST['loginSubmit'])){
 	$count = mysqli_num_rows($result);
 
 	echo "" + $count;
+	
+	echo "" + $count['groupID'];
 
 	if($count==1){
 
@@ -28,7 +30,7 @@ if (isset($_POST['loginSubmit'])){
 			$_SESSION["password"] = $pass;
 			$_SESSION["groupID"] = $count['groupID'];
 			echo $_SESSION['username'];
-			header("Location: index.php");
+			//header("Location: index.php");
 
 	}
 	else {

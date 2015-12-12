@@ -24,7 +24,7 @@ $country = $db->query($queryCountries);
 
 if(isset($_POST['update'])) {
 //form variables
-    $fields = array('groupID', 'first_Name', 'last_Name', 'email');
+    $fields = array('groupID', 'first_Name', 'last_Name', 'country', 'email');
 
 
     foreach ($fields AS $fieldname) { //Loop trough each field
@@ -52,7 +52,8 @@ if(isset($_POST['update'])) {
         $email = $data[4];
         $id = $info['userID'];
 
-        $update_user = mysqli_query($db, ("UPDATE users SET groupID = '$groupID', first_Name='$firstName', last_Name='$lastName', country='$country', email='$email'  WHERE userID = '$id'"));
+        $update_user = mysqli_query($db, ("UPDATE users SET groupID = '$groupID', first_Name='$firstName', last_Name='$lastName', country='$country', email='$email'  WHERE userID = '$id'"))or die(mysqli_error($db));
+        //$info2 = mysqli_fetch_array($result) or die;
         if ($update_user) {
             echo "User successfully updated!";
             $page = "./?page=admin";

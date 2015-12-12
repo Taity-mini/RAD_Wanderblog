@@ -87,6 +87,10 @@ include("./includes/functions.php");
                     $content_header = "Admin Panel";
                     include("./admin.php");
                     break;
+                case "edit_user":
+                    $content_header = "Edit User";
+                    include("./Includes/user/edit_user.php");
+                    break;
 
             }
         }

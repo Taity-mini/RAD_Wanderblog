@@ -18,7 +18,7 @@ if (isset($_POST['loginSubmit'])){
 	$query1 = "SELECT groupID FROM users WHERE userName = '$user' AND password = '$pass'";
 
 	$result = mysqli_query($db, $query);
-	$groupID = mysqli_query($db, $query);
+	$groupID = mysqli_query($db, $query1);
 	echo "" + groupID;
 	
 	echo "" + $result;

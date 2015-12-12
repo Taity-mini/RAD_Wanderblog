@@ -54,6 +54,7 @@ if (mysqli_num_rows($users_table) > 0)
           echo "<td>" . $info['last_Name'] . "</td>";
           echo countryName($db,$info['country']);
           echo "<td>" . $info['email'] . "</td>";
+          echo '<td><a href="./?page=edit_user&id='. $info['userID'] .'">Edit</a></td>';
           echo "</tr>";
       }
      echo"</table>";

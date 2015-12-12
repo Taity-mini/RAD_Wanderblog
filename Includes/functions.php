@@ -29,7 +29,7 @@ function isEqual($Field1, $Field2)
         echo '<td>' . $country_query . '</td>';
     }
 
-    //Display Group Name based on ID
+    //Display Permission Name based on ID
 
     function groupName($db, $id)
     {

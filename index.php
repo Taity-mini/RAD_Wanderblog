@@ -100,6 +100,11 @@ include("./includes/functions.php");
                     include("./Includes/group/edit_group.php");
                     break;
 
+                case "edit_perm":
+                    $content_header = "Edit Permission";
+                    include("./Includes/group/edit_permission.php");
+                    break;
+
             }
         }
         else{

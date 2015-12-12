@@ -58,15 +58,14 @@ if (isset($_POST['update'])) {
 <h1><?php echo $content_header . "ID :" . $getid ?></h1>
 <div id="Content-inner">
     <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
-        <table border="1">
+        <table border="1" align="center">
             <tr>
                 <td>Group ID</td>
                 <td><?php echo $info['groupID']; ?></td>
             </tr>
             <tr>
                 <td>Group Name</td>
-                <td><input type="text" name="groupName" maxlength="60" value="<?php echo $info['groupName']; ?>"
-                           style="width: 200px"></td>
+                <td><input type="text" name="groupName" maxlength="60" value="<?php echo $info['groupName']; ?>"style="width: 200px"></td>
             </tr>
             <tr>
                 <td>Permission Level</td>
@@ -86,7 +85,7 @@ if (isset($_POST['update'])) {
                 </td>
             </tr>
             <tr>
-                <td><input name="update" style="text-align: center" type="submit" value="Update User"/></td>
+                <td><input name="update" style="text-align: center" type="submit" value="Update Group"/></td>
                 <td><input type="reset" value="Reset"/></td>
             </tr>
         </table>

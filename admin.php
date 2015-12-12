@@ -114,6 +114,7 @@ else
             <td>Edit Comments</td>
             <td>View Content</td>
             <td>View Comments</td>
+            <td>Edit</td>
         </tr>";
         while ($info = mysqli_fetch_array($permissions)) {
             echo "<trstyle='background-color:#000000;'>";
@@ -127,6 +128,7 @@ else
             echo "<td>" . $info['edit_Comments'] . "</td>";
             echo "<td>" . $info['view_Content'] . "</td>";
             echo "<td>" . $info['view_Comments'] . "</td>";
+            echo '<td><a href="./?page=edit_perm&id='. $info['permissionID'] .'">Edit</a></td>';
             echo "</tr>";
 
         }

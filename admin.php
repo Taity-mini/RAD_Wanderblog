@@ -75,12 +75,16 @@ else
             <td>Group ID</td>
             <td>Group Name</td>
             <td>Permission Name</td>
+            <td>Edit</td>
+            <td>Delete</td>
         </tr>";
             while ($info = mysqli_fetch_array($groups)) {
                 echo "<trstyle='background-color:#000000;'>";
                 echo "<td>" . $info['groupID'] . "</td>";
                 echo "<td>" . $info['groupName'] . "</td>";
                 echo groupName($db, $info['permissionID']);
+                echo '<td><a href="./?page=edit_group&id='. $info['groupID'] .'">Edit</a></td>';
+                //echo"[Delete]";
                 echo "</tr>";
             }
             echo "</table>";

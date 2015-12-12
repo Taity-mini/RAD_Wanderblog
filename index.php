@@ -13,7 +13,6 @@ include("./includes/connect.php");
 include("./includes/global.php");
 include("./includes/functions.php");
 
-//$listdbtables = array_column(mysqli_fetch_all($db->query('SHOW TABLES')),0);
 ?>
 <!doctype html>
 <html lang="en">
@@ -83,13 +82,22 @@ include("./includes/functions.php");
                     $content_header = "Register";
                     include("./register.php");
                     break;
+
                 case "admin":
                     $content_header = "Admin Panel";
                     include("./admin.php");
                     break;
+
+                //Editing forms
+
                 case "edit_user":
                     $content_header = "Edit User";
                     include("./Includes/user/edit_user.php");
+                    break;
+
+                case "edit_group":
+                    $content_header = "Edit Group";
+                    include("./Includes/group/edit_group.php");
                     break;
 
             }

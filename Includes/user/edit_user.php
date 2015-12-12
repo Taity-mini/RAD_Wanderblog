@@ -4,9 +4,11 @@
  * User: Andrew Tait (1504693)
  * Date: 11/12/2015
  * Time: 16:41
+ * Edit user profile
  */
 
 $getid = $_GET['id'];
+$error = false;
 
 $result = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$getid'");
 $info = mysqli_fetch_array($result) or die;
@@ -18,6 +20,7 @@ $groups = mysqli_query($db, $groups_table)  or die;;
 //Country Dropdown
 $queryCountries = "SELECT countryID, country_name FROM countries ORDER BY countryid ";
 $country = $db->query($queryCountries);
+
 
 if(isset($_POST['update'])) {
 //form variables

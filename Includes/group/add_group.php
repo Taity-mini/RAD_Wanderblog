@@ -39,8 +39,6 @@ if (isset($_POST["group_submit"]))
 
       //Insertion Queries
 
-      //$group = "INSERT INTO group (groupName, permissionID) VALUES (NULL,'$groupName','$permID')";
-
 
       $group = "INSERT INTO `group` (`groupID` ,`groupName` ,`permissionID`)VALUES (NULL,  '$groupName',  '$permissionID')";
       $group_insert = mysqli_query($db, $group) or die(mysqli_error($db));

@@ -8,9 +8,7 @@
 
 $getid = $_GET['id'];
 
-//$users = "SELECT * FROM `users` WHERE `userID` = `$getid`";
 $result = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$getid'");
-//$mainResult = $db->query($users);
 $info = mysqli_fetch_array($result) or die;
 
 //Group DropDown
@@ -23,21 +21,43 @@ $country = $db->query($queryCountries);
 
 if(isset($_POST['update'])) {
 //form variables
-    $groupID = $_POST['groupID'];
-    $firstName = $_POST['first_Name'];
-    $lastName = $_POST['last_Name'];
-    $country = $_POST['country'];
-    $email = $_POST['email'];
-    $id  =$info['userID'];
+    $fields = array('groupID', 'first_Name', 'last_Name', 'email', 'userID');
 
-$update_user= mysqli_query($db,("UPDATE users SET groupID = '$groupID', first_Name='$firstName', last_Name='$lastName', country='$country', email='$email'  WHERE userID = '$id'"));
-if($update_user){
-    echo "User successfully updated!";
-    $page = "./?page=admin";
-    header("Refresh: 2; URL=\"" . $page . "\"");
-} else{
-    echo("<br>Input data is fail");
-}
+
+    foreach ($fields AS $fieldname) { //Loop trough each field
+        if (!isset($_POST[$fieldname]) || empty($_POST[$fieldname])) {
+            echo 'Field ' . $fieldname . ' misses!<br />'; //Display error with field
+            $error = true; //Yup there are errors
+        }
+    }
+//If all fields are filled in then proceed
+    if (!$error) {
+        $data = array();
+        foreach ($fields AS $fieldname) { //Loop trough each field
+            $fieldname = $_POST[$fieldname]; //grab from form
+            echo $fieldname;
+            $fieldname = mysqli_real_escape_string($db, $fieldname); //prevent from SQL injection
+            $data[] = $fieldname;
+        }
+
+
+        //set variables from array data
+        $groupID = $data[0];
+        $firstName = $data[1];
+        $lastName = $data[2];
+        $country = $data[3];
+        $email = $data[4];
+        $id = $info['userID'];
+
+        $update_user = mysqli_query($db, ("UPDATE users SET groupID = '$groupID', first_Name='$firstName', last_Name='$lastName', country='$country', email='$email'  WHERE userID = '$id'"));
+        if ($update_user) {
+            echo "User successfully updated!";
+            $page = "./?page=admin";
+            header("Refresh: 2; URL=\"" . $page . "\"");
+        } else {
+            echo("<br>Input data is fail");
+        }
+    }
 }
 ?>
 <h1><?php echo $content_header. "ID :" . $getid?></h1>
@@ -83,8 +103,6 @@ if($update_user){
                     <select name="country">
                         <?php
                         //Select all countries from table as a dropdown
-
-
                         while ($rowCerts = $country->fetch_assoc()) {
                             $selected = ($info['country'] == $rowCerts['countryID']) ? 'selected="selected"' : '';
                             echo '<option '.$selected.' value="' . $rowCerts['countryID'] . '">' .
@@ -108,5 +126,3 @@ if($update_user){
             </tr>
         </table>
     </form>
-
-

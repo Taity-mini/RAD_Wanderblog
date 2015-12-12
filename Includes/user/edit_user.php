@@ -24,7 +24,7 @@ $country = $db->query($queryCountries);
 
 if(isset($_POST['update'])) {
 //form variables
-    $fields = array('groupID', 'first_Name', 'last_Name', 'email', 'userID');
+    $fields = array('groupID', 'first_Name', 'last_Name', 'email');
 
 
     foreach ($fields AS $fieldname) { //Loop trough each field

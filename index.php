@@ -20,7 +20,21 @@ include("./includes/functions.php");
     <meta charset="utf-8" />
     <title>Wanderblog | Home Page</title>
     <link rel="stylesheet" href="./style.css" />
-    <script  src = "java/popup.js"></script>
+    <link rel="stylesheet" href="./Java/jquery-ui.css" />
+
+    <script  src = "./Java/jquery.min.js"</script>
+    <script  src = "./Java/popup.js"></script>
+    <script  src = "./Java/jquery-ui.js"></script>
+    <script>
+        $(function()
+        {
+            $( "#datepicker" ).datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat:'dd-mm-yy',
+            });
+        });
+    </script>
 </head>
 <body>
 <div id="Wrapper">
@@ -47,7 +61,7 @@ include("./includes/functions.php");
 
                 <?php } ?>
 
-                <li class="Adventure"><a href="#">Adventure</a>
+                <li class="Adventure"><a href="./?page=add_adventure">Adventure</a>
                     <ul>
                         <li><a href="#">Author Search</a></li>
                         <li><a href="#">News #3</a></li>
@@ -87,6 +101,13 @@ include("./includes/functions.php");
                     $content_header = "Admin Panel";
                     include("./admin.php");
                     break;
+
+                //Adventure Pages
+                case "add_adventure":
+                    $content_header = "Add Adventure";
+                    include("./Includes/page/add_adventure.php");
+                    break;
+
 
                 //Editing forms
 

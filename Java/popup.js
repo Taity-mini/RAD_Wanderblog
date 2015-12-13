@@ -5,3 +5,12 @@
 	 else
 		e.style.display = 'block';
 }
+ //Date picker modal
+ $(function()
+ {
+	 $( "#datepicker" ).datepicker({
+		 changeMonth: true,
+		 changeYear: true,
+		 dateFormat:'dd-mm-yy',
+	 });
+ });

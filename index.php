@@ -14,17 +14,23 @@ include("./includes/global.php");
 include("./includes/functions.php");
 
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Wanderblog | Home Page</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./Java/jquery-ui.css" />
-
+<!--    <link rel="stylesheet" href="./Java/jquery-ui.css" />
     <script  src = "./Java/jquery.min.js"</script>
-    <script  src = "./Java/popup.js"></script>
-    <script  src = "./Java/jquery-ui.js"></script>
+    <script  src = "./Java/jquery-ui.js"></script>-->
+
+
+    <link rel="stylesheet" href="./Java/jquery-ui.css" />
+        <script  src = "Java/jquery.min.js"</script>
+        <script  src = "/java/jquery-ui.js"></script>-->
+
+    <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
     <script>
         $(function()
         {
@@ -35,6 +41,7 @@ include("./includes/functions.php");
             });
         });
     </script>
+    <script  src = "java/popup.js"></script>
 </head>
 <body>
 <div id="Wrapper">
@@ -91,7 +98,6 @@ include("./includes/functions.php");
         if(isset($_GET['page'])) {
             switch ($_GET['page']) {
 
-
                 case "register":
                     $content_header = "Register";
                     include("./register.php");
@@ -103,11 +109,15 @@ include("./includes/functions.php");
                     break;
 
                 //Adventure Pages
-                case "add_adventure":
+                 case "add_adventure":
                     $content_header = "Add Adventure";
                     include("./Includes/page/add_adventure.php");
                     break;
 
+                case "adventure":
+                    $content_header = "Adventure";
+                    include("./Includes/page/view_adventure.php");
+                    break;
 
                 //Editing forms
 

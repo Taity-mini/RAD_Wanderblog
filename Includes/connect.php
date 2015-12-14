@@ -36,7 +36,7 @@ if (mysqli_connect_errno()) {
 
 /* check if server is alive */
 if (mysqli_ping($db)) {
-    printf ("Our connection is ok!\n");
+    //printf ("Our connection is ok!\n");
 } else {
     printf ("Error: %s\n", mysqli_error($db));
 }

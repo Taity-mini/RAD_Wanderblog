@@ -221,14 +221,6 @@ else
 
 
 
-        <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp1.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
 
 
         <div id = "content-blob">

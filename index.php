@@ -21,7 +21,7 @@ include("./includes/functions.php");
     <meta charset="utf-8" />
     <title>Wanderblog | Home Page</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./Java/jquery-ui.css" />
+    <link rel="stylesheet" href="java/jquery-ui.css" />
     <script  src = "Java/jquery.min.js"</script>
     <script  src = "/java/jquery-ui.js"></script>
     <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>

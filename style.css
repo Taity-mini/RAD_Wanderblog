@@ -152,7 +152,7 @@ body {
     position:relative;
     width: 250px;
 
-    height: 300px;
+    max-height: 300px;
     overflow:hidden;
 
      

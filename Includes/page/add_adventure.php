@@ -14,7 +14,7 @@ $mainResult = $db->query($queryCountries);
 
 if (isset($_POST["submit"]))
 {
-$fields = array('title', 'trip_country', 'trip_Date');
+$fields = array('title', 'trip_country', 'tags', 'trip_Date');
 
 foreach ($fields AS $fieldname) { //Loop trough each field
     if (!isset($_POST[$fieldname]) || empty($_POST[$fieldname])) {

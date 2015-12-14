@@ -50,13 +50,13 @@ if(isset($_GET['id']))
                 <td>
                     Author:</td>
                 <td>
-                    <?php echo $overview['Title']; ?> </td>
+                    <?php echo $user_info['userName']; ?> </td>
             </tr>
             <tr>
                 <td>
                     Trip Country</td>
                 <td>
-                    <?php echo countryName($db,$info['trip_Country']) ?>  </td>
+                    <?php echo countryName($db,$info['trip_country']) ?>  </td>
             </tr>
             <tr>
                 <td>

@@ -7,7 +7,7 @@
  */
 
 
-if(isset($_GET['id']))
+if(!isset($_GET['id']))
 {
     $getid = $_GET['id'];
     $error = false;
@@ -43,7 +43,6 @@ if(isset($_GET['id']))
 
         <h1><?php echo $content_header ?></h1>
         <div id ="Content-inner">
-
         </div>
         <table border="1">
             <tr>
@@ -56,25 +55,25 @@ if(isset($_GET['id']))
                 <td>
                     Trip Country</td>
                 <td>
-                    <?php echo countryName($db,$info['trip_country']) ?>  </td>
+                    <?php echo countryName($db,$info['trip_country']);?>  </td>
             </tr>
             <tr>
                 <td>
-                    Instructor:</td>
+                    Tags</td>
                 <td>
-                    <?php echo $overview['Instructor'];?></td>
+                    <?php echo $info['tags'];?></td>
             </tr>
             <tr>
                 <td>
-                    Sessions per week</td>
+                    Trip Date</td>
                 <td>
-                    <?php echo $overview['Sessions_week'];?> </td>
+                    <?php echo $trip_Date;?> </td>
             </tr>
             <tr>
                 <td>
-                    Short-term goal</td>
+                    Last Updated</td>
                 <td>
-                    <?php echo $overview['Goal'];?> </td>
+                    <?php echo  $mod_date;?> </td>
             </tr>
             <tr>
                 <td>
@@ -86,7 +85,6 @@ if(isset($_GET['id']))
 
 
 <?php
-
     }
     else
     {

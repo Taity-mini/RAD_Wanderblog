@@ -43,14 +43,14 @@ if (!$error) {
         echo $userID;
     }
 
-    $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', $tags , '$userID',  '$trip_Date', '$mod_Date')";
+    $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', '$tags' , '$userID',  '$trip_Date', '$mod_Date')";
     $result = mysqli_query($db, $insert);
 
     if ($result) {
         echo "Adventure Succesfully Added.";
     }
     else{
-        echo "User registration failed";
+        echo "Add Adventure failed";
 
     }
 

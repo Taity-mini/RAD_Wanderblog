@@ -7,7 +7,7 @@
  * Edit user profile
  */
 
-$getid = $_GET['id'];
+$getid = htmlentities($_GET['id']);
 $error = false;
 
 $result = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$getid'");
@@ -15,7 +15,7 @@ $info = mysqli_fetch_array($result) or die;
 
 //Group DropDown
 $groups_table = ("SELECT * FROM `group`");
-$groups = mysqli_query($db, $groups_table)  or die;;
+$groups = mysqli_query($db, $groups_table)  or die;
 
 //Country Dropdown
 $queryCountries = "SELECT countryID, country_name FROM countries ORDER BY countryid ";

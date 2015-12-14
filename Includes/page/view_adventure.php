@@ -93,15 +93,6 @@
 
 
 </div>
-<div id = "Welcome_Outter_Wrap">
-<h1>Trending</h1>
-<h2> </h2>
-	<div id = "Content-outter">
-	<div class = "Trending_Picture_Container"><header><h4>Votes</h4></header></div>
-	<div class = "Trending_Picture_Container"><header><h4>Votes</h4></header></div>
-	</div>
-
-</div>
 
 
 <br />

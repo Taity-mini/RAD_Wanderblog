@@ -32,6 +32,7 @@ include("./includes/functions.php");
 
     <div id="Header">
         <div id = "Header_Image"><img src="temp.jpg" alt="Coffee Shop" ></div>
+        </div>
         <div class ="nav">
             <ul>
                 <li class ="Home"><a href ="./">Home</a></li>

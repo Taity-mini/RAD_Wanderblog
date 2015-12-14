@@ -6,26 +6,28 @@
  * Time: 11:53
  */
 
-
 if(isset($_GET['id']))
 {
+    echo "IT works!";
     $getid = $_GET['id'];
     $error = false;
 
     //Individual Adventures
-    $page = mysqli_query($db,"SELECT * FROM `pages` WHERE pageID = '$getid'");
-    $info = mysqli_fetch_array($page) or die;
+    $page = mysqli_query($db,"SELECT * FROM `pages` WHERE PageID = '$getid'");
+    $info = mysqli_fetch_array($page)  or die(mysqli_error($db));
+
 
     //Page Variables
     $content_header = $info['title'];
-    $trip_Date =date('d/m/Y',strtotime($row['trip_Date']));
-    $mod_date =date('d/m/Y',strtotime($row['mod_Date']));
-
+    echo $content_header;
+    $trip_Date =date('d/m/Y',strtotime($info['trip_Date']));
+    $mod_date =date('d/m/Y',strtotime($info['mod_Date']));
+ echo "IT works!";
     //User Variables
     $userID = $info['userID'];
+    echo "User ID" + $userID;
     $user = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$userID'");
-    $user_info = mysqli_fetch_array($page) or die;
-
+    $user_info = mysqli_fetch_array($user) or die(mysqli_error($db));
 
     //Picture Variables
 
@@ -37,13 +39,14 @@ if(isset($_GET['id']))
 
 
 //If there is an adventure then display it
-    if (mysqli_num_rows($info) > 0)
+    if (mysqli_num_rows($page) > 0)
     {
+    echo "IT works inside if sTATEMENTS!";
        ?>
 
         <h1><?php echo $content_header ?></h1>
         <div id ="Content-inner">
-        </div>
+
         <table border="1">
             <tr>
                 <td>
@@ -82,7 +85,7 @@ if(isset($_GET['id']))
                     <?php echo $start_date ;?> </td>
             </tr>
         </table>
-
+</div>
 
 <?php
     }
@@ -214,7 +217,6 @@ else
            Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
            </div>
         </div>
-<<<<<<< Updated upstream
 
 
 
@@ -238,9 +240,6 @@ else
            </div>
         </div>
 
-=======
->>>>>>> Stashed changes
-
                 <div id = "content-blob">
            <div class = "Picture_Container">
            		<img src="./Res/temp4.jpg" >
@@ -249,8 +248,6 @@ else
            Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
            </div>
         </div>
-
-<<<<<<< Updated upstream
 
 
                         <div id = "content-blob">
@@ -268,22 +265,16 @@ else
            Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
            </div>
         </div>
-
-
-
-
-
 </div>
 </div>
 </div>
 <br />
 </body>
 </html>
-=======
 </div>
 </div>
 <br />
     <?php
 }
 ?>
->>>>>>> Stashed changes
+

@@ -32,6 +32,7 @@ body {
     margin:5%;
     margin-left: 3%;
     padding:2%;
+    max-height: 500px;
     background-color: #ECECEA;
     box-shadow: -2px 2px 5px grey;
     
@@ -147,7 +148,7 @@ body {
 
 
 .Picture_Container{
-    background: url(temp1.jpg);
+
     position:relative;
     width: 250px;
     height: 300px;

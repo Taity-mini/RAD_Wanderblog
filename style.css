@@ -97,6 +97,12 @@ body {
     float: left;
 
 }
+#Welcome_Inner_Wrap{
+    width: 95%;
+
+    float: left;
+
+}
 
 .Text_Container{
     position:relative;

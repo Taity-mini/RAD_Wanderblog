@@ -145,13 +145,14 @@ if (!$error) {
             <td><input maxlength="10" name="trip_Date" id="datepicker"  type="text" /></td>
         </tr>
         <tr>
-            <td>Trip Images</td>
-            <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
-        </tr>
-        <tr>
             <td><input name="submit" style="text-align: center" type="submit" value="Add Adventure" /></td>
             <td><input type="reset" value="Reset" /></td>
         </tr>
+        <tr>
+            <td>Trip Images</td>
+            <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+        </tr>
+
     </table>
         <br/>
         <h3>Trip Pictures</h3>

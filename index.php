@@ -31,7 +31,7 @@ include("./includes/functions.php");
 <body>
 
     <div id="Header">
-        <div id = "Header_Image"><img src="temp.jpg" alt="Coffee Shop" ></div>
+        <div id = "Header_Image"><img src="temp.jpg" alt="Coffee Shop" style="height:20%" ></div>
         </div>
         <div class ="nav">
             <ul>

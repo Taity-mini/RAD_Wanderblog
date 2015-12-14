@@ -29,10 +29,9 @@ include("./includes/functions.php");
     <script  src = "java/functions.js"></script>
 </head>
 <body>
-
+<div id="Wrapper">
     <div id="Header">
-        <div id = "Header_Image"><img src="temp.jpg" alt="Coffee Shop" ></div>
-        </div>
+        <p>Header image goes here!</p>
         <div class ="nav">
             <ul>
                 <li class ="Home"><a href ="./">Home</a></li>
@@ -76,8 +75,8 @@ include("./includes/functions.php");
                 ?>
             </ul>
         </div>
-        <div id="Wrapper">
-            <div id ="Content">
+    </div>
+    <div id ="Content">
         <?php
         //$page = (isset($_GET['page']) ? $_GET['page'] : 'home') . '.php';
        // $page = $_GET['page'];
@@ -137,6 +136,7 @@ include("./includes/functions.php");
         ?>
 </div>
 </div>
+
     <div id ="Footer">
         <p>© <?php echo date("Y");?> RAD | <a href ="https://github.com/Taity-mini/RAD_Wanderblog" >Github Repo</a> </p>
     </div>

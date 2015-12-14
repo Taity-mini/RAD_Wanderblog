@@ -28,8 +28,12 @@
 			<div class = "Scroll_Banner">
 			<div class ="Begining-img" src = "./Res/img3.jpg"></div>
 			<img src="./Res/temp3.jpg" alt="Coffee Shop" >
+			<img src="./Res/temp1.jpg" alt="Coffee Shop" >
+			<img src="./Res/temp2.jpg" alt="Coffee Shop" >
+			<img src="./Res/temp4.jpg" alt="Coffee Shop" >
 			<img src="./Res/temp3.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp3.jpg" alt="Coffee Shop" >
+			<img src="./Res/temp2.jpg" alt="Coffee Shop" >
+
    		</div>
     </div>
 </div>

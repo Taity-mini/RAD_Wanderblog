@@ -21,27 +21,12 @@ include("./includes/functions.php");
     <meta charset="utf-8" />
     <title>Wanderblog | Home Page</title>
     <link rel="stylesheet" href="./style.css" />
-<!--    <link rel="stylesheet" href="./Java/jquery-ui.css" />
-    <script  src = "./Java/jquery.min.js"</script>
-    <script  src = "./Java/jquery-ui.js"></script>-->
-
-
     <link rel="stylesheet" href="./Java/jquery-ui.css" />
-        <script  src = "Java/jquery.min.js"</script>
-        <script  src = "/java/jquery-ui.js"></script>-->
-
+    <script  src = "Java/jquery.min.js"</script>
+    <script  src = "/java/jquery-ui.js"></script>
     <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
-    <script>
-        $(function()
-        {
-            $( "#datepicker" ).datepicker({
-                changeMonth: true,
-                changeYear: true,
-                dateFormat:'dd-mm-yy',
-            });
-        });
-    </script>
     <script  src = "java/popup.js"></script>
+    <script  src = "java/functions.js"></script>
 </head>
 <body>
 <div id="Wrapper">
@@ -134,6 +119,12 @@ include("./includes/functions.php");
                 case "edit_perm":
                     $content_header = "Edit Permission";
                     include("./Includes/group/edit_permission.php");
+                    break;
+
+                //Delete Functions
+                    case "delete":
+                    $content_header = "Delete Record";
+                    include("./Includes/delete.php");
                     break;
 
             }

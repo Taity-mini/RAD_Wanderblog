@@ -55,6 +55,7 @@ if (mysqli_num_rows($users_table) > 0)
           echo countryName($db,$info['country']);
           echo "<td>" . $info['email'] . "</td>";
           echo '<td><a href="./?page=edit_user&id='. $info['userID'] .'">Edit</a></td>';
+          echo userMatch($info['userID'],$_SESSION["userID"]);
           echo "</tr>";
       }
      echo"</table>";
@@ -84,7 +85,7 @@ else
                 echo "<td>" . $info['groupName'] . "</td>";
                 echo groupName($db, $info['permissionID']);
                 echo '<td><a href="./?page=edit_group&id='. $info['groupID'] .'">Edit</a></td>';
-                //echo"[Delete]";
+                echo groupInUse($db, $info['groupID'], "Row");
                 echo "</tr>";
             }
             echo "</table>";
@@ -115,6 +116,7 @@ else
             <td>View Content</td>
             <td>View Comments</td>
             <td>Edit</td>
+            <td>Delete</td>
         </tr>";
         while ($info = mysqli_fetch_array($permissions)) {
             echo "<trstyle='background-color:#000000;'>";
@@ -129,6 +131,7 @@ else
             echo "<td>" . $info['view_Content'] . "</td>";
             echo "<td>" . $info['view_Comments'] . "</td>";
             echo '<td><a href="./?page=edit_perm&id='. $info['permissionID'] .'">Edit</a></td>';
+            echo permissionInUse($db, $info['permissionID'], "Row");
             echo "</tr>";
 
         }
@@ -143,5 +146,4 @@ else
     include("includes/group/add_permission.php");
 
     ?>
-
 </div>

@@ -93,64 +93,7 @@ if (!$error) {
     </table>
         <br/>
         <h3>Trip Pictures</h3>
-        <div id = "columns">
-        <div id = "content-blob">
-           <div class = "Picture_Container">
-            <img src="temp.jpg" alt="Coffee Shop" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb 
-           </div>
-        </div>
-                <div id = "content-blob">
-           <div class = "Picture_Container">
-            <img src="temp.jpg" alt="Coffee Shop" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb 
-           </div>
-        </div>
-                <div id = "content-blob">
-           <div class = "Picture_Container">
-            <img src="temp.jpg" alt="Coffee Shop" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb 
-           </div>
-        </div>
-                <div id = "content-blob">
-           <div class = "Picture_Container">
-            <img src="temp.jpg" alt="Coffee Shop" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb 
-           </div>
-        </div>
-                <div id = "content-blob">
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb 
-           </div>
-        </div>
-                <div id = "content-blob">
-           <div class = "Picture_Container">
-            <img src="temp.jpg" alt="Coffee Shop" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb 
-           </div>
-        </div>
-                        <div id = "content-blob">
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb 
-           </div>
-        </div>
-                        <div id = "content-blob">
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb 
-           </div>
-        </div>
-        </div>
-
+        
 
     </form>
     <br />

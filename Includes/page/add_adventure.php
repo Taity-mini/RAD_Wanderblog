@@ -57,9 +57,10 @@ if (!$error) {
 }
 ?>
 <h1><?php echo $content_header ?></h1>
+<h2></h2>
 <div id ="Content-inner">
     <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
-    <h2>Adventure Details</h2>
+    <h3>Adventure Details</h3>
         <table border ="1" align="center">
         <tr>
             <td>Adventure Title</td>
@@ -91,7 +92,7 @@ if (!$error) {
         </tr>
     </table>
         <br/>
-        <h2>Trip Pictures</h2>
+        <h3>Trip Pictures</h3>
     </form>
     <br />
 </div>

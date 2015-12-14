@@ -137,7 +137,7 @@ include("./includes/functions.php");
         ?>
 </div>
 </div>
-</div>
+
     <div id ="Footer">
         <p>© <?php echo date("Y");?> RAD | <a href ="https://github.com/Taity-mini/RAD_Wanderblog" >Github Repo</a> </p>
     </div>

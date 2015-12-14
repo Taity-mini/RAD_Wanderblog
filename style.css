@@ -99,14 +99,14 @@ body {
 
 .Begining-img{
  -webkit-animation: bannermove 25s linear infinite;
-         animation: bannermove 25s linear infinite;
+animation: bannermove 25s linear infinite;
 }
  
 @keyframes "bannermove" {
  0% {
     margin-left: 0px;
  }
- 50% {
+ 100% {
     margin-left: -1800px;
  }
  
@@ -117,7 +117,7 @@ body {
  0% {
    margin-left: 0px;
  }
- 50% {
+ 100% {
    margin-left: -1800px;
  }
  

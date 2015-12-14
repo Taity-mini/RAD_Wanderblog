@@ -81,6 +81,13 @@ body {
     overflow: hidden;
 }
 
+.Scroll_Banner img{
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+}
+
 .Begining-img{
     -webkit-animation:bannermove 30s linear infinite;
 

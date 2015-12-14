@@ -22,7 +22,6 @@ body {
 
 #columns{
     -webkit-column-count: 5;
-    -webkit-column-gap: 10px;
     -webkit-column-fill: auto;
 
 

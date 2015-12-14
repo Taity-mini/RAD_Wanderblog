@@ -84,7 +84,7 @@ if (!$error) {
             </td>
         </tr>
             <tr>
-                <tdTags</td>
+                <td>Tags</td>
                 <td><input type="text" name="tags" maxlength="60"></td>
             </tr>
         <tr>

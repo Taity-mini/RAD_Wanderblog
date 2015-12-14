@@ -18,13 +18,13 @@ $db = new mysqli(
 
 //Localhost dev server
 
-/*$db = new mysqli(
-    "localhost", //db host
-    "root", //username
-    "", //pw
-    "Wanderblog"  //db_name
-
-);*/
+//$db = new mysqli(
+//    "localhost", //db host
+//    "root", //username
+//    "", //pw
+//    "Wanderblog"  //db_name
+//
+//);
 
 
 

@@ -82,11 +82,12 @@ body {
 }
 
 .Scroll_Banner{
-    width: 3550px;
+    width: 1775px;
     background-color: black;
     height: 25%;
     float: left;
     overflow: hidden;
+    margin: 3% auto;
 }
 
 .Scroll_Banner img{
@@ -98,9 +99,6 @@ body {
 
 .Begining-img{
  -webkit-animation: bannermove 30s linear infinite;
-    -moz-animation: bannermove 30s linear infinite;
-     -ms-animation: bannermove 30s linear infinite;
-      -o-animation: bannermove 30s linear infinite;
          animation: bannermove 30s linear infinite;
 }
  
@@ -113,16 +111,7 @@ body {
  }
  
 }
- 
-@-moz-keyframes bannermove {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -2125px;
- }
- 
-}
+
  
 @-webkit-keyframes "bannermove" {
  0% {
@@ -134,27 +123,6 @@ body {
  
 }
  
-@-ms-keyframes "bannermove" {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -2125px;
- }
- 
-}
- 
-@-o-keyframes "bannermove" {
- 0% {
-   margin-left: 0px;
- }
- 100% {
-   margin-left: -2125px;
- }
- 
-}
- 
-}
 
 
 

@@ -75,25 +75,9 @@
            Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb 
            </div>
         </div>
-<img src="temp.jpg" alt="Coffee Shop" style="height:20%;" >
-
-
-
-
-
-
-
-
 </div>
-
-
 </div>
-
-
+</div>
 <br />
-
 </body>
-
-
-
 </html>

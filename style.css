@@ -74,19 +74,24 @@ body {
 }
 
 .Scroll_Banner{
-    width: 100%;
+    width: 4000px;
     background-color: black;
     height: 25%;
-    overflow: 
-
 
 }
 
+.Begining-img{
+    -webkit-animation:bannermove 30s linear infinite;
 
-.Scroll_Banner img{
-    width: 35%;
-    height: 100%;
+}
 
+@-webkit-keyframes "bannermove"{
+    0%{
+        margin-left:0px;
+    }
+    100%{
+        margin-left: -2000px;
+    }
 }
 
 
@@ -123,15 +128,15 @@ body {
 
 
 .Welcome_Picture_Container{
-    background: url(temp1.jpg);
     position:relative;
     width: 250px;
     height: 300px;
     overflow: hidden;
-
-     
+    
 
 }
+
+
 #Welcome-content-blob{
     display: inline-block;
     width: 90%;
@@ -215,7 +220,7 @@ body {
     
 
     width: 95%;
-    height: 250px;
+    height: 100px;
     position: relative;
     padding-bottom: 100px;
 
@@ -229,7 +234,7 @@ body {
 
 #Header_Image{
     width: 100%;
-    height: 1%;
+    height: 150px;
 
 }
 
@@ -487,8 +492,15 @@ Code obtained then modified via http://css-snippets.com/drop-down-navigation/
 @media screen and (max-width: 1000px) {
     #columns{
         -webkit-column-count: 2;
-        -webkit-column-gap: 10px;
-        -webkit-column-fill: auto;
+
+
+
+    }
+
+    @media screen and (max-width: 1400px) {
+    #columns{
+        -webkit-column-count: 3;
+
 
 
     }

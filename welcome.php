@@ -25,14 +25,13 @@
 
 
 	<div id = "Welcome-Content-blob">
-		<div class = "Scroll_Banner">
-		<img class = "Welcome_Picture_Container"/>
-		<img src="./Res/temp.jpg" alt="Coffee Shop" >
-		<img src="./Res/temp.jpg" alt="Coffee Shop" >
-		<img src="./Res/temp.jpg" alt="Coffee Shop" >
+			<div class = "Scroll_Banner">
+			<div class ="Begining-img" src = "./Res/img3.jpg"></div>
+			<img src="./Res/temp3.jpg" alt="Coffee Shop" >
+			<img src="./Res/temp3.jpg" alt="Coffee Shop" >
+			<img src="./Res/temp3.jpg" alt="Coffee Shop" >
    		</div>
     </div>
-    <br />
 </div>
 
 

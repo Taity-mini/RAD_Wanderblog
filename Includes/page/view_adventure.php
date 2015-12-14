@@ -7,6 +7,20 @@
  */
 ?>
 
+
+<head>
+
+<title>
+	Home 
+</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id = "Welcome_Inner_Wrap">
+<h1><?php echo $content_header ?></h1>
+<h2> </h2>
+
 <div id ="Content-inner">
 
 
@@ -42,3 +56,12 @@
 	</div>
 
 </div>
+
+
+<br />
+
+</body>
+
+
+
+</html>

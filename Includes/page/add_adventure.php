@@ -98,6 +98,8 @@ if (!$error) {
     </table>
         <br/>
         <h3>Trip Pictures</h3>
+        
+
     </form>
     <br />
 </div>

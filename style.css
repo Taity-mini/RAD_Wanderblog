@@ -98,8 +98,8 @@ body {
 }
 
 .Begining-img{
- -webkit-animation: bannermove 30s linear infinite;
-         animation: bannermove 30s linear infinite;
+ -webkit-animation: bannermove 15s linear infinite;
+         animation: bannermove 15s linear infinite;
 }
  
 @keyframes "bannermove" {

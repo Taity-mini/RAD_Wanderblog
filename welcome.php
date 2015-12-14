@@ -27,9 +27,9 @@
 	<div id = "Welcome-Content-blob">
 		<div class = "Scroll_Banner">
 		<img class = "Welcome_Picture_Container"/>
-		<img src="temp.jpg" alt="Coffee Shop" >
-		<img src="temp.jpg" alt="Coffee Shop" >
-		<img src="temp.jpg" alt="Coffee Shop" >
+		<img src="./Res/temp.jpg" alt="Coffee Shop" >
+		<img src="./Res/temp.jpg" alt="Coffee Shop" >
+		<img src="./Res/temp.jpg" alt="Coffee Shop" >
    		</div>
     </div>
     <br />

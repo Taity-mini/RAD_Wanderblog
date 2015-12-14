@@ -97,12 +97,6 @@ body {
     float: left;
 
 }
-#Inner_Wrap{
-    width: 95%;
-
-    float: left;
-
-}
 
 .Text_Container{
     position:relative;
@@ -492,7 +486,28 @@ Code obtained then modified via http://css-snippets.com/drop-down-navigation/
 
 
 
+@media screen and (max-width: 1000px) {
+    #columns{
+        -webkit-column-count: 2;
+        -webkit-column-gap: 10px;
+        -webkit-column-fill: auto;
 
+
+    }
+
+
+
+    }
+@media screen and (max-width: 650px) {
+    #columns{
+        -webkit-column-count: 1;
+        -webkit-column-gap: 10px;
+        -webkit-column-fill: auto;
+
+
+    }
+
+    }
 
 
 #popupBoxTwoPosition{

@@ -82,12 +82,13 @@ body {
 }
 
 .Scroll_Banner{
-    width: 1800px;
+    width: 130%;
     background-color: black;
     height: 25%;
     float: left;
     overflow: hidden;
     margin: 1% auto;
+    
 }
 
 .Scroll_Banner img{

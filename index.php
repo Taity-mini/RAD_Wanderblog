@@ -29,9 +29,9 @@ include("./includes/functions.php");
     <script  src = "java/functions.js"></script>
 </head>
 <body>
-<div id="Wrapper">
+
     <div id="Header">
-        <p>Header image goes here!</p>
+        <div id = "Header_Image"><img src="temp.jpg" alt="Coffee Shop" ></div>
         <div class ="nav">
             <ul>
                 <li class ="Home"><a href ="./">Home</a></li>
@@ -75,6 +75,7 @@ include("./includes/functions.php");
                 ?>
             </ul>
         </div>
+        <div id="Wrapper">
     </div>
     <div id ="Content">
         <?php

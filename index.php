@@ -77,8 +77,7 @@ include("./includes/functions.php");
             </ul>
         </div>
         <div id="Wrapper">
-    </div>
-    <div id ="Content">
+            <div id ="Content">
         <?php
         //$page = (isset($_GET['page']) ? $_GET['page'] : 'home') . '.php';
        // $page = $_GET['page'];
@@ -138,7 +137,7 @@ include("./includes/functions.php");
         ?>
 </div>
 </div>
-
+</div>
     <div id ="Footer">
         <p>© <?php echo date("Y");?> RAD | <a href ="https://github.com/Taity-mini/RAD_Wanderblog" >Github Repo</a> </p>
     </div>

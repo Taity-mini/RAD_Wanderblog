@@ -151,8 +151,7 @@ body {
 
     position:relative;
     width: 250px;
-    max-height: 100%;
-    max-width: 100%;
+
     height: 300px;
     overflow:hidden;
 
@@ -195,11 +194,9 @@ body {
 
 
 
-#Picture_Holder{
 
-}
 
-#Picture_Container img{
+.Picture_Container img{
     width: auto;
     height: auto;
     border-radius: 15px;

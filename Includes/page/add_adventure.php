@@ -15,7 +15,7 @@ $mainResult = $db->query($queryCountries);
 
 if (isset($_POST["submit"]))
 {
-$fields = array('title', 'trip_country', 'trip_Date');
+$fields = array('title', 'trip_country', 'tags', 'trip_Date');
 
 foreach ($fields AS $fieldname) { //Loop trough each field
     if (!isset($_POST[$fieldname]) || empty($_POST[$fieldname])) {
@@ -35,14 +35,15 @@ if (!$error) {
 
     $title = $data[0];
     $trip_country = $data[1];
-    $trip_Date = date('Y-m-d', strtotime($data[2]));
+    $tags = $data[2];
+    $trip_Date = date('Y-m-d', strtotime($data[3]));
     $mod_Date = date('Y-m-d');
     if(!empty($_SESSION['userID'])){
         $userID = $_SESSION['userID'];
         echo $userID;
     }
 
-    $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', NULL , '$userID',  '$trip_Date', '$mod_Date')";
+    $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', $tags , '$userID',  '$trip_Date', '$mod_Date')";
     $result = mysqli_query($db, $insert);
 
     if ($result) {
@@ -82,6 +83,10 @@ if (!$error) {
                 </select>
             </td>
         </tr>
+            <tr>
+                <tdTags</td>
+                <td><input type="text" name="tags" maxlength="60"></td>
+            </tr>
         <tr>
             <td>Trip Date</td>
             <td><input maxlength="10" name="trip_Date" id="datepicker"  type="text" /></td>

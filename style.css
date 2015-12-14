@@ -82,12 +82,12 @@ body {
 }
 
 .Scroll_Banner{
-    width: 1775px;
+    width: 1800px;
     background-color: black;
     height: 25%;
     float: left;
     overflow: hidden;
-    margin: 3% auto;
+    margin: 1% auto;
 }
 
 .Scroll_Banner img{
@@ -107,7 +107,7 @@ body {
     margin-left: 0px;
  }
  100% {
-    margin-left: -2125px;
+    margin-left: -1800px;
  }
  
 }
@@ -118,7 +118,7 @@ body {
    margin-left: 0px;
  }
  100% {
-   margin-left: -2125px;
+   margin-left: -1800px;
  }
  
 }

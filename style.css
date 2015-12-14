@@ -73,6 +73,13 @@ body {
     text-align: center;
 }
 
+#Banner_Container{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin:2%;
+}
+
 .Scroll_Banner{
     width: 3550px;
     background-color: black;

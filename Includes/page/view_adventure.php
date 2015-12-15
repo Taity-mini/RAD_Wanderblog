@@ -30,7 +30,7 @@ if(isset($_GET['id']))
 
     //Picture Variables
     $pictures = mysqli_query($db,"SELECT * FROM `picture_gallery_pages` WHERE PageID = '$pageID'");
-    $user_info = mysqli_fetch_array($user) or die(mysqli_error($db));
+    $pictures_info = mysqli_fetch_array($pictures) or die(mysqli_error($db));
 
     //Comment Variables
 
@@ -135,6 +135,7 @@ if (mysqli_num_rows($pictures) > 0)
      echo'</table>';
 
 }
+
  ?>
 
 

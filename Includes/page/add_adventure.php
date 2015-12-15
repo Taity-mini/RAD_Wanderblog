@@ -15,6 +15,7 @@ $target_dir = "./Res/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+$desc = $_POST["photoDesc"];
 
 if (isset($_POST["submit"]))
 {
@@ -82,7 +83,7 @@ if (!$error) {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "entered 1";
             $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', '$tags' , '$userID',  '$trip_Date', '$mod_Date')";
-            $result = mysqli_query($db, $insert) or die(mysqli_error($db));
+            $result = mysqli_query($db, $insert);
             if ($result) {
             echo "entered 2";
             $query ="SELECT pageID FROM pages WHERE title = '$title' limit 1";
@@ -92,7 +93,7 @@ if (!$error) {
             $name =  $_FILES["fileToUpload"]["name"];
             $filePath = "./Res/" . basename($name);
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-            $insert1 = "INSERT INTO picture_gallery_pages (filePath, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', $output)";
+            $insert1 = "INSERT INTO picture_gallery_pages (filePath, photoDesc, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', $desc, $output)";
             $result1 = mysqli_query($db, $insert1) or die(mysqli_error($db));
             echo "Adventure Succesfully Added.";
             }
@@ -146,6 +147,10 @@ if (!$error) {
         <tr>
             <td>Trip Images</td>
             <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+        </tr>
+        <tr>
+        <td>Photo Desc</td>
+            <td><input type="text" name="photoDesc" maxlength="100"></td>
         </tr>
         <tr>
             <td><input name="submit" style="text-align: center" type="submit" value="Add Adventure" /></td>

@@ -72,6 +72,12 @@ if(isset($_GET['id']))
      //if user votes up
       if (isset($_POST['vote_down'])) {
         echo"Vote down pressed!";
+        $voting_up = "INSERT INTO `votes` (`userID` ,`pageID` ,`vote_Count`)VALUES ('$current_user', '$pageID', '-1')";
+        $vote_insert = mysqli_query($db, $voting_up) or die(mysqli_error($db));
+         if($vote_insert)
+        {
+            echo "Vote up meh :/!";
+        }
      }
 
      /*Voting Functions END*/

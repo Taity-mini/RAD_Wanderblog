@@ -59,8 +59,8 @@ if(isset($_GET['id']))
 
                     for (var i =0; i< tweets.length ; i++)
                     {
-                        tweetstring += "<td><h3>" + tweets[i].name + "</h3></td>";
-                        tweetstring += "<td><p>"  + tweets[i].text + "</p></td>"
+                        tweetstring += "<tr><td><h3>" + tweets[i].name + "</h3></td>";
+                        tweetstring += "<td><p>"  + tweets[i].text + "</p></td></tr>"
                     }
                     document.getElementById("twitter").innerHTML = tweetstring;
                 }

@@ -124,25 +124,23 @@ if(isset($_GET['id']))
 
 if (mysqli_num_rows($pictures) > 0)
 {
-    print "
-        <table border='1' cellspacing='0'>";
+    echo "<table border='1' cellspacing='0'>";
      while($images = mysqli_fetch_array($users_table))
       {
         echo "<trstyle='background-color:#000000;'>";
         echo "<td>";
-        echo "<img src='".$images['filePath']."' />";
+        echo "<img src='".$images['filePath']."' /> </br>";
+        echo "<p>" . $images['photo_order'] . "</p>";
         echo "</td>";
       }
      echo"</table>";
     }
 else
-{   //No users? Register then!
-    echo"No Pictures ";
+{   //No picture Display message
+    echo"No Pictures currently available for this trip";
 }
 
  ?>
-
-
 </br>
 
 

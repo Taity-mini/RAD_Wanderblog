@@ -7,40 +7,7 @@
  * Adventure Adding form
  */
 
-$error = false;
-//Country DropDown Queries
-$queryCountries = "SELECT countryID, country_name FROM countries ORDER BY countryid ";
-$mainResult = $db->query($queryCountries);
-
-if (isset($_POST["submit"]))
-{
-$fields = array('title', 'trip_country', 'trip_Date');
-
-foreach ($fields AS $fieldname) { //Loop trough each field
-    if (!isset($_POST[$fieldname]) || empty($_POST[$fieldname])) {
-        echo 'Field ' . $fieldname . ' misses!<br />'; //Display error with field
-        $error = true; //Yup there are errors
-    }
-}
-//If all fields are filled in then proceed
-if (!$error) {
-    $data = array();
-    foreach ($fields AS $fieldname) { //Loop trough each field
-        $fieldname = $_POST[$fieldname]; //grab from form
-        echo $fieldname;
-        $fieldname = mysqli_real_escape_string($db, $fieldname); //prevent from SQL injection
-        $data[] = $fieldname;
-    }
-
-    $title = $data[0];
-    $trip_country = $data[1];
-    $trip_Date = date('Y-m-d', strtotime($data[2]));
-    $mod_Date = date('Y-m-d');
-    if(!empty($_SESSION['userID'])){
-        $userID = $_SESSION['userID'];
-        echo $userID;
-    }
-    
+//Photo Upload
     $target_dir = "Res/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
@@ -69,7 +36,8 @@ if (!$error) {
         $uploadOk = 0;
     }
     
-    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    && $imageFileType != "gif" ) {
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         $uploadOk = 0;
     }
@@ -77,36 +45,26 @@ if (!$error) {
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
 
-    } 
-    else {
+    } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', NULL , '$userID',  '$trip_Date', '$mod_Date')";
-            $result = mysqli_query($db, $insert);
-            if ($result) {
-          
             $query ="SELECT pageID FROM pages WHERE title = '$title' limit 1";
-            $result2 = mysqli_query($db, $query);
-            $array = mysqli_fetch_array($result2);
+            $result = mysqli_query($db, $query);
+            $array = mysqli_fetch_array($result);
             $output = $array['pageID'];
             $name =  $_FILES["fileToUpload"]["name"];
             $filePath = "Res/" . basename($name);
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-            $insert1 = "INSERT INTO picture_gallery_pages (filePath, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', $output)";
-            $result1 = mysqli_query($db, $insert1) or die(mysqli_error($db));
-            echo "Adventure Succesfully Added.";
-            }
-    }
-        else{
-             echo "User registration failed";
+            $insert = "INSERT INTO picture_gallery_pages (filePath, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', $output)";
+            $result = mysqli_query($db, $insert) or die(mysqli_error($db));
+        } 
 
+        else {
+            echo "Sorry, there was an error uploading your file.";
+        }
     }
-
-    }
-
     
 }
 }
-
 
 ?>
 <h1><?php echo $content_header ?></h1>

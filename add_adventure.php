@@ -6,6 +6,7 @@
  * Time: 16:50
  * Adventure Adding form
  */
+
 $error = false;
 //Country DropDown Queries
 $queryCountries = "SELECT countryID, country_name FROM countries ORDER BY countryid ";
@@ -14,9 +15,11 @@ $target_dir = "Res/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+
 if (isset($_POST["submit"]))
 {
 $fields = array('title', 'trip_country', 'trip_Date');
+
 foreach ($fields AS $fieldname) { //Loop trough each field
     if (!isset($_POST[$fieldname]) || empty($_POST[$fieldname])) {
         echo 'Field ' . $fieldname . ' misses!<br />'; //Display error with field
@@ -32,6 +35,7 @@ if (!$error) {
         $fieldname = mysqli_real_escape_string($db, $fieldname); //prevent from SQL injection
         $data[] = $fieldname;
     }
+
     $title = $data[0];
     $trip_country = $data[1];
     $trip_Date = date('Y-m-d', strtotime($data[2]));
@@ -41,6 +45,12 @@ if (!$error) {
         echo $userID;
     }
     
+
+
+
+
+
+
      $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
      if($check !== false){
         echo "File is an image - " . $check["mime"] . ".";
@@ -70,6 +80,7 @@ if (!$error) {
     
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
+
     } 
     else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
@@ -90,8 +101,11 @@ if (!$error) {
     }
         else{
              echo "User registration failed";
+
     }
+
     }
+
     
 }
 }

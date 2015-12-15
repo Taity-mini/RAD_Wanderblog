@@ -111,4 +111,9 @@ function userMatch($user1, $user2)
     }
 
 }
+
+
+//Voting Functions
+
+
 ?>

@@ -1,3 +1,10 @@
+<head>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
 <?php
 /**
  * Created by PhpStorm.
@@ -27,6 +34,9 @@ if(isset($_GET['id']))
     $userID = $info['userID'];
     $user = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$userID'");
     $user_info = mysqli_fetch_array($user) or die(mysqli_error($db));
+
+    //Voting Variables
+     $vote = mysqli_query($db,"SELECT * FROM `vote` WHERE PageID = '$pageID'");
 
     //Picture Variables
      $pictures = mysqli_query($db,"SELECT * FROM `picture_gallery_pages` WHERE PageID = '$pageID'") or die(mysqli_error($db));
@@ -102,7 +112,19 @@ if(isset($_GET['id']))
             <tr>
                 <td>
                     Votes:</td>
-                <td></td>
+                <td>
+                    <table class="auto-style1">
+                        <tr>
+                            <td><input type="submit" name="vote_up" alt="Vote UP" value="UP"/></td>
+                        </tr>
+                        <tr>
+                            <td>Vote[]</td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" name="vote_down" alt="Vote Down" value="DOWN"/</td>
+                        </tr>
+                    </table>
+                </td>
             </tr>
         </table>
 

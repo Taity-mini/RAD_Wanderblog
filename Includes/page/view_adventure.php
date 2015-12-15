@@ -121,8 +121,7 @@ if(isset($_GET['id']))
 <h2>Trip Pictures</h2>
 <?php
 
-if (mysqli_num_rows($pictures) > 0)
-{
+
     $count = 0;
     echo "<table border = '1'>";
      while($picture_row = mysqli_fetch_array($pictures))
@@ -134,7 +133,7 @@ if (mysqli_num_rows($pictures) > 0)
       }
      echo'</table>';
 
-}
+
 
  ?>
 

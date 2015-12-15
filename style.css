@@ -419,8 +419,7 @@ body {
     width: 15%;
     height: 400px;
     background-color: #ECECEA;
-    box-shadow: 5px 0px 5px grey;
-
+    box-shadow: 15px 0px 15px -8px grey;
 }
 
 #Profile-Horizontal-Split-Right{

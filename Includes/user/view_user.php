@@ -13,12 +13,14 @@
     <div id ="Content-inner">
 
     <div id= "Profile-Content">
+    	
+
+    	<div id = "Profile-Horizontal-Split-Right">
+
     	<div id = "Profile-Horizontal-Split-Left">
     	<div id ="Profile-Picture"><img src="/Res/temp4.jpg"></div>
     	</div>
 
-
-    	<div id = "Profile-Horizontal-Split-Right">
 
     	<div id ="Information-Header"><h1>Person Name</h1><h2> </h2></div>
     	<div id ="Information-Content">

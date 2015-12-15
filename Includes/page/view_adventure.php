@@ -3,6 +3,9 @@
         .auto-style1 {
             width: 100%;
         }
+        .auto-style2 {
+            text-align: center;
+        }
     </style>
 </head>
 <?php
@@ -115,10 +118,10 @@ if(isset($_GET['id']))
                 <td>
                     <table class="auto-style1">
                         <tr>
-                            <td><input type="submit" name="vote_up" alt="Vote UP" value="UP"/></td>
+                            <td class="auto-style2"><input type="submit" name="vote_up" alt="Vote UP" value="UP"/></td>
                         </tr>
                         <tr>
-                            <td>Vote[]</td>
+                            <td class="auto-style2">Vote[]</td>
                         </tr>
                         <tr>
                             <td><input type="submit" name="vote_down" alt="Vote Down" value="DOWN"/</td>

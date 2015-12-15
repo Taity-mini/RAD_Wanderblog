@@ -98,7 +98,7 @@ if (!$error) {
 
     }
 
-    
+} 
 }
 ?>
 <h1><?php echo $content_header ?></h1>

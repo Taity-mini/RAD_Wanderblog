@@ -41,28 +41,6 @@ if(isset($_GET['id']))
     {
        ?>
 
-      <!--  <script>
-        window.onload = function() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (xhttp.readyState == 4 && xhttp.status == 200) {
-
-                    var tweets = JSON.parse(xhttp.responseText);
-                    var tweetstring = "";
-
-                    for (var i =0; i< tweets.length ; i++)
-                    {
-                        tweetstring += "<h3>" + tweets[i].name + "</h3> </br>";
-                        tweetstring += "<p>"  + tweets[i].text + "</p>"
-                    }
-                    document.getElementById("twitter").innerHTML = tweetstring;
-                }
-            };
-            xhttp.open("GET", "http://rgunodeapp.azurewebsites.net/?q=<?php /*echo countryNameTweets($db,$info['trip_country']);*/?>", true);
-            xhttp.send();
-        }
-
-    </script>-->
 
         <h1><?php echo $content_header ?></h1>
         <div id ="Content-inner">

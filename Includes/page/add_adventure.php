@@ -6,6 +6,7 @@
  * Time: 16:50
  * Adventure Adding form
  */
+
 $error = false;
 //Country DropDown Queries
 $queryCountries = "SELECT countryID, country_name FROM countries ORDER BY countryid ";
@@ -105,6 +106,8 @@ if (!$error) {
     
 }
 }
+
+
 ?>
 <h1><?php echo $content_header ?></h1>
 <div id ="Content-inner">

@@ -41,7 +41,7 @@ if(isset($_GET['id']))
     {
        ?>
 
-        <script>
+      <!--  <script>
         window.onload = function() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
@@ -58,11 +58,11 @@ if(isset($_GET['id']))
                     document.getElementById("twitter").innerHTML = tweetstring;
                 }
             };
-            xhttp.open("GET", "http://rgunodeapp.azurewebsites.net/?q=<?php echo countryNameTweets($db,$info['trip_country']);?>", true);
+            xhttp.open("GET", "http://rgunodeapp.azurewebsites.net/?q=<?php /*echo countryNameTweets($db,$info['trip_country']);*/?>", true);
             xhttp.send();
         }
 
-    </script>
+    </script>-->
 
         <h1><?php echo $content_header ?></h1>
         <div id ="Content-inner">
@@ -251,11 +251,6 @@ else
            Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
            </div>
         </div>
-
-
-
-
-
 
         <div id = "content-blob">
            <div class = "Picture_Container">

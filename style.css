@@ -386,6 +386,54 @@ body {
 
 }
 
+/* ---------------------------PROFILE STYLE--------------------------- */
+
+#Profile-Content{
+
+    width: 100%;
+    height: 800px;
+    float: left;
+    position: relative;
+
+
+}
+#Profile-Picture{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+
+}
+
+#Profile-Picture img{
+    width: 95%;
+    height: 95%;
+    background-color: red;
+}
+
+#Profile-Horizontal-Split-Left{
+    width: 15%;
+    height: 100%;
+    background-color: orange;
+}
+
+#Profile-Horizontal-Split-Right{
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------profile style end---------------------------*/
+
 
 
 #Footer

@@ -94,7 +94,7 @@ if (!$error) {
             $name =  $_FILES["fileToUpload"]["name"];
             $filePath = "./Res/" . basename($name);
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-            $insert1 = "INSERT INTO picture_gallery_pages (filePath, photoDesc, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', $desc, $output)";
+            $insert1 = "INSERT INTO picture_gallery_pages (filePath, photoDesc, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', '$desc', '$output')";
             $result1 = mysqli_query($db, $insert1) or die(mysqli_error($db));
             echo "Adventure Succesfully Added.";
             }

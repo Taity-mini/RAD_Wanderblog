@@ -56,6 +56,12 @@ if(isset($_GET['id']))
         echo"Vote up pressed!";
      }
 
+
+
+      if (isset($_POST['vote_down'])) {
+        echo"Vote down pressed!";
+     }
+
      /*Voting Functions END*/
 
 

@@ -80,6 +80,7 @@ if (!$error) {
             echo "Entered lol";
             $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', NULL , '$userID',  '$trip_Date', '$mod_Date')";
             $result = mysqli_query($db, $insert);
+            if ($result) {
             echo "entered again lol";
             $query ="SELECT pageID FROM pages WHERE title = '$title' limit 1";
             $result2 = mysqli_query($db, $query);
@@ -91,6 +92,7 @@ if (!$error) {
             $insert1 = "INSERT INTO picture_gallery_pages (filePath, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', $output)";
             $result1 = mysqli_query($db, $insert1) or die(mysqli_error($db));
             echo "Adventure Succesfully Added.";
+            }
         }
         else{
              echo "User registration failed";

@@ -98,6 +98,8 @@ body {
 .Scroll_Banner img:hover{
     -webkit-transform: scale(1.6);
     transform: scale(1.6);
+    -webkit-animation: bannermove 10s linear infinite;
+    animation: bannermove 10s linear infinite;
     box-shadow: 2px 2px 2px black 0 0 0 99999px rgb(128,128,128,.5);
     overflow: visible;
 }
@@ -105,28 +107,28 @@ body {
 
 
 .Begining-img{
- -webkit-animation: bannermove 25s linear infinite;
-animation: bannermove 25s linear infinite;
-}
+    -webkit-animation: bannermove 25s linear infinite;
+    animation: bannermove 25s linear infinite;
+    }
  
-@keyframes "bannermove" {
- 0% {
+    @keyframes "bannermove" {
+         0% {
     margin-left: 0px;
- }
- 100% {
+    }
+        100% {
     margin-left: -1800px;
- }
+    }
  
 }
 
  
-@-webkit-keyframes "bannermove" {
- 0% {
+    @-webkit-keyframes "bannermove" {
+        0% {
    margin-left: 0px;
- }
- 100% {
+    }
+        100% {
    margin-left: -1800px;
- }
+    }
  
 }
  

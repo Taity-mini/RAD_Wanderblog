@@ -9,7 +9,30 @@
 ?>
 
 <h1><?php echo $content_header ?></h1>
-<div id ="Content-inner">
+<h2> </h2>
+    <div id ="Content-inner">
+    <div id= "Profile-Content">
+    </div>
+    <div id = "Adventure-Profile-Content">
+    </div>
+    <div id = "Adventure-Profile-Content">
+    </div>
+    <div id = "Adventure-Profile-Content">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </div>

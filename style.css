@@ -380,6 +380,12 @@ animation: bannermove 25s linear infinite;
 
 }
 
+.Trending_Picture_Container:hover img{
+    box-shadow: 2px 2px 2px black 0 0 0 99999px rgb(128,128,128,.5);
+
+
+}
+
 #Footer
 {
     width: 100%;

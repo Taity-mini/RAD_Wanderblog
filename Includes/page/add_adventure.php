@@ -15,7 +15,7 @@ $target_dir = "./Res/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
-//$desc = $_POST['photoDesc'];
+$desc = $_POST['photoDesc'];
 
 if (isset($_POST["submit"]))
 {
@@ -94,7 +94,7 @@ if (!$error) {
             $name =  $_FILES["fileToUpload"]["name"];
             $filePath = "./Res/" . basename($name);
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-            $insert1 = "INSERT INTO picture_gallery_pages (filePath, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', $output)";
+            $insert1 = "INSERT INTO picture_gallery_pages (filePath, photoDesc, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', '$desc', '$output')";
             $result1 = mysqli_query($db, $insert1) or die(mysqli_error($db));
             echo "Adventure Succesfully Added.";
             }

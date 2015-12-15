@@ -37,6 +37,7 @@ if(isset($_GET['id']))
     $userID = $info['userID'];
     $user = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$userID'");
     $user_info = mysqli_fetch_array($user) or die(mysqli_error($db));
+    $current_user = $_SESSION["userID"];
 
     //Voting Variables
      $vote = mysqli_query($db,"SELECT * FROM `vote` WHERE pageID = '$pageID'");
@@ -44,6 +45,7 @@ if(isset($_GET['id']))
      if(mysqli_num_rows($vote) == 0)
      {
         $vote_count = 0;
+
      }
      else
      {
@@ -53,11 +55,15 @@ if(isset($_GET['id']))
      //if user votes up
 
      if (isset($_POST['vote_up'])) {
+
         echo"Vote up pressed!";
+        $voting_up = "INSERT INTO `vote` (`userID` ,`pageID` ,`vote_Count`)VALUES ('$current_user', '$pageID', '1')";
+        unset($_POST);
+
      }
 
 
-
+     //if user votes up
       if (isset($_POST['vote_down'])) {
         echo"Vote down pressed!";
      }

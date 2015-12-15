@@ -79,8 +79,7 @@ if(isset($_GET['id']))
             <tr>
                 <td>
                     Votes:</td>
-                <td>
-                    Vote code goes here! </td>
+                <td></td>
             </tr>
         </table>
 

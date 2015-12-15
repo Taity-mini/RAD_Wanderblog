@@ -18,7 +18,7 @@ $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 
 if (isset($_POST["submit"]))
 {
-$fields = array('title', 'trip_country', 'trip_Date');
+$fields = array('title', 'trip_country', 'tags', 'trip_Date');
 
 foreach ($fields AS $fieldname) { //Loop trough each field
     if (!isset($_POST[$fieldname]) || empty($_POST[$fieldname])) {
@@ -38,7 +38,8 @@ if (!$error) {
 
     $title = $data[0];
     $trip_country = $data[1];
-    $trip_Date = date('Y-m-d', strtotime($data[2]));
+    $tags = $data[2];
+    $trip_Date = date('Y-m-d', strtotime($data[3]));
     $mod_Date = date('Y-m-d');
     if(!empty($_SESSION['userID'])){
         $userID = $_SESSION['userID'];
@@ -79,7 +80,7 @@ if (!$error) {
     } 
     else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', NULL , '$userID',  '$trip_Date', '$mod_Date')";
+            $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', $tags , '$userID',  '$trip_Date', '$mod_Date')";
             $result = mysqli_query($db, $insert);
             if ($result) {
             $query ="SELECT pageID FROM pages WHERE title = '$title' limit 1";

@@ -401,7 +401,7 @@ body {
     float: left;
     width: 200px;
     height: auto;
-    background-color: black;
+
 
 }
 
@@ -418,14 +418,16 @@ body {
     float: left;
     width: 15%;
     height: 400px;
-    background-color: orange;
+    background-color: #ECECEA;
+    box-shadow: 5px 0px 5px grey;
+
 }
 
 #Profile-Horizontal-Split-Right{
     float: left;
     width: 85%;
     height: 400px;
-    background-color: blue;
+
 }
 
 #Information-Header{
@@ -451,12 +453,14 @@ body {
 }
 
 #Personal-Highest img {
-    margin:5%;
+    margin:2%;
     box-shadow: -2px 2px 5px grey;
     width: auto;
     height: auto;
     max-width: 90%;
     max-height:90%;
+    margin-bottom: -98%;
+    margin-left: 35%
 
 
 }

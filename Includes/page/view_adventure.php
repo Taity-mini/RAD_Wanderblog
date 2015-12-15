@@ -82,6 +82,16 @@ if(isset($_GET['id']))
     //$pictures_info = mysqli_fetch_array($pictures) or die(mysqli_error($db));
 
     //Comment Variables
+    $comment = $_POST['commentText'];
+    $userId = $_SESSION['userID'];
+    
+    if(isset($_POST['addCommentBtn'])){
+        
+       $insert = "INSERT INTO comments (comment, userID, pageID) VALUES ('$comment', '$userID', '$getid')";
+       $result = mysqli_query($db, $insert);
+       header("Refresh: 2; URL=\"" . $page1 . "\"");
+        
+    }
 
 
 
@@ -203,6 +213,48 @@ else
 <!--Comment codes Goes here!-->
 <h2>Trip Comments</h2>
 <br/>
+<table border="1" align = "Center">
+<tr>
+<form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
+    <td>Add Comment</td>
+    <td><textarea rows="4" cols="50" name = "commentText" id = "commentText">
+    Add your Comment 
+    </textarea>
+    <input type = "submit" name = "addCommentBtn" id = "addCommentBtn"/><br /></td>
+</form>
+</tr>
+</table>
+<table border="1" align = "Center" >
+    
+    <tr>
+        <td>User</td>
+        <td>Comment</td>
+    </tr>
+
+    <?php
+        
+    $query = "SELECT * FROM comments WHERE pageID = '$getid'";
+    $result1 = mysqli_query($db, $query);
+    
+    while($row = mysqli_fetch_assoc($result1)){
+        
+    $username = $row['userID'];
+        
+    $query1 = "SELECT userName FROM users where userID = '$username'";
+    $result2 = mysqli_query($db, $query1); 
+    
+    $row1 = mysqli_fetch_assoc($result2);
+     echo '<tr>';
+     echo '<td>'. strip_tags($row1['userName']) .'</td>';
+     echo '<td>'. strip_tags($row['comment']) .'</td>';
+     echo '</tr>';
+     
+        
+    }
+        
+        
+    ?>
+</table>
 <!--Comment codes Goes here!-->
 
 

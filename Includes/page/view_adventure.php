@@ -39,7 +39,7 @@ if(isset($_GET['id']))
     $user_info = mysqli_fetch_array($user) or die(mysqli_error($db));
 
     //Voting Variables
-     $vote = mysqli_query($db,"SELECT * FROM `vote` WHERE PageID = '$pageID'");
+     $vote = mysqli_query($db,"SELECT * FROM `vote` WHERE pageID = '$pageID'");
 
     //Picture Variables
      $pictures = mysqli_query($db,"SELECT * FROM `picture_gallery_pages` WHERE PageID = '$pageID'") or die(mysqli_error($db));
@@ -135,12 +135,6 @@ if(isset($_GET['id']))
             <br />
  <h2>Tweets(based on trip tag)</h2>
             <ul id ="twitter">
-                <li>lol
-                    <ul>
-                        <li>&nbsp;lol<br />
-                        </li>
-                    </ul>
-                </li>
             </ul>
 <!--Picture codes Goes here-->
 <br/>

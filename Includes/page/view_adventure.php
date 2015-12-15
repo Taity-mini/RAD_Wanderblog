@@ -40,6 +40,24 @@ if(isset($_GET['id']))
 
     //Voting Variables
      $vote = mysqli_query($db,"SELECT * FROM `vote` WHERE pageID = '$pageID'");
+     $vote_count = 0;
+     if(mysqli_num_rows($vote) == 0)
+     {
+        $vote_count = 0;
+     }
+     else
+     {
+        $vote_info = mysqli_fetch_array($user) or die(mysqli_error($db));
+     }
+
+     //if user votes up
+
+     if (isset($_POST['vote_up'])) {
+        echo"Vote up pressed!";
+     }
+
+     /*Voting Functions END*/
+
 
     //Picture Variables
      $pictures = mysqli_query($db,"SELECT * FROM `picture_gallery_pages` WHERE PageID = '$pageID'") or die(mysqli_error($db));
@@ -54,7 +72,6 @@ if(isset($_GET['id']))
     if (mysqli_num_rows($page) > 0)
     {
        ?>
-
   <script>
         window.onload = function() {
             var xhttp = new XMLHttpRequest();
@@ -116,18 +133,20 @@ if(isset($_GET['id']))
                 <td>
                     Votes:</td>
                 <td>
+                  <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
                     <table class="auto-style1">
                         <tr>
                             <td class="auto-style2">
                             <input type="submit" name="vote_up" alt="Vote UP" value="UP"/></td>
                         </tr>
                         <tr>
-                            <td class="auto-style2">Vote[]</td>
+                            <td class="auto-style2">Vote[<?php echo $vote_count ?>]</td>
                         </tr>
                         <tr>
                             <td><input type="submit" name="vote_down" alt="Vote Down" value="DOWN"/</td>
                         </tr>
                     </table>
+                    </form>
                 </td>
             </tr>
         </table>
@@ -350,4 +369,3 @@ else
     <?php
 }
 ?>
-

@@ -118,7 +118,8 @@ if(isset($_GET['id']))
                 <td>
                     <table class="auto-style1">
                         <tr>
-                            <td class="auto-style2"><input type="submit" name="vote_up" alt="Vote UP" value="UP"/></td>
+                            <td class="auto-style2">
+                            <input type="submit" name="vote_up" alt="Vote UP" value="UP"/></td>
                         </tr>
                         <tr>
                             <td class="auto-style2">Vote[]</td>

@@ -401,13 +401,17 @@ body {
     float: left;
     width: 200px;
     height: 200px;
+    margin-top: 5%;
     background-color: black;
 
 }
 
 #Profile-Picture img{
-    width: 95%;
-    height: 95%;
+    margin:5%;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
     background-color: red;
 }
 
@@ -437,6 +441,33 @@ body {
     height: 90%;
     
 }
+
+#Personal-Highest{
+    float:left;
+    width: 350px;
+    height: 225px;
+
+
+
+}
+
+#Personal-Highest img {
+    margin:5%;
+    box-shadow: -2px 2px 5px grey;
+
+
+}
+
+
+#Personal-Columns{
+    -webkit-column-count: 3;
+    -webkit-column-fill: auto;
+     column-count: 3;
+    column-fill: auto;
+
+
+}
+
 
 
 

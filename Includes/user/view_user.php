@@ -20,8 +20,14 @@
 
     	<div id = "Profile-Horizontal-Split-Right">
 
-    	<div id ="Information-Header"></div>
-    	<div id ="Information-Content"></div>
+    	<div id ="Information-Header"><h1>Person Name</h1><h2> </h2></div>
+    	<div id ="Information-Content">
+    	  <div id ="Personal-Columns">
+    		<div id = "Personal-Highest"><img src="/Res/temp4.jpg"></div>
+    		<div id = "Personal-Highest"><img src="/Res/temp4.jpg"></div>
+    		<div id = "Personal-Highest"><img src="/Res/temp4.jpg"></div>
+    	  </div>
+    	</div>
     	</div>
     </div>
 

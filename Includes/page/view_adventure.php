@@ -129,7 +129,7 @@ if (mysqli_num_rows($pictures) > 0)
         echo "<trstyle='background-color:#000000;'>";
         echo "<td>";
         echo "<img src='".$images['filePath']."' /></br>";
-        //echo "<p>" .$images['photo_order']. "</p>";
+        echo "<p>" .$images['photo_order']. "</p>";
         echo "</td>";
       }
      echo"</table>";

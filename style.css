@@ -317,14 +317,16 @@ animation: bannermove 25s linear infinite;
 }
 
 
-.4_Picture_Container{
-    background: url(./Res/temp1.jpg);
+.Trending_Picture_Container{
+    background: url(./Res/temp.jpg);
     position:relative;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
     margin-bottom: 20px;
     overflow: hidden;
-    background-color: black;
+    background-color: yellow;
 
      
 
@@ -370,8 +372,8 @@ animation: bannermove 25s linear infinite;
 }
 
 #Trending_Picture_Container img{
-    width: 50px;
-    height: 50px;
+    width: auto;
+    height: auto;
     border-radius: 15px;
     max-width: 100%;
     max-height: 100%;

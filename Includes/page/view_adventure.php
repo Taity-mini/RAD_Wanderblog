@@ -51,16 +51,15 @@ if(isset($_GET['id']))
 
                     var tweets = JSON.parse(xhttp.responseText);
                     var tweetstring = "";
-                    for (var i =0; i< 5 ; i++)
-                    {
-                        for (var i =0; i< tweets.length ; i++)
+
+                        for (var i =0; i< 5 ; i++)
                         {
 
                             tweetstring += "<li><b>" + tweets[i].name + "</b>";
                             tweetstring += "<ul><li>" + tweets[i].text + "</li></ul></li>";
 
                         }
-                    }
+
                     document.getElementById("twitter").innerHTML = tweetstring;
                 }
             };

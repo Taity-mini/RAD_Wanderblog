@@ -1,5 +1,3 @@
-<head>
-</head>
 <?php
 /**
  * Created by PhpStorm.
@@ -17,6 +15,7 @@ if(isset($_GET['id']))
     //Individual Adventures
     $page = mysqli_query($db,"SELECT * FROM `pages` WHERE PageID = '$getid'");
     $info = mysqli_fetch_array($page)  or die(mysqli_error($db));
+    $pageID = $info['PageID'];
 
 
     //Page Variables
@@ -30,8 +29,8 @@ if(isset($_GET['id']))
     $user_info = mysqli_fetch_array($user) or die(mysqli_error($db));
 
     //Picture Variables
-
-
+    $pictures = mysqli_query($db,"SELECT * FROM `picture_gallery_pages` WHERE PageID = '$pageID'");
+    $user_info = mysqli_fetch_array($user) or die(mysqli_error($db));
 
     //Comment Variables
 
@@ -51,13 +50,11 @@ if(isset($_GET['id']))
 
                     var tweets = JSON.parse(xhttp.responseText);
                     var tweetstring = "";
-
+                        //Limit tweets by 5 and display in list
                         for (var i =0; i< 5 ; i++)
                         {
-
                             tweetstring += "<li><b>" + tweets[i].name + "</b>";
                             tweetstring += "<ul><li>" + tweets[i].text + "</li></ul></li>";
-
                         }
 
                     document.getElementById("twitter").innerHTML = tweetstring;
@@ -66,8 +63,8 @@ if(isset($_GET['id']))
             xhttp.open("GET", "http://rgunodeapp.azurewebsites.net/?q=<?php echo $info['tags'];?>", true);
             xhttp.send();
         }
-
     </script>
+
         <h1><?php echo $content_header ?></h1>
         <div id ="Content-inner">
 
@@ -119,11 +116,36 @@ if(isset($_GET['id']))
                     </ul>
                 </li>
             </ul>
-
-<h2>Trip Pictures</h2>
-
 <!--Picture codes Goes here-->
 <br/>
+<h2>Trip Pictures</h2>
+<?php
+
+if (mysqli_num_rows($pictures) > 0)
+{
+    $count = 0;
+    echo "<table border = '1'>";
+     while($picture_row = mysqli_fetch_array($pictures))
+      {
+        echo "<trstyle='background-color:#000000;'>";
+        echo "<td>";
+        echo "<img src='".$picture_row['filePath']."' />";
+        echo "</td>";
+      }
+     echo'</table>';
+
+}
+else
+{
+   echo("There's no pictures currently available for this trip.");
+}
+
+ ?>
+
+
+</br>
+
+
 <!--Comment codes Goes here!-->
 <h2>Trip Comments</h2>
 <br/>

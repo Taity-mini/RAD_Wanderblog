@@ -98,9 +98,9 @@ body {
 .Scroll_Banner img:hover{
     -webkit-transform: scale(1.6);
     transform: scale(1.6);
-    -webkit-animation: bannermove 10s linear infinite;
-    animation: bannermove 10s linear infinite;
-    box-shadow: 2px 2px 2px black 0 0 0 99999px rgb(128,128,128,.5);
+    -webkit-animation: bannermove -20s linear infinite;
+    animation: bannermove -20s linear infinite;
+    box-shadow: -2px 2px 5px grey;
     overflow: visible;
 }
 

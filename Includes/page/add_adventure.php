@@ -11,7 +11,7 @@ $error = false;
 //Country DropDown Queries
 $queryCountries = "SELECT countryID, country_name FROM countries ORDER BY countryid ";
 $mainResult = $db->query($queryCountries);
-$target_dir = "Res/";
+$target_dir = "./Res/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
@@ -87,7 +87,7 @@ if (!$error) {
             $array = mysqli_fetch_array($result2);
             $output = $array['pageID'];
             $name =  $_FILES["fileToUpload"]["name"];
-            $filePath = "Res/" . basename($name);
+            $filePath = "./Res/" . basename($name);
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
             $insert1 = "INSERT INTO picture_gallery_pages (filePath, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', $output)";
             $result1 = mysqli_query($db, $insert1) or die(mysqli_error($db));

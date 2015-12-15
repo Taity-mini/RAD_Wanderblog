@@ -133,6 +133,10 @@ if (!$error) {
                 </select>
             </td>
         </tr>
+            <tr>
+                <td>Tags</td>
+                <td><input maxlength="20" name="tags"  type="text" /></td>
+            </tr>
         <tr>
             <td>Trip Date</td>
             <td><input maxlength="10" name="trip_Date" id="datepicker"  type="text" /></td>

@@ -24,7 +24,6 @@ if(isset($_GET['id']))
 
     //User Variables
     $userID = $info['userID'];
-    echo "User ID" + $userID;
     $user = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$userID'");
     $user_info = mysqli_fetch_array($user) or die(mysqli_error($db));
 

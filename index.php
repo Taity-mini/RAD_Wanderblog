@@ -106,6 +106,12 @@ include("./includes/functions.php");
                     include("./Includes/page/view_adventure.php");
                     break;
 
+                //User profile
+                    case "view_user":
+                    $content_header = "User Profile";
+                    include("./Includes/user/view_user.php");
+                    break;
+
                 //Editing forms
 
                 case "edit_user":

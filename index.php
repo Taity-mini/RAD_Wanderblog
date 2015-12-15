@@ -97,7 +97,7 @@ include("./includes/functions.php");
                 //Adventure Pages
                  case "add_adventure":
                     $content_header = "Add Adventure";
-                    include("add_adventure.php");
+                    include("./Includes/page/add_adventure.php");
                     break;
 
                 case "adventure":

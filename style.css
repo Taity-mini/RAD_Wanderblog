@@ -100,7 +100,7 @@ body {
     transform: scale(2);
     -webkit-animation: bannermove -20s linear infinite;
     animation: bannermove -20s linear infinite;
-    box-shadow: 0px 0px 100px 10000px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 100px 10000px rgba(0, 0, 0, 0.80);
     
 }
 

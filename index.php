@@ -54,9 +54,9 @@ include("./includes/functions.php");
 
                 <?php } ?>
 
-                <li class="Adventure"><a href="./?page=add_adventure">Adventure</a>
+                <li class="Adventure"><a href="./?page=adventure">Adventure</a>
                     <ul>
-                        <li><a href="#">Author Search</a></li>
+                        <li><a href="./?page=add_adventure">Add Adventure</a></li>
                         <li><a href="#">News #3</a></li>
                     </ul>
                 </li>

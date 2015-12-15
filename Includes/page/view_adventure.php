@@ -8,7 +8,7 @@
 
 if(isset($_GET['id']))
 {
-    echo "IT works!";
+
     $getid = $_GET['id'];
     $error = false;
 
@@ -19,10 +19,9 @@ if(isset($_GET['id']))
 
     //Page Variables
     $content_header = $info['title'];
-    echo $content_header;
     $trip_Date =date('d/m/Y',strtotime($info['trip_Date']));
     $mod_date =date('d/m/Y',strtotime($info['mod_Date']));
- echo "IT works!";
+
     //User Variables
     $userID = $info['userID'];
     echo "User ID" + $userID;
@@ -41,13 +40,12 @@ if(isset($_GET['id']))
 //If there is an adventure then display it
     if (mysqli_num_rows($page) > 0)
     {
-    echo "IT works inside if sTATEMENTS!";
        ?>
 
         <h1><?php echo $content_header ?></h1>
         <div id ="Content-inner">
 
-        <table border="1">
+        <table border="1" align = "Center">
             <tr>
                 <td>
                     Author:</td>
@@ -57,8 +55,8 @@ if(isset($_GET['id']))
             <tr>
                 <td>
                     Trip Country</td>
-                <td>
-                    <?php echo countryName($db,$info['trip_country']);?>  </td>
+
+                    <?php echo countryName($db,$info['trip_country']);?>
             </tr>
             <tr>
                 <td>
@@ -80,12 +78,27 @@ if(isset($_GET['id']))
             </tr>
             <tr>
                 <td>
-                    Start Date:</td>
+                    Votes:</td>
                 <td>
-                    <?php echo $start_date ;?> </td>
+                    Vote code goes here! </td>
             </tr>
         </table>
+
+
+<!--Picture codes Goes here-->
+<h2>Trip Pictures</h2>
+
+<!--Picture codes Goes here-->
+<br/>
+<!--Comment codes Goes here!-->
+<h2>Trip Comments</h2>
+<br/>
+<!--Comment codes Goes here!-->
+
+
+
 </div>
+
 
 <?php
     }

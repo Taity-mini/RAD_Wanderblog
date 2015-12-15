@@ -63,7 +63,7 @@ if(isset($_GET['id']))
                     document.getElementById("twitter").innerHTML = tweetstring;
                 }
             };
-            xhttp.open("GET", "http://rgunodeapp.azurewebsites.net/?q=<?php echo countryNameTweets($db,$info['trip_country']);?>", true);
+            xhttp.open("GET", "http://rgunodeapp.azurewebsites.net/?q=<?php echo $info['tags'];?>", true);
             xhttp.send();
         }
 

@@ -29,7 +29,7 @@
 			<div class = "Scroll_Banner">
 			<img class ="Begining-img" src = "./Res/temp.jpg">
 			<div img src="./Res/temp3.jpg" alt="Coffee Shop" ></div>
-			<div img src="./Res/temp1.jpg" alt="Coffee Shop" ><header><h4>Votes</h4></header></div>
+			<img src="./Res/temp1.jpg" alt="Coffee Shop" ><header><h4>Votes</h4></header>
 			<div img src="./Res/temp2.jpg" alt="Coffee Shop" ><header><h4>Votes</h4></header></div>
 			<div img src="./Res/temp4.jpg" alt="Coffee Shop" ><header><h4>Votes</h4></header></div>
 			<div img src="./Res/temp3.jpg" alt="Coffee Shop" ><header><h4>Votes</h4></header></div>

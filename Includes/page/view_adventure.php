@@ -121,15 +121,14 @@ if(isset($_GET['id']))
 <h2>Trip Pictures</h2>
 <?php
 
-
 if (mysqli_num_rows($pictures) > 0)
 {
     print "<table border='1' cellspacing='0'>";
-     while($images = mysqli_fetch_array($users_table))
+     while($images = mysqli_fetch_array($pictures))
       {
         echo "<trstyle='background-color:#000000;'>";
         echo "<td>";
-        echo "<img src='".$images['filePath']."' /> </br>";
+        echo "<img src='".$images['filePath']."' /></br>";
         //echo "<p>" .$images['photo_order']. "</p>";
         echo "</td>";
       }

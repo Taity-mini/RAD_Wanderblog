@@ -16,8 +16,7 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
 
-if (isset($_POST["submit"]))
-{
+if (isset($_POST["submit"])){
 $fields = array('title', 'trip_country', 'trip_Date');
 
 foreach ($fields AS $fieldname) { //Loop trough each field
@@ -45,12 +44,6 @@ if (!$error) {
         echo $userID;
     }
     
-
-
-
-
-
-
      $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
      if($check !== false){
         echo "File is an image - " . $check["mime"] . ".";
@@ -98,16 +91,14 @@ if (!$error) {
             $result1 = mysqli_query($db, $insert1) or die(mysqli_error($db));
             echo "Adventure Succesfully Added.";
             }
-    }
+        }
         else{
              echo "User registration failed";
-
-    }
+            }
 
     }
 
     
-}
 }
 ?>
 <h1><?php echo $content_header ?></h1>

@@ -110,7 +110,7 @@ if(isset($_GET['id']))
         </table>
 
             <br />
- <h2>Tweets</h2>
+ <h2>Tweets(based on trip tag)</h2>
             <ul id ="twitter">
                 <li>lol
                     <ul>

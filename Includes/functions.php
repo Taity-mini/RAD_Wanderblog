@@ -29,6 +29,15 @@ function countryName($db, $id)
     echo '<td>' . $country_query . '</td>';
 }
 
+//Display Country Name based on ID
+
+function countryNameTweets($db, $id)
+{
+    $country_query = $db->query("SELECT country_name FROM countries WHERE countryID = '$id' limit 1")->fetch_object()->country_name;
+    return $country_query;
+}
+
+
 //Display Permission Name based on ID
 
 function groupName($db, $id)

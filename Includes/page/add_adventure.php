@@ -80,9 +80,11 @@ if (!$error) {
     } 
     else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', '$tags', '$userID', '$trip_Date', '$mod_Date')";
+            echo "entered 1";
+            $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', $tags , '$userID',  '$trip_Date', '$mod_Date')";
             $result = mysqli_query($db, $insert);
             if ($result) {
+            echo "entered 2";
             $query ="SELECT pageID FROM pages WHERE title = '$title' limit 1";
             $result2 = mysqli_query($db, $query);
             $array = mysqli_fetch_array($result2);

@@ -58,9 +58,10 @@ if (!$error) {
 }
 ?>
 <h1><?php echo $content_header ?></h1>
+<h2></h2>
 <div id ="Content-inner">
-    <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center" enctype="multipart/form-data"> 
-    <h2>Adventure Details</h2>
+    <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
+    <h3>Adventure Details</h3>
         <table border ="1" align="center">
         <tr>
             <td>Adventure Title</td>
@@ -82,13 +83,13 @@ if (!$error) {
                 </select>
             </td>
         </tr>
+            <tr>
+                <td>Tags</td>
+                <td><input type="text" name="tags" maxlength="60"></td>
+            </tr>
         <tr>
             <td>Trip Date</td>
             <td><input maxlength="10" name="trip_Date" id="datepicker"  type="text" /></td>
-        </tr>
-        <tr>
-            <td>Trip Images</td>
-            <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
         </tr>
         <tr>
             <td><input name="submit" style="text-align: center" type="submit" value="Add Adventure" /></td>
@@ -96,7 +97,9 @@ if (!$error) {
         </tr>
     </table>
         <br/>
-        <h2>Trip Pictures</h2>
+        <h3>Trip Pictures</h3>
+        
+
     </form>
     <br />
 </div>

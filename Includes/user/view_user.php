@@ -14,10 +14,10 @@
 
     <div id= "Profile-Content">
     	<div id = "Profile-Horizontal-Split-Left">
-    	<div id ="Profile-Picture"></div>
+    	<div id ="Profile-Picture"><img src="/Res/temp4.jpg"></div>
     	</div>
 
-    	
+
     	<div id = "Profile-Horizontal-Split-Right">
 
     	<div id ="Information-Header"></div>
@@ -34,21 +34,6 @@
     </div>
     <div id = "Adventure-Profile-Content">
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 

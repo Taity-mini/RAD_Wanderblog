@@ -87,6 +87,8 @@ body {
     
 }
 
+
+
 .Scroll_Banner img{
     max-width: 300px;
     max-height: 300px;
@@ -96,6 +98,8 @@ body {
 .Scroll_Banner img:hover{
     -webkit-transform: scale(1.6);
     transform: scale(1.6);
+    box-shadow: 2px 2px 2px black 0 0 0 99999px rgb(128,128,128,.5);
+    overflow: visible;
 }
 
 
@@ -380,12 +384,7 @@ animation: bannermove 25s linear infinite;
 
 }
 
-.Trending_Picture_Container img:hover{
-    box-shadow: 2px 2px 2px black 0 0 0 99999px rgb(128,128,128,.5);
-    overflow: visible;
 
-
-}
 
 #Footer
 {

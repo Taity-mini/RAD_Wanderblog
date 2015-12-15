@@ -134,7 +134,7 @@ animation: bannermove 25s linear infinite;
 
 
 #Welcome_Inner_Wrap{
-    width: 80%;
+    width: 100%;
 
     float: left;
 
@@ -298,8 +298,7 @@ animation: bannermove 25s linear infinite;
 {
     float: left;
     position: relative;
-    width:100%;
-
+    width:85%;
     height: 100%;
     margin-bottom:20px;
     margin-top:10px;
@@ -626,7 +625,7 @@ form{
 
 }
 
-.Content h2{
+#Content h2{
     text-align:center;
     color:#000000;
     border: 0;

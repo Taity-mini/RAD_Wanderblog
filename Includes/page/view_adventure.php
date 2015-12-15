@@ -1,3 +1,10 @@
+<head>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
+</head>
 <?php
 /**
  * Created by PhpStorm.
@@ -103,6 +110,16 @@ if(isset($_GET['id']))
                 <td></td>
             </tr>
         </table>
+
+
+            <table class="auto-style1">
+                <tr>
+                    <td>Tweets (based on adventure country</td>
+                </tr>
+                <tr>
+                    <td id="twitter"></td>
+                </tr>
+            </table>
 
 
 <!--Picture codes Goes here-->

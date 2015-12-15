@@ -80,6 +80,7 @@ if (!$error) {
     } 
     else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            echo "entered 1";
             $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', $tags , '$userID',  '$trip_Date', '$mod_Date')";
             $result = mysqli_query($db, $insert);
             if ($result) {

@@ -135,11 +135,6 @@ if (mysqli_num_rows($pictures) > 0)
      echo'</table>';
 
 }
-else
-{
-   echo("There's no pictures currently available for this trip.");
-}
-
  ?>
 
 

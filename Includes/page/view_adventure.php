@@ -59,8 +59,8 @@ if(isset($_GET['id']))
 
                     for (var i =0; i< tweets.length ; i++)
                     {
-                        tweetstring += "<h3>" + tweets[i].name + "</h3> </br>";
-                        tweetstring += "<p>"  + tweets[i].text + "</p>"
+                        tweetstring += "<td><h3>" + tweets[i].name + "</h3></td>";
+                        tweetstring += "<td><p>"  + tweets[i].text + "</p></td>"
                     }
                     document.getElementById("twitter").innerHTML = tweetstring;
                 }
@@ -112,11 +112,12 @@ if(isset($_GET['id']))
         </table>
 
 
-            <table class="auto-style1">
+            <table border="1" align = "Center">
                 <tr>
-                    <td>Tweets (based on adventure country</td>
+                    <td colspan="2">Tweets (based on adventure country)</td>
                 </tr>
-                <tr>
+                <tr id="twitter" >
+                    
                     <td id="twitter"></td>
                 </tr>
             </table>

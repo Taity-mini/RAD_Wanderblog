@@ -15,7 +15,7 @@
  * Date: 08/12/2015
  * Time: 11:53
  */
-
+session_start();
 if(isset($_GET['id']))
 {
 

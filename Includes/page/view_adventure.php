@@ -111,14 +111,6 @@ if(isset($_GET['id']))
 
             <br />
  <h2>Tweets</h2>
-            <ul>
-                <li>lol
-                    <ul>
-                        <li>&nbsp;lol</li>
-                    </ul>
-                </li>
-            </ul>
-
             <ul id ="twitter">
                 <li>lol
                     <ul>

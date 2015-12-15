@@ -1,9 +1,4 @@
 <head>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-    </style>
 </head>
 <?php
 /**
@@ -59,10 +54,10 @@ if(isset($_GET['id']))
 
                     for (var i =0; i< tweets.length ; i++)
                     {
-                        "<tr>"
-                        tweetstring += "<tr><td><h3>" + tweets[i].name + "</h3></td>";
-                        tweetstring += "<td><p>" + tweets[i].text + "</p></td>"
-                        "</tr>";
+                        
+                        tweetstring += "<li><b>" + tweets[i].name + "</b>";
+                        tweetstring += "<ul><li>" + tweets[i].text + "</li></ul></li>";
+                       
                     }
                     document.getElementById("twitter").innerHTML = tweetstring;
                 }
@@ -113,21 +108,25 @@ if(isset($_GET['id']))
             </tr>
         </table>
 
-
             <br />
-            <br />
-            <table border="1" align ="Center" >
-                <tr>
-                    <td>User</td>
-                    <td>Tweet</td>
-                </tr>
-                <aside id ="twitter">
-                
-                </aside>
-            </table>
+ <h2>Tweets</h2>
+            <ul>
+                <li>lol
+                    <ul>
+                        <li>&nbsp;lol</li>
+                    </ul>
+                </li>
+            </ul>
 
+            <ul id ="twitter">
+                <li>lol
+                    <ul>
+                        <li>&nbsp;lol<br />
+                        </li>
+                    </ul>
+                </li>
+            </ul>
 
-<!--Picture codes Goes here-->
 <h2>Trip Pictures</h2>
 
 <!--Picture codes Goes here-->

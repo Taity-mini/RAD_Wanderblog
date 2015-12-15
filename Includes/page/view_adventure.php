@@ -58,7 +58,13 @@ if(isset($_GET['id']))
 
         echo"Vote up pressed!";
         $voting_up = "INSERT INTO `vote` (`userID` ,`pageID` ,`vote_Count`)VALUES ('$current_user', '$pageID', '1')";
-        unset($_POST);
+        $vote_insert = mysqli_query($db, $voting_up) or die(mysqli_error($db));
+        if($vote_insert)
+        {
+            echo "Vote up yay!";
+        }
+
+        //unset($_POST);
 
      }
 

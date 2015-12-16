@@ -564,6 +564,7 @@ body {
 
 #Small-Img:hover #Big{
     left: 0px;
+    z-index: 6;
 
 }
 
@@ -582,7 +583,7 @@ body {
 
 #Big{
     position: absolute;
-    left: 9999999px;
+
     width: 100%;
     height: auto;
     max-width: 100%;
@@ -601,8 +602,8 @@ body {
 
 #Big-Main{
     position: absolute;
-    top:95px;
-    left: 0px;
+
+    left: 20px;
     width: 100%;
     height: 100%;
     z-index: 1;

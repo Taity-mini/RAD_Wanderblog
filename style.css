@@ -563,7 +563,7 @@ body {
 }
 
 #Small-Img:hover #Big{
-    left: 9999999px;
+    left: 0px;
 
 }
 
@@ -621,7 +621,7 @@ body {
     margin-top: -0.2%;
     overflow: hidden;
     float: left;
-    background-color:ECECEA;
+    background-color:#ECECEA;
 
 
 }

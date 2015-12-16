@@ -19,11 +19,13 @@
 
     	<div id = "Profile-Horizontal-Split-Left">
     	<div id ="Profile-Picture"><img src="/Res/temp4.jpg"></div>
+    	<div id ="Profile-bio"><h3>Bio</h3>Yo dawg my name's dave and i do stuff, things and other stuff.</div>
     	</div>
 
 
-    	<div id ="Information-Header"><h1>Person Name</h1><h2> </h2></div>
+    	<div id ="Information-Header"><h1>Dave DoStuff</h1><h2> </h2></div>
     	<div id ="Information-Content">
+    	<div id ="Adventure-Bio"><h3>Content Description</h3>My adventures consist of germany and elgin because i'm wiiiiild. God is love, Rev, Rob.</div>
     	  <div id ="Personal-Columns">
     		<div id = "Personal-Highest"><img src="/Res/temp4.jpg"></div>
     		<div id = "Personal-Highest"><img src="/Res/temp4.jpg"></div>
@@ -36,12 +38,35 @@
 
 
 
-    <div id = "Adventure-Profile-Content">
+    <div id = "Adventure-Profile-Content-0">
+    <div id = "Small-Img">
+    <img id = "Small" src="./Res/temp2.jpg">
+    <img id = "Big" src="./Res/temp2.jpg">
     </div>
-    <div id = "Adventure-Profile-Content">
+
+        <div id = "Small-Img">
+    <img id = "Small" src="./Res/temp3.jpg">
+    <img id = "Big" src="./Res/temp3.jpg">
     </div>
-    <div id = "Adventure-Profile-Content">
+
+
+        <div id = "Small-Img">
+    <img id = "Small" src="./Res/temp4.jpg">
+    <img id = "Big" src="./Res/temp4.jpg">
     </div>
+
+
+        <div id = "Small-Img">
+    <img id = "Small" src="./Res/temp1.jpg">
+    <img id = "Big" src="./Res/temp1.jpg">
+    </div>
+
+
+
+    </div>
+    <div id = "Adventure-Profile-Content-1">
+    </div>
+
 
 </div>
 

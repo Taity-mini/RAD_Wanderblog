@@ -553,7 +553,7 @@ body {
     float: left;
     width: 75px;
     height: 75px;
-    box-shadow: 2px 2px 1px grey;
+
 }
 
 #Small-Img:hover #Small{
@@ -566,6 +566,7 @@ body {
 
     -webkit-transform: scale(1,1);
     transform: scale(0.6,1);
+    box-shadow: 0px 0px 100px 10000px rgba(0, 0, 0, 0.80);
     z-index: 6;
     left: 0px;
 

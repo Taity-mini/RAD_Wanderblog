@@ -42,11 +42,15 @@ if (isset($_POST["group_submit"]))
 
       $group = "INSERT INTO `group` (`groupID` ,`groupName` ,`permissionID`)VALUES (NULL,  '$groupName',  '$permissionID')";
       $group_insert = mysqli_query($db, $group) or die(mysqli_error($db));
-      if ($group_insert) {
-          echo "Thank You! Group Successfully Added";
+      if ($group_insert)
+      {
+          echo "<script> alert('Group Added Successfully');</script>";
+          $admin_panel = $_SERVER['REQUEST_URI'];
+          header("Refresh: 2; URL=\"" . $admin_panel . "\"");
       } else {
-          echo "Group registration failed";
-
+          echo "<script> alert('Group Registration Failed');</script>";
+          $admin_panel = $_SERVER['REQUEST_URI'];
+          header("Refresh: 2; URL=\"" . $admin_panel . "\"");
       }
   }
 

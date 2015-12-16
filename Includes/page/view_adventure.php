@@ -15,11 +15,12 @@
  * Date: 08/12/2015
  * Time: 11:53
  */
-session_start();
+//session_start(); //comment out for now - session already started in index.php
 if(isset($_GET['id']))
 {
 
-    $getid = $_GET['id'];
+    //$getid = $_GET['id'];
+    $getid = htmlentities($_GET['id']);
     $error = false;
 
     //Individual Adventures
@@ -37,20 +38,18 @@ if(isset($_GET['id']))
     $userID = $info['userID'];
     $user = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$userID'");
     $user_info = mysqli_fetch_array($user) or die(mysqli_error($db));
-    $current_user = $_SESSION["userID"];
+    $current_user = $_SESSION["userID"]; //Current user logged in - differs from $userID which is adventure author!
 
-    //Voting Variables
-     $vote = mysqli_query($db,"SELECT * FROM `vote` WHERE pageID = '$pageID'");
+       /*Voting Functions START*/
+     $vote = mysqli_query($db,"SELECT SUM(vote_Count), userID, pageID FROM `votes` WHERE pageID = '$pageID'");
      $vote_count = 0;
-     if(mysqli_num_rows($vote) == 0)
+     if(mysqli_num_rows($vote) > 0)
      {
-        $vote_count = 0;
+        $vote_info = mysqli_fetch_array($vote) or die(mysqli_error($db));
+        $vote_count = $vote_info['SUM(vote_Count)'];
 
      }
-     else
-     {
-        $vote_info = mysqli_fetch_array($user) or die(mysqli_error($db));
-     }
+
 
      //if user votes up
 
@@ -61,7 +60,16 @@ if(isset($_GET['id']))
         $vote_insert = mysqli_query($db, $voting_up) or die(mysqli_error($db));
         if($vote_insert)
         {
-            echo "Vote up yay!";
+            $view_adventure = $_SERVER['REQUEST_URI'];
+            header("Refresh: 1; URL=\"" . $view_adventure . "\"");
+            echo "<script> alert('Voted up Successfully - Good one!');</script>";
+        }
+        else
+        {
+
+            $view_adventure = $_SERVER['REQUEST_URI'];
+            header("Refresh: 1; URL=\"" . $view_adventure . "\"");
+            echo "<script> alert('Vote up Unsuccessful');</script>";
         }
 
         //unset($_POST);
@@ -69,14 +77,24 @@ if(isset($_GET['id']))
      }
 
 
-     //if user votes up
+     //if user votes down
       if (isset($_POST['vote_down'])) {
         echo"Vote down pressed!";
-        $voting_up = "INSERT INTO `votes` (`userID` ,`pageID` ,`vote_Count`)VALUES ('$current_user', '$pageID', '-1')";
-        $vote_insert = mysqli_query($db, $voting_up) or die(mysqli_error($db));
+        $voting_down = "INSERT INTO `votes` (`userID` ,`pageID` ,`vote_Count`)VALUES ('$current_user', '$pageID', '-1')";
+        $vote_insert = mysqli_query($db, $voting_down) or die(mysqli_error($db));
          if($vote_insert)
         {
-            echo "Vote up meh :/!";
+
+            $view_adventure = $_SERVER['REQUEST_URI'];
+            header("Refresh: 2; URL=\"" . $view_adventure . "\"");
+            echo "<script> alert('Voted down- Thats a shame..');</script>";
+        }
+        else
+        {
+            echo "<script> alert('Voted down- Unsuccessful');</script>";
+            $view_adventure = $_SERVER['REQUEST_URI'];
+            header("Refresh: 2; URL=\"" . $view_adventure . "\"");
+
         }
      }
 
@@ -88,15 +106,20 @@ if(isset($_GET['id']))
     //$pictures_info = mysqli_fetch_array($pictures) or die(mysqli_error($db));
 
     //Comment Variables
-    $comment = $_POST['commentText'];
-    $userId = $_SESSION['userID'];
-    
+
+      if(isset($_POST['commentText']))
+      {
+        $comment = $_POST['commentText'];
+      }
+
+    //$userId = $_SESSION['userID']; Use $current_user instead ^_^
+
     if(isset($_POST['addCommentBtn'])){
-        
-       $insert = "INSERT INTO comments (comment, userID, pageID) VALUES ('$comment', '$userID', '$getid')";
+
+       $insert = "INSERT INTO comments (comment, userID, pageID) VALUES ('$comment', '$current_user', '$getid')";
        $result = mysqli_query($db, $insert);
-       header("Refresh: 2; URL=\"" . $page1 . "\"");
-        
+       header('Location: '.$_SERVER['REQUEST_URI']); //this should now refresh correctly :)
+
     }
 
 
@@ -167,6 +190,11 @@ if(isset($_GET['id']))
                 <td>
                     Votes:</td>
                 <td>
+                     <?php
+                    //If user hasn't voted yet then display form
+                    if (!hasUserVoted($db, $current_user, $pageID))
+                    {
+                    ?>
                   <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
                     <table class="auto-style1">
                         <tr>
@@ -174,13 +202,21 @@ if(isset($_GET['id']))
                             <input type="submit" name="vote_up" alt="Vote UP" value="UP"/></td>
                         </tr>
                         <tr>
-                            <td class="auto-style2">Vote[<?php echo $vote_count ?>]</td>
+                            <td class="auto-style2">Vote(s)[<?php echo $vote_count ?>]</td>
                         </tr>
                         <tr>
                             <td><input type="submit" name="vote_down" alt="Vote Down" value="DOWN"/</td>
                         </tr>
                     </table>
                     </form>
+                     <?php
+                     }
+                     //Otherwise just show vote counter
+                    else
+                     {
+                     echo "Vote(s)[$vote_count]";
+                     }
+                    ?>
                 </td>
             </tr>
         </table>
@@ -224,41 +260,41 @@ else
 <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
     <td>Add Comment</td>
     <td><textarea rows="4" cols="50" name = "commentText" id = "commentText">
-    Add your Comment 
+    Add your Comment
     </textarea>
     <input type = "submit" name = "addCommentBtn" id = "addCommentBtn"/><br /></td>
 </form>
 </tr>
 </table>
 <table border="1" align = "Center" >
-    
+
     <tr>
         <td>User</td>
         <td>Comment</td>
     </tr>
 
     <?php
-        
+
     $query = "SELECT * FROM comments WHERE pageID = '$getid'";
     $result1 = mysqli_query($db, $query);
-    
+
     while($row = mysqli_fetch_assoc($result1)){
-        
+
     $username = $row['userID'];
-        
+
     $query1 = "SELECT userName FROM users where userID = '$username'";
-    $result2 = mysqli_query($db, $query1); 
-    
+    $result2 = mysqli_query($db, $query1);
+
     $row1 = mysqli_fetch_assoc($result2);
      echo '<tr>';
      echo '<td>'. strip_tags($row1['userName']) .'</td>';
      echo '<td>'. strip_tags($row['comment']) .'</td>';
      echo '</tr>';
-     
-        
+
+
     }
-        
-        
+
+
     ?>
 </table>
 <!--Comment codes Goes here!-->

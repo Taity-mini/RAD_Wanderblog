@@ -22,7 +22,6 @@ if (isset($_POST["permission_submit"]))
 if (!$error)
 {
 
-
     foreach ($fields AS $fieldname) { //Loop trough each field
         $fieldname = $_POST[$fieldname]; //grab from form
         echo $fieldname;
@@ -55,11 +54,17 @@ if (!$error)
     //grab permission ID from permissions table
     if ($permissions_insert)
     {
-       echo "Permission Added Succesfully";
+        echo "<script> alert('Permission Added Successfully');</script>";
+        $admin_panel = $_SERVER['REQUEST_URI'];
+        header("Refresh: 2; URL=\"" . $admin_panel . "\"");
+
     }
     else
     {
-        echo"Permission Insert failed";
+        header("Refresh: 2; URL=\"" . $admin_panel . "\"");
+        echo "<script> alert('Permission Insert failed\"');</script>";
+        $admin_panel = $_SERVER['REQUEST_URI'];
+
     }
 }
 }

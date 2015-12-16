@@ -8,23 +8,33 @@
  */
 $getid = htmlentities($_GET['id']);
 $type = htmlentities($_GET['type']);
+echo $type;
 $msg ="";
 if (isset($type)) {
+    //echo "IT works here!";
     switch ($type) {
-
         case "group":
-            function delete_group($getid, $db)
-            {
                 $group_check = groupInUse($db, $getid, "Check");
+                echo $group_check;
 
-                $msg = "delete record";
-                if ($group_check) {
+                if ($group_check)
+                {
+                    $delete_exercises = mysqli_query($db,"DELETE FROM `group` WHERE groupID = '$getid'");
 
-                } else {
+                    if($delete_exercises)
+                    {
+                        $msg = "Delete group successful";
+                        echo "<script> alert('Group Added Successfully');</script>";
+                        $page = "./?page=admin";
+                        header("Refresh: 2; URL=\"" . $page . "\"");
+                    }
 
+                } else
+                {
+                    echo "<script> alert('Delete Failed Failed');</script>";
+                    $page = "./?page=admin";
+                    header("Refresh: 2; URL=\"" . $page . "\"");
                 }
-
-            }
             break;
 
         case "perm":
@@ -35,7 +45,7 @@ if (isset($type)) {
 
             break;
         case "user":
-            function delete_permissions($getid)
+            function delete_user($getid)
             {
                 //
 
@@ -52,7 +62,5 @@ if (isset($type)) {
 ?>
 <h1><?php echo $content_header ?></h1>
 <div id ="Content-inner">
-<?php
-echo $msg;
-?>
+<h3><?php echo $msg;?></h3>
 </div>

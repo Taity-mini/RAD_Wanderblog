@@ -50,16 +50,16 @@ function groupName($db, $id)
 //Check if group is in use (I.E are any users apart of this group)
 function groupInUse($db, $id, $type)
 {
-    $user_query = $db->query("SELECT groupID FROM users WHERE groupID = '$id' limit 1");
+    $user_query = $db->query("SELECT groupID FROM users WHERE groupID = '$id' limit 1") or die(mysqli_error($db));
     $count = mysqli_num_rows($user_query);
-    if ($type = "Row") {
+    if ($type == "Row") {
         if ($count == 0) {
             echo '<td><a href ="#" onclick="deleteGroup('.$id.')" >Delete</a></td>';
 
         } else {
             echo '<td> [Unavailable] </td>';
         }
-    } elseif ($type = "Check") {
+    } elseif ($type == "Check") {
         if ($count == 0) {
             return true;
 
@@ -114,6 +114,32 @@ function userMatch($user1, $user2)
 
 
 //Voting Functions
+
+//Check if standard user has voted already on an adventure (database, userid, pageID)
+function hasUserVoted($db, $userID, $pageID)
+{
+    $vote_query = $db->query("SELECT * FROM `votes` WHERE pageID = '$pageID' AND userID = '$userID'");
+    $count = mysqli_num_rows($vote_query);
+    if ($count >= 1)
+    {
+        return true;
+    }
+    else if($count == 0)
+    {
+        return false;
+    }
+
+}
+
+//Display the vote counter + buttons on adventure page
+function displayVotes($count)
+{
+
+}
+
+//Permissions Function - do to...
+
+
 
 
 ?>

@@ -16,7 +16,7 @@ $permissions_table = mysqli_query (($db),("SELECT * FROM group_permissions"));
 $groups_table = ("SELECT * FROM `group`");
 $groups = mysqli_query($db, $groups_table);
 
-//Permission Managment
+//Permission Management
 $permissions_table = ("SELECT * FROM group_permissions");
 $permissions = mysqli_query($db, $permissions_table);
 

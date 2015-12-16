@@ -11,6 +11,8 @@ $error = false;
 //Country DropDown Queries
 $queryCountries = "SELECT countryID, country_name FROM countries ORDER BY countryid ";
 $mainResult = $db->query($queryCountries);
+
+//File Upload Stuff
 $target_dir = "./Res/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -96,7 +98,7 @@ if (!$error) {
             echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
             $insert1 = "INSERT INTO picture_gallery_pages (filePath, photoDesc, pageID) VALUES ('". mysqli_real_escape_string($db, $filePath)."', '$desc', '$output')";
             $result1 = mysqli_query($db, $insert1) or die(mysqli_error($db));
-            echo "Adventure Succesfully Added.";
+            echo "Adventure Successfully Added.";
             }
     }
         else{
@@ -158,8 +160,6 @@ if (!$error) {
             <td><input type="reset" value="Reset" /></td>
         </tr>
     </table>
-        <br/>
-        <h2>Trip Pictures</h2>
     </form>
     <br />
 </div>

@@ -7,7 +7,7 @@
  * Edit Permissions (Admin)
  */
 
-$getid = $_GET['id'];
+$getid = htmlentities($_GET['id']);
 $error = false;
 
 $result = mysqli_query($db,"SELECT * FROM `group_permissions` WHERE permissionID = '$getid'");

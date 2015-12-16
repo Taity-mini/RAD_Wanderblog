@@ -563,10 +563,9 @@ body {
 }
 
 #Small-Img:hover #Big{
-    left: 25%;
-    top: 25%;
-    -webkit-transform: scale(2);
-    transform: scale(2);
+
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
     z-index: 6;
 
 }

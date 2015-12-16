@@ -59,6 +59,7 @@ include("./includes/functions.php");
                     <ul>
                         <li><a href="./?page=add_adventure">Add Adventure</a></li>
                         <li><a href="./?page=edit_adventure">Edit Adventure</a></li>
+                        <li><a href="./?page=search_adventure">Search Adventure</a></li>
                     </ul>
                 </li>
                 <?php
@@ -142,6 +143,13 @@ include("./includes/functions.php");
                     case "delete":
                     $content_header = "Delete Record";
                     include("./Includes/delete.php");
+                    break;
+
+                //Search Functions
+
+                case "search_adventure":
+                    $content_header = "Search Adventure";
+                    include("./Includes/page/search_adventure.php");
                     break;
 
 

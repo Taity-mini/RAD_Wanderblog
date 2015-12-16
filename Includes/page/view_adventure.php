@@ -251,15 +251,7 @@ else
  ?>
 
 
-<div id = "Adventure-Profile-Content-0">
-    <?php
-    while($images1 = mysqli_fetch_array($pictures))){
-    echo '<div id = "Small-Img">';
-    echo '<img id = "Big" src='".$images1['filePath']."'>';
-    echo '</div>';
-    }
-    ?>	
-    </div>
+
 
 
 

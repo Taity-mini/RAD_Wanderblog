@@ -21,7 +21,7 @@ $desc = $_POST['photoDesc'];
 
 if (isset($_POST["submit"]))
 {
-$fields = array('title', 'trip_country', 'tags', 'trip_Date');
+$fields = array('title', 'trip_country', 'bio', 'tags', 'trip_Date');
 
 foreach ($fields AS $fieldname) { //Loop trough each field
     if (!isset($_POST[$fieldname]) || empty($_POST[$fieldname])) {
@@ -41,8 +41,9 @@ if (!$error) {
 
     $title = $data[0];
     $trip_country = $data[1];
-    $tags = $data[2];
-    $trip_Date = date('Y-m-d', strtotime($data[3]));
+    $bio = $data[2];
+    $tags = $data[3];
+    $trip_Date = date('Y-m-d', strtotime($data[4]));
     $mod_Date = date('Y-m-d');
     if(!empty($_SESSION['userID'])){
         $userID = $_SESSION['userID'];
@@ -84,7 +85,7 @@ if (!$error) {
     else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "entered 1";
-            $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', '$tags' , '$userID',  '$trip_Date', '$mod_Date')";
+            $insert = "INSERT INTO pages (title,trip_country, bio, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', '$bio', '$tags' , '$userID',  '$trip_Date', '$mod_Date')";
             $result = mysqli_query($db, $insert);
             if ($result) {
             echo "entered 2";
@@ -138,6 +139,12 @@ if (!$error) {
                     ?>
                 </select>
             </td>
+        </tr>
+        <tr></tr>
+        td>Trip Bio</td>
+        <td>
+            <textarea rows="3" cols="22" name = "bio" id = "bio" maxlength = "500">Type here!</textarea>
+        </td>
         </tr>
             <tr>
                 <td>Tags</td>

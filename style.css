@@ -563,7 +563,10 @@ body {
 }
 
 #Small-Img:hover #Big{
-    left: 0px;
+
+    -webkit-transform: scale(1,1);
+    transform: scale(1,1);
+    z-index: 6;
 
 }
 
@@ -575,20 +578,18 @@ body {
 }
 
 #Small{
-    width: 75px;
-    height: 75px;
+    width: 0px;
+    height: 0px;
 
 }
 
 #Big{
     position: absolute;
-    left: 9999999px;
+    box-shadow: -2px 2px 5px black;
     width: 100%;
     height: auto;
     max-width: 100%;
     max-height: 100%;
-    -webkit-transition: top 1s ease;
-    transition: top 1s ease;
     z-index: 5;
 }
 
@@ -601,8 +602,8 @@ body {
 
 #Big-Main{
     position: absolute;
-    top:95px;
-    left: 0px;
+
+    left: 20px;
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -621,8 +622,8 @@ body {
     height: 400px;
     margin-top: -0.2%;
     overflow: hidden;
-    float: left;
-    background-color:#ECECEA;
+    float: right;
+
 
 
 }

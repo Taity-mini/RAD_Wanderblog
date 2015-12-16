@@ -584,13 +584,11 @@ body {
 
 #Big{
     position: absolute;
-
+    box-shadow: -2px 2px 5px black;
     width: 100%;
     height: auto;
     max-width: 100%;
     max-height: 100%;
-    -webkit-transition: top 1s ease;
-    transition: top 1s ease;
     z-index: 5;
 }
 
@@ -623,8 +621,8 @@ body {
     height: 400px;
     margin-top: -0.2%;
     overflow: hidden;
-    float: left;
-    background-color:#ECECEA;
+    float: right;
+
 
 
 }

@@ -543,7 +543,7 @@ body {
     margin-top: -0.2%;
     overflow: hidden;
     float: left;
-    background-color: #ECECEA;
+
 
 
 }
@@ -616,10 +616,12 @@ body {
 
 #Adventure-Profile-Content-1{
     width: 100%;
+    position: relative;
     height: 400px;
     margin-top: -0.2%;
+    overflow: hidden;
     float: left;
-    background-color: blue;
+    background-color:ECECEA;
 
 
 }

@@ -464,7 +464,7 @@ body {
 #Adventure-Bio{
 
     width: auto;
-    height: auto;
+    height: 150px;
     margin:5%;
 
 }
@@ -505,7 +505,7 @@ body {
 }
 
 #Personal-Highest img {
-    margin:2%;
+    margin-top:-36%;
     box-shadow: 2px 2px 1px grey;
     width: auto;
     height: auto;
@@ -517,9 +517,10 @@ body {
 }
 
 #Personal-Highest img:hover{
-    -webkit-transform: scale(5);
-    transform: scale(5);
-    box-shadow: 0px 0px 100px 10000px rgba(0, 0, 0, 0.25);
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
+    box-shadow: 0px 0px 100px 10000px rgba(0, 0, 0, 0.50);
+    z-index: 99999;
     
 }
 
@@ -536,9 +537,20 @@ body {
 
 #Adventure-Profile-Content-0{
     width: 100%;
-    height: 400%;
+    height: 400px;
+    margin-top: -0.2%;
     float: left;
     background-color: orange;
+
+
+}
+
+#Adventure-Profile-Content-1{
+    width: 100%;
+    height: 400px;
+    margin-top: -0.2%;
+    float: left;
+    background-color: blue;
 
 
 }

@@ -140,7 +140,7 @@ if (!$error) {
                 </select>
             </td>
         </tr>
-        <tr></tr>
+        <tr>
         td>Trip Bio</td>
         <td>
             <textarea rows="3" cols="22" name = "bio" id = "bio" maxlength = "500">Type here!</textarea>

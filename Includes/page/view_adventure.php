@@ -350,7 +350,7 @@ else
 
     echo    '<div id = "content-blob">';
     echo       '<div class = "Picture_Container">';
-    echo      		"<img src='".$picAdventure['filePath']."' />";
+    echo           '<a href="./?page=adventure&id=' . $rowPages['PageID'] . '"> <img src="'.$picAdventure['filePath'].'"/></a>';
     echo       '</div>';
     echo       '<div class = "Text_Container">'. $rowPages['bio'] .'</div>';
     echo    '</div>';

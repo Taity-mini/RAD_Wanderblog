@@ -3,13 +3,14 @@
  * Created by PhpStorm.
  * User: Andrew Tait (1504693)
  * Date: 16/12/2015
- * Time: 18:00
+ * Time: 21:11
+ * Search Author Form
  */
 
 $error = false;
 $display_results = false;
 
-if (isset($_POST['adventure'])) {
+if (isset($_POST['user'])) {
 
     if (!isset($_POST['find']) || empty($_POST['find']))
     {
@@ -22,21 +23,21 @@ if (isset($_POST['adventure'])) {
         $find = mysqli_real_escape_string($db, $_POST['find']);
         $field = mysqli_real_escape_string($db, $_POST['field']);
         echo $field;
-        if($field == "userID")
+        if($field == "groupID")
         {
             echo "Field check";
             //$result = mysqli_query($db,"SELECT userID FROM `users` WHERE userName = '$field'");
-            $userID="";
-            $userID = $db->query("SELECT `userID` FROM `users` WHERE userName LIKE '$find' limit 1")->fetch_object()->userID;
-            $find = $userID;
+            $userID = $db->query("SELECT `groupID` FROM `group` WHERE groupName = '$field'")->fetch_object()-groupID;
+            $field = $userID;
+            echo $field;
             $search_results = mysqli_query($db, "SELECT * FROM `pages` WHERE $field LIKE '%$find%'") or die(mysqli_error($db));
         }
 
-        elseif($field == "trip_country")
+        elseif($field == "country")
         {
             $country_query = $db->query("SELECT countryID FROM countries WHERE country_name LIKE '%$find%'")->fetch_object()->countryID;
             $find = $country_query;
-            $search_results = mysqli_query($db, "SELECT * FROM `pages` WHERE $field LIKE '%$find%'") or die(mysqli_error($db));
+            $search_results = mysqli_query($db, "SELECT * FROM `users` WHERE $field LIKE '%$find%'") or die(mysqli_error($db));
         }
 
         else
@@ -68,45 +69,45 @@ if (isset($_POST['adventure'])) {
 <div id ="Content-inner">
     <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
         Search for where: <Select name="field">
-            <Option value="title">Title</option>
-            <Option value="userID">Author</option>
-            <Option value="trip_country">Trip Country</option>
+            <Option value="userName">Author UserName</option>
+            <Option value="FirstName">First Name</option>
+            <Option value="LastName">Last Name</option>
+            <Option value="country">Country</option>
+
             <Option value="tags">Tags</option>
         </Select>
         = <input type="text" name="find" />
-        <input type="submit" name="adventure" value="Search" />
+        <input type="submit" name="user" value="Search" />
     </form>
 
 
-<?php
-if (isset($_POST['adventure'])) {
-    if ($display_results) {
-        print "
+    <?php
+    if (isset($_POST['user'])) {
+        if ($display_results) {
+            print "
         <table border='1' cellspacing='0'>
             <tr>
-                <td>Adventure ID</td>
-                <td>Adventure Title</td>
+                <td>Author ID</td>
+                <td>Author Name</td>
                 <td>Author</td>
                 <td>Trip Country</td>
                 <td>Tags</td>
                 <td>View Adventure</td>
             </tr>";
-        while ($info = mysqli_fetch_array($search_results)) {
-            echo "<trstyle='background-color:#000000;'>";
-            echo "<td>" . $info['PageID'] . "</td>";
-            echo "<td>" . $info['title'] . "</td>";
-            echo "<td>" . $info['userID'] . "</td>";
-            echo countryName($db, $info['trip_country']);
-            echo "<td>" . $info['tags'] . "</td>";
-            echo '<td><a href="./?page=adventure&id=' . $info['PageID'] . '">View</a></td>';
-            echo '<td><a href="./?page=adventure&id=' . $rowPages['PageID'] . '"> <img src="'.$picAdventure['filePath'].'"/></a></td>';
-
-            echo "</tr>";
+            while ($info = mysqli_fetch_array($search_results)) {
+                echo "<trstyle='background-color:#000000;'>";
+                echo "<td>" . $info['u'] . "</td>";
+                echo "<td>" . $info['title'] . "</td>";
+                echo "<td>" . $info['userID'] . "</td>";
+                echo countryName($db, $info['trip_country']);
+                echo "<td>" . $info['tags'] . "</td>";
+                echo '<td><a href="./?page=view_user&id=' . $info['userID'] . '"></a></td>';
+                echo "</tr>";
+            }
+            echo "</table>";
+        } elseif (!$display_results) {
+            echo "No results found";
         }
-        echo "</table>";
-    } elseif (!$display_results) {
-        echo "No results found";
     }
-}
-?>
+    ?>
 </div>

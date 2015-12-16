@@ -62,6 +62,7 @@ include("./includes/functions.php");
                         <li><a href="./?page=search_adventure">Search Adventure</a></li>
                     </ul>
                 </li>
+
                 <?php
                 //Check if session is not empty then check if they are an admin
                 if (isset($_SESSION['groupID'])  && $_SESSION['groupID'] != null ){
@@ -77,6 +78,12 @@ include("./includes/functions.php");
                 <?php
                      }}
                 ?>
+                <li class="Search"><a href="#">Search</a>
+                    <ul>
+                        <li><a href="./?page=search_adventure">Search Adventure</a></li>
+                        <li><a href="./?page=search_user">Search Adventure</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <div id="Wrapper">
@@ -152,7 +159,10 @@ include("./includes/functions.php");
                     include("./Includes/page/search_adventure.php");
                     break;
 
-
+                case "search_adventure":
+                    $content_header = "Search Author";
+                    include("./Includes/user/search_user.php");
+                    break;
 
             }
         }

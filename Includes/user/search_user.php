@@ -7,7 +7,7 @@
  * Search Author Form
  */
 
-/*$error = false;
+$error = false;
 $display_results = false;
 
 if (isset($_POST['user'])) {
@@ -61,9 +61,8 @@ if (isset($_POST['user'])) {
         //$info = mysqli_query("SELECT @N := @N +1 AS number, ID, Card_ID, Exercise, Weight, Sets_reps, exercise_type FROM weight_cards WHERE $field LIKE '%$find%' AND User_ID ='$row[ID]'") or die(mysql_error());
 
     }
-}*/
+}
 ?>
-
 
 <h1><?php echo $content_header ?></h1>
 <div id ="Content-inner">

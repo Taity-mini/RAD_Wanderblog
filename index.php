@@ -159,7 +159,7 @@ include("./includes/functions.php");
                     include("./Includes/page/search_adventure.php");
                     break;
 
-                case "search_adventure":
+                case "search_user":
                     $content_header = "Search Author";
                     include("./Includes/user/search_user.php");
                     break;

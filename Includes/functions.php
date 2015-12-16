@@ -139,7 +139,33 @@ function displayVotes($count)
 
 //Permissions Function - do to...
 
+//Check if user is an admin or not
+function isAdmin($db, $groupID)
+{
+    ///Get permission id from group table first
+    $group_query = $db->query("SELECT `permissionID` FROM `group` WHERE groupID = '$groupID' limit 1")->fetch_object()->permissionID;
+    $permID =  $group_query;
 
+    //Then get all the permission information
+    $permissions = mysqli_query($db,"SELECT  `create_Content` ,  `create_Comments` ,  `vote` ,  `edit_Vote_Admin` ,  `edit_Content` ,  `edit_Comments` ,  `view_Content` , `view_Comments`  FROM `group_permissions` WHERE permissionID = '$group_query'");
+    //$info = mysqli_fetch_array($permissions) or die;
+$count = 0;
+while ($row = mysqli_fetch_assoc($permissions)) {
+    foreach ($row as $key => $value) {
 
+        if ($value == 0) {
+           $count++;
+        }
+    }
+    }
+    if($count ==0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
 ?>

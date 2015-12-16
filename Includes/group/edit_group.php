@@ -51,7 +51,6 @@ if (isset($_POST['update'])) {
 
     }
 }
-
 ?>
 <h1><?php echo $content_header . "ID :" . $getid ?></h1>
 <div id="Content-inner">

@@ -58,13 +58,14 @@ include("./includes/functions.php");
                 <li class="Adventure"><a href="./?page=adventure">Adventure</a>
                     <ul>
                         <li><a href="./?page=add_adventure">Add Adventure</a></li>
-                        <li><a href="#">News #3</a></li>
+                        <li><a href="./?page=edit_adventure">Edit Adventure</a></li>
                     </ul>
                 </li>
                 <?php
                 //Check if session is not empty then check if they are an admin
                 if (isset($_SESSION['groupID'])  && $_SESSION['groupID'] != null ){
-                    if($_SESSION['groupID'] == 1){
+
+                    if(isAdmin($db,$_SESSION['groupID'])){
                 ?>
                     <li class="Admin"><a href="#">Admin</a>
                         <ul>
@@ -85,6 +86,7 @@ include("./includes/functions.php");
         if(isset($_GET['page'])) {
             switch ($_GET['page']) {
 
+             //Main Pages
                 case "register":
                     $content_header = "Register";
                     include("./register.php");
@@ -129,11 +131,20 @@ include("./includes/functions.php");
                     include("./Includes/group/edit_permission.php");
                     break;
 
+                case "edit_adventure":
+                    $content_header = "Edit Adventure";
+                    include("./Includes/page/edit_adventure.php");
+                    break;
+
+
+
                 //Delete Functions
                     case "delete":
                     $content_header = "Delete Record";
                     include("./Includes/delete.php");
                     break;
+
+
 
             }
         }

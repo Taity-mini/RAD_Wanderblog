@@ -558,15 +558,19 @@ body {
     width: auto;
     height: auto;
     max-width: 100%;
-    max-height: 60%;
+    max-height: 100%;
+}
+
+#Small{
+    width: 75px;
+    height: 75px;
+
 }
 
 #Big{
     position: absolute;
     top:260px;
     left: 20px;
-    width: 50%;
-    height: 50%;
 }
 
 #Big img{

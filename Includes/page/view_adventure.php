@@ -337,138 +337,27 @@ else
 <div id ="Content-inner">
 
 
-	<div id = "columns">
-        <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
+<div id = "columns">
+	
+<?php
+    $queryPages = "SELECT * FROM pages";
+    $resultPages = mysqli_query($db, $queryPages);
+    while($rowPages = mysqli_fetch_assoc($resultPages)){
+        
+    $pagePic = $rowPages['PageID'];
+    $picOne = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$pagePic'");
+    $picAdventure = mysqli_fetch_array($picOne);
 
+    echo    '<div id = "content-blob">';
+    echo       '<div class = "Picture_Container">';
+    echo      		"<img src='".$picAdventure['filePath']."' />";
+    echo       '</div>';
+    echo       '<div class = "Text_Container">'. $rowPages['bio'] .'</div>';
+    echo    '</div>';
 
-        <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-
-                <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-
-
-                        <div id = "content-blob">
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-
-                        <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp3.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-
-
-
-        <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-
-        <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp4.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-
-                <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp3.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-
-
-                        <div id = "content-blob">
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-
-                        <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp3.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-        <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp3.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-                <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp4.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-
-                        <div id = "content-blob">
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
-
-
-                        <div id = "content-blob">
-           <div class = "Picture_Container">
-           		<img src="./Res/temp3.jpg" >
-           </div>
-           <div class = "Text_Container">
-           Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb Rubarb
-           </div>
-        </div>
+    }
+?>
+        
 </div>
 </div>
 </div>

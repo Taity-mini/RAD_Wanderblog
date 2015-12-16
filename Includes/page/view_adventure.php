@@ -250,71 +250,15 @@ else
 
  ?>
 
+
 <div id = "Adventure-Profile-Content-0">
-    <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp2.jpg">
-    </div>
-
-        <div id = "Small-Img">
-
-    <img id = "Big" src="./Res/temp3.jpg">
-    </div>
-
-
-        <div id = "Small-Img">
-
-    <img id = "Big" src="./Res/temp4.jpg">
-    </div>
-
-
-        <div id = "Small-Img">
-
-    <img id = "Big" src="./Res/temp1.jpg">
-    </div>
-
-        <div id = "Small-Img">
-
-    <img id = "Big" src="./Res/temp2.jpg">
-    </div>
-
-        <div id = "Small-Img">
-
-    <img id = "Big" src="./Res/temp3.jpg">
-    </div>
-
-
-        <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp4.jpg">
-    </div>
-
-
-        <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp1.jpg">
-    </div>
-        <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp2.jpg">
-    </div>
-
-        <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp3.jpg">
-    </div>
-
-
-        <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp4.jpg">
-    </div>
-
-
-        <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp1.jpg">
-    </div>
-
-            <div id = "Small-Img">
-
-    </div>
-
-
-
+    <?php
+    while($images1 = mysqli_fetch_array($pictures))){
+    echo '<div id = "Small-Img">';
+    echo '<img id = "Big" src=".$images1['filePath'].">';
+    echo</div>
+    }
+    ?>	
     </div>
 
 

@@ -39,6 +39,30 @@
 
 
     <div id = "Adventure-Profile-Content-0">
+    <div id = "Small-Img">
+    <img id = "Small" src="./Res/temp2.jp">
+    <img id = "Big" src="./Res/temp2.jp">
+    </div>
+
+        <div id = "Small-Img">
+    <img id = "Small" src="./Res/temp3.jp">
+    <img id = "Big" src="./Res/temp3.jp">
+    </div>
+
+
+        <div id = "Small-Img">
+    <img id = "Small" src="./Res/temp4.jp">
+    <img id = "Big" src="./Res/temp4.jp">
+    </div>
+
+
+        <div id = "Small-Img">
+    <img id = "Small" src="./Res/temp1.jp">
+    <img id = "Big" src="./Res/temp1.jp">
+    </div>
+
+
+
     </div>
     <div id = "Adventure-Profile-Content-1">
     </div>

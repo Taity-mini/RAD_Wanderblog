@@ -491,6 +491,7 @@ body {
 #Information-Content{
     float: left;
     width: 85%;
+    overflow: hidden;
     height: 90%;
     
 }
@@ -537,12 +538,25 @@ body {
 
 #Adventure-Profile-Content-0{
     width: 100%;
+    position: relative;
     height: 400px;
     margin-top: -0.2%;
+    overflow: hidden;
     float: left;
     background-color: orange;
 
 
+}
+
+#Small-Img{
+    margin: 10px;
+    float: left;
+}
+
+#Big{
+    position: absolute;
+    top:260px;
+    left: 20px;
 }
 
 #Adventure-Profile-Content-1{
@@ -836,6 +850,7 @@ h2{
 #Content-inner
 {
     margin-left:10px;
+    display: inline-block;
     margin-right:10px;
     padding:10px;
     padding-top: 0px;

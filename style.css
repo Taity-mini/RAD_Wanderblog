@@ -516,11 +516,12 @@ body {
 
 }
 
-#Personal-Highest img:hover{
+#Personal-Highest img:focus{
     -webkit-transform: scale(2.5);
     transform: scale(2.5);
     box-shadow: 0px 0px 100px 10000px rgba(0, 0, 0, 0.50);
     z-index: 99999;
+    overflow: visible;
     
 }
 

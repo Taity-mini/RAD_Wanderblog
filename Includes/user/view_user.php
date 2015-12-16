@@ -27,9 +27,9 @@
     	<div id ="Information-Content">
     	<div id ="Adventure-Bio"><h3>Content Description</h3>My adventures consist of germany and elgin because i'm wiiiiild. God is love, Rev, Rob.</div>
     	  <div id ="Personal-Columns">
-    		<div id = "Personal-Highest"><img src="/Res/temp4.jpg"></div>
-    		<div id = "Personal-Highest"><img src="/Res/temp4.jpg"></div>
-    		<div id = "Personal-Highest"><img src="/Res/temp4.jpg"></div>
+    		<div id = "Personal-Highest" tabindex ="0"><img src="/Res/temp4.jpg"></div>
+    		<div id = "Personal-Highest" tabindex ="0"><img src="/Res/temp4.jpg"></div>
+    		<div id = "Personal-Highest" tabindex ="0"><img src="/Res/temp4.jpg"></div>
     	  </div>
     	</div>
     	</div>

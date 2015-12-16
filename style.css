@@ -491,7 +491,6 @@ body {
 #Information-Content{
     float: left;
     width: 85%;
-    overflow: hidden;
     height: 90%;
     
 }
@@ -570,7 +569,7 @@ body {
     height: 50%;
 }
 
-#Big{
+#Big img{
     width: auto;
     height: auto;
     max-width: 100%;

@@ -81,7 +81,7 @@ include("./includes/functions.php");
                 <li class="Search"><a href="#">Search</a>
                     <ul>
                         <li><a href="./?page=search_adventure">Search Adventure</a></li>
-                        <li><a href="./?page=search_user">Search Adventure</a></li>
+                        <li><a href="./?page=search_user">Search User</a></li>
                     </ul>
                 </li>
             </ul>

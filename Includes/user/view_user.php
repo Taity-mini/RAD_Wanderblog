@@ -13,7 +13,6 @@ $profileQuery = mysqli_query($db, "SELECT * FROM users WHERE userID = '$UserID1'
 
 $pageDetails = mysqli_query($db, "SELECT * FROM pages WHERE userID = '$UserID1' ORDER BY PageID ASC" );
 
-$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
 
 $userDetails = mysqli_fetch_array($profileQuery);
 
@@ -36,7 +35,7 @@ $userDetails = mysqli_fetch_array($profileQuery);
     	</div>
 
 
-    	<div id ="Information-Header"><h1><?php echo $userDetails['first_Name'] . " " . $userDetails['last_Name']; ?></h1><h2></h2></div>
+    	<div id ="Information-Header"><h1><?php echo $userDetails['first_Name'] . " " . $userDetails['last_Name']; ?></h1></div>
     	<div id ="Information-Content">
     	<div id ="Adventure-Bio"><h3>My Trips</h3></div>
     	  <div id ="Personal-Columns">
@@ -58,19 +57,17 @@ $userDetails = mysqli_fetch_array($profileQuery);
 
 
     <div id = "Adventure-Profile-Content-0">
+    <?php
+    $pageDetails1 = mysqli_query($db, "SELECT * FROM pages WHERE userID = '$UserID1' ORDER BY PageID ASC" );
+             while($pictures1 = mysqli_fetch_array($pageDetails1)){
+    	        $picsID1 = $pictures1['PageID'];
+    	        $getPics1 = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID1'");
+    	        while($images1 = mysqli_fetch_array($getPics1)){
+        		    echo '<div  id = "Small-Img" ><img id = "Big" src="'.$images1['filePath'].'"></div>';
+    	        }
+    	    }
+    ?>
     
-    <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp2.jpg">
-    </div>
-
-    
-
-
-    </div>
-    
-
-
-
     </div>
     </div>
 

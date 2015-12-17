@@ -109,13 +109,12 @@ include("./includes/functions.php");
 
                 //Adventure Pages
                  case "add_adventure":
-
+                     //Login only for valid accounts
                      if(!empty($_SESSION['username'])){
                          $content_header = "Add Adventure";
                          include("./Includes/page/add_adventure.php");
                      }
-                     $content_header = "Error 403";
-                     include("./Includes/error/403.php");
+                     header("Location: index.php");
                     break;
 
                 case "adventure":
@@ -169,6 +168,14 @@ include("./includes/functions.php");
                 case "search_user":
                     $content_header = "Search Author";
                     include("./Includes/user/search_user.php");
+                    break;
+
+                //Error Pages
+
+                //Forbidden
+                case "403":
+                    $content_header = "Error 403";
+                    include("./Includes/error/403.php");
                     break;
 
             }

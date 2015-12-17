@@ -192,6 +192,7 @@ if(isset($_GET['id']))
                 <td>
                      <?php
                     //If user hasn't voted yet then display form
+                    if(!empty($_SESSION['username'])){
                     if (!hasUserVoted($db, $current_user, $pageID))
                     {
                     ?>
@@ -210,6 +211,7 @@ if(isset($_GET['id']))
                     </table>
                     </form>
                      <?php
+                     }
                      }
                      //Otherwise just show vote counter
                     else

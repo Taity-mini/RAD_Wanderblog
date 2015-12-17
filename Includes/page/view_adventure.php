@@ -278,6 +278,11 @@ if(!empty($_SESSION['username'])){
     <tr>
         <td>User</td>
         <td>Comment</td>
+        <?php
+          if(empty($_SESSION['username'])){
+         echo  '<td>Edit</td>';
+         }
+         ?>
         <td>Edit</td>
     </tr>
 
@@ -297,7 +302,10 @@ if(!empty($_SESSION['username'])){
      echo '<tr>';
      echo '<td>'. strip_tags($row1['userName']) .'</td>';
      echo '<td>'. strip_tags($row['comment']) .'</td>';
-     echo '<td><a href="./?page=edit_comment&id='. $row['commentID'] .'">Edit</a></td>';
+       if($username == $current_user){
+            echo '<td><a href="./?page=edit_comment&id='. $row['commentID'] .'">Edit</a></td>';
+        }
+        echo '</tr>';
      echo '</tr>';
 
 

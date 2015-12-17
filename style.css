@@ -23,20 +23,20 @@ body {
 #columns{
     -webkit-column-count: 5;
     -webkit-column-fill: auto;
+    min-height: 500px
 
 
 }
 
 #content-blob{
     display: inline-table;
-    margin:5%;
+    margin: 5%;
     margin-left: 3%;
-    padding:2%;
+    padding: 2%;
     padding-top: 0.98%;
-    max-height: 500px;
+    min-height: 260px;
     background-color: #ECECEA;
     box-shadow: -2px 2px 5px grey;
-    
 
 
 }
@@ -914,6 +914,7 @@ h2{
     margin-left:10px;
     display: inline-block;
     margin-right:10px;
+    width: 95%;
     padding:10px;
     padding-top: 0px;
     background-color: #f6f6f6;

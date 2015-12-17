@@ -643,7 +643,7 @@ body {
 
 
 #Comment-Section{
-    width: 100%;
+    width: 95%;
     height: auto;
     display: inline-block;
     float: left;
@@ -654,8 +654,8 @@ body {
 
 #Comment-Header{
     width: 100%;
-
-    height: 80px;
+    margin-left: 0.5%;
+    height: auto;
     float: left;
     display: inline-block;
 
@@ -681,8 +681,10 @@ body {
 }
 
 #Comment-1{
-    width: 100%;
+    width: 99%;
+    margin-left: 0.5%;
     height: auto;
+    box-shadow: -3px 2px 2px grey;
     display: inline-block;
 }
 
@@ -691,6 +693,7 @@ body {
     width: 15%;
     height: auto;
     float: left;
+    margin: 0.4%;
 
 
 }
@@ -698,6 +701,8 @@ body {
 #User-Comment{
     width: 84%;
     height: auto;
+    border-left: aliceblue;
+    border-left-style: inset;
     float: right;
 
 

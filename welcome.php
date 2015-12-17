@@ -44,7 +44,7 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 					$picsID = $pictures['pageID'];
 					$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
 					while($images = mysqli_fetch_array($getPics)){
-						if($count = 1)
+						if($count == 1)
 						{
 							echo '<img class="Begining-img" src="'.$images['filePath'].'" alt = "' . $pictures['title'] . '">';
 						}

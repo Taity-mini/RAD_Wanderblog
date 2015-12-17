@@ -38,23 +38,22 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 			<div class = "Scroll_Banner">
 				<?php
 
+					for($i = 0; $i < 3; $i++)
+					{
+						$count = 1;
 
-					$count = 1;
-				while($pictures = mysqli_fetch_array($vote)){
+				while($pictures = mysqli_fetch_array($vote)) {
 					$picsID = $pictures['pageID'];
 					$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
-					while($images = mysqli_fetch_array($getPics)){
-						if($count == 1)
-						{
-							echo '<img class="Begining-img" src="'.$images['filePath'].'" alt = "' . $pictures['title'] . '">';
-						}
-						else
-						{
-							echo '<img src="'.$images['filePath'].'" alt = "' . $pictures['title'] . '">';
+					while ($images = mysqli_fetch_array($getPics)) {
+						if ($count == 1) {
+							echo '<img class="Begining-img" src="' . $images['filePath'] . '" alt = "' . $pictures['title'] . '">';
+						} else {
+							echo '<img src="' . $images['filePath'] . '" alt = "' . $pictures['title'] . '">';
 						}
 						$count++;
 					}
-				}
+				}}
 				?>
 			</div>
 		</div>

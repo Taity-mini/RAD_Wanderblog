@@ -38,8 +38,7 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 			<div class = "Scroll_Banner">
 				<?php
 
-				for($i = 0; $i < 3; $i++)
-				{
+
 					$count = 1;
 				while($pictures = mysqli_fetch_array($vote)){
 					$picsID = $pictures['pageID'];
@@ -55,7 +54,7 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 						}
 						$count++;
 					}
-				}}
+				}
 				?>
 			</div>
 		</div>

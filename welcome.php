@@ -11,7 +11,7 @@ $queryPages = "SELECT * FROM pages";
 $resultPages = mysqli_query($db, $queryPages);
 $queryPages  = "SELECT * FROM votes GROUP BY ";
 
-$vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc limit 5");
+$vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc");
 
 
 

@@ -147,7 +147,9 @@ body {
 
 .Text_Container{
     position:relative;
-    width: 250px;
+    width: 90%;
+    min-height: 50px;
+    margin-left: 3%;
     overflow: hidden;
     
 
@@ -180,7 +182,7 @@ body {
 
 #Welcome-content-blob{
     display: inline-block;
-    width: 90%;
+    width: 100%;
     margin:5%;
     height: 600px;
     margin-left: 3%;
@@ -790,7 +792,7 @@ Code obtained then modified via http://css-snippets.com/drop-down-navigation/
 
 @media screen and (max-width: 1000px) {
     #columns{
-        -webkit-column-count: 2;
+        /*-webkit-column-count: 2;*/
 
 
 

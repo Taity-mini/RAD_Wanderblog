@@ -214,10 +214,10 @@ if(isset($_GET['id']))
                      }
                      }
                      //Otherwise just show vote counter
-                    else
-                     {
+                    elseif ((empty($_SESSION['username']))){
                      echo "Vote(s)[$vote_count]";
-                     }
+                    }
+
                     ?>
                 </td>
             </tr>

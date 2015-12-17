@@ -64,7 +64,7 @@ if (isset($_POST["update"])) {
 <div id ="Content-inner">
     <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
         <td>Add Comment</td>
-        <td><textarea rows="4" cols="50" name = "commentText" id = "commentText" value =""><?php echo htmlentities($info['comment']);?></textarea>
+        <td><textarea rows="4" cols="50" name = "comment"  value =""><?php echo htmlentities($info['comment']);?></textarea>
             <input type = "submit" name = "update"><br /></td>
     </form>
 

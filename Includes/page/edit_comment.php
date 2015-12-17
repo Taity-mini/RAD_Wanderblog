@@ -51,7 +51,7 @@ if (isset($_POST["update"])) {
             echo "<script> alert('Adventure comment Updated Successfully');</script>";
             $pageID = $info['pageID'];
             $return = "./?page=adventure&id=" + $pageID;
-            header("Location:" .'$return');
+            header("Location:" .$return);
             //header("Refresh: 2; URL=\"" . $return . "\"");
         } else {
             echo "<script> alert('Adventure Comment Update Failed');</script>";

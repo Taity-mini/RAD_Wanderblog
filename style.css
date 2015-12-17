@@ -694,7 +694,7 @@ body {
 
 
 #User{
-    width: 15%;
+    width: 12%;
     height: auto;
     float: left;
     margin: 0.4%;
@@ -704,6 +704,7 @@ body {
 
 #User-Comment{
     width: 84%;
+    min-height: 35px;
     height: auto;
     border-left: aliceblue;
     border-left-style: inset;

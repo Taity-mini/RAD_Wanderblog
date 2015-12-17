@@ -163,7 +163,49 @@ if(isset($_GET['id']))
 
         <div id = "Profile-Horizontal-Split-Left">
         <div id ="Profile-Picture"><img src="/Res/temp4.jpg"></div>
-        <div id ="Profile-bio"><h3>Bio</h3>Yo dawg my name's dave and i do stuff, things and other stuff.</div>
+        <div id ="Profile-bio">
+        <h3>Dave DoStff</h3>
+        Trip Country:<br/><?php echo countryName($db,$info['trip_country']);?><br/>
+        Tags:<br/><?php echo $info['tags'];?><br/>
+        Trip Date:<br/><?php echo $trip_Date;?><br/>
+        Last Update:<br/><?php echo  $mod_date;?> <br/>
+        Votes:<br/>
+         <?php
+                    //If user hasn't voted yet then display form
+                    if(!empty($_SESSION['username'])){
+                    if (!hasUserVoted($db, $current_user, $pageID))
+                    {
+                    ?>
+                  <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
+                    <table class="auto-style1">
+                        <tr>
+                            <td class="auto-style2">
+                            <input type="submit" name="vote_up" alt="Vote UP" value="UP"/></td>
+                        </tr>
+                        <tr>
+                            <td class="auto-style2">Vote(s)[<?php echo $vote_count ?>]</td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" name="vote_down" alt="Vote Down" value="DOWN"/</td>
+                        </tr>
+                    </table>
+                    </form>
+                     <?php
+                     }
+                     else
+                     {
+                         echo "Vote(s)[$vote_count]";
+                     }
+                     }
+                     //Otherwise just show vote counter
+                    elseif((empty($_SESSION['username']))){
+                     echo "Vote(s)[$vote_count]";
+                    }
+
+                    ?>
+
+
+        </div>
         </div>
 
 

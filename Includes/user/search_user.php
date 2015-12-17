@@ -85,6 +85,7 @@ if (isset($_POST['user'])) {
         <table border='1' cellspacing='0'>
             <tr>
                 <td>Author ID</td>
+                <td>Author Group</td>
                 <td>Author Alias</td>
                 <td>Author First Name</td>
                 <td>Author Last Name</td>

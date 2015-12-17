@@ -57,9 +57,11 @@ include("./includes/functions.php");
 
                 <li class="Adventure"><a href="./?page=adventure">Adventure</a>
                     <ul>
-                        <li><a href="./?page=add_adventure">Add Adventure</a></li>
-                        <li><a href="./?page=edit_adventure">Edit Adventure</a></li>
-                        <li><a href="./?page=search_adventure">Search Adventure</a></li>
+                        <?php if(!empty($_SESSION['username'])){
+                           echo'<li><a href="./?page=add_adventure">Add Adventure</a></li>';
+                          // echo '<li><a href="./?page=edit_adventure">Edit Adventure</a></li>';
+                        }
+                        ?>
                     </ul>
                 </li>
 
@@ -107,8 +109,13 @@ include("./includes/functions.php");
 
                 //Adventure Pages
                  case "add_adventure":
-                    $content_header = "Add Adventure";
-                    include("./Includes/page/add_adventure.php");
+
+                     if(!empty($_SESSION['username'])){
+                         $content_header = "Add Adventure";
+                         include("./Includes/page/add_adventure.php");
+                     }
+                     $content_header = "Error 403";
+                     include("./Includes/error/403.php");
                     break;
 
                 case "adventure":

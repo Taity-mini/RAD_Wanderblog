@@ -247,33 +247,6 @@ if(isset($_GET['id']))
 
     </div>
 
-        <div id = "Adventure-Profile-Content-0">
-    
-    <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp2.jpg">
-        <img id = "Big" src="./Res/temp2.jpg">
-            <img id = "Big" src="./Res/temp2.jpg">
-                <img id = "Big" src="./Res/temp2.jpg">
-    </div>
-
-    
-
-
-    </div>
-
-        <div id = "Adventure-Profile-Content-0">
-    
-    <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp2.jpg">
-        <img id = "Big" src="./Res/temp2.jpg">
-            <img id = "Big" src="./Res/temp2.jpg">
-                <img id = "Big" src="./Res/temp2.jpg">
-    </div>
-
-    
-
-
-    </div>
 
 <?php
 

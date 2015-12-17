@@ -47,9 +47,9 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 					$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
 					while ($images = mysqli_fetch_array($getPics)) {
 						if ($count == 1) {
-							echo '<img class="Begining-img" src="' . $images['filePath'] . '" alt = "' . $pictures['title'] . '">';
+							echo '<a href="./?page=adventure&id=' . $pictures['PageID'] . '"><img class="Begining-img" src="' . $images['filePath'] . '" alt = "' . $pictures['title'] . '"></a>';
 						} else {
-							echo '<img src="' . $images['filePath'] . '" alt = "' . $pictures['title'] . '">';
+							echo '<a href="./?page=adventure&id=' . $pictures['PageID'] . '"><img src="' . $images['filePath'] . '" alt = "' . $pictures['title'] . '"></a>';
 						}
 						$count++;
 					}
@@ -58,7 +58,6 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 			</div>
 		</div>
 	</div>
-
 
 </div>
 

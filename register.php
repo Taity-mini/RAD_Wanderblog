@@ -87,7 +87,7 @@ if (isset($_POST["submit"]))
                 $password = md5($password);
 
                 //Finally add users to db
-                $insert = "INSERT INTO users (userName,password, first_Name, last_Name, country, email, bio)VALUES ('$username','$password', '$FirstName' , '$LastName ',  '$country', '$email', '$bio')";
+                $insert = "INSERT INTO users (groupID,userName,password, first_Name, last_Name, country, email, bio)VALUES (21,'$username','$password', '$FirstName' , '$LastName ',  '$country', '$email', '$bio')";
                 $result = mysqli_query($db, $insert);
 
                 if ($result) {

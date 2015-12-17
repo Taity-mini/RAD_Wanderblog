@@ -23,7 +23,6 @@ body {
 #columns{
     -webkit-column-count: 5;
     -webkit-column-fill: auto;
-    min-height: 500px
 
 
 }
@@ -39,6 +38,7 @@ body {
     max-height: auto;
     min-height: 260px;
     background-color: #ECECEA;
+    max-width: 250px;
     box-shadow: -2px 2px 5px grey;
 
 

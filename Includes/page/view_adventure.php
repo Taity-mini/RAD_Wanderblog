@@ -164,7 +164,7 @@ if(isset($_GET['id']))
         <div id = "Profile-Horizontal-Split-Left">
         <div id ="Profile-Picture"><img src="/Res/temp4.jpg"></div>
         <div id ="Profile-bio">
-        <h3><?php echo $content_header ?></h3>
+        <h3><?php echo $user_info['first_Name']. " ". $user_info['last_Name']; ?></h3>
         <h2></h2>
         Trip Country:<br/><?php echo countryName($db,$info['trip_country']);?><br/>
         Tags:<br/><?php echo $info['tags'];?><br/>
@@ -210,9 +210,9 @@ if(isset($_GET['id']))
         </div>
 
 
-        <div id ="Information-Header"><h1>fix me<?php echo $info['title'];?></h1><h2> </h2></div>
+        <div id ="Information-Header"><h1><?php echo $info['title'];?></h1><h2> </h2></div>
         <div id ="Information-Content">
-        <div id ="Adventure-Bio"><h3>Content Description</h3>fix me<?php echo $info['bio'];?></div>
+        <div id ="Adventure-Bio"><h3>Content Description</h3><?php echo $info['bio'];?></div>
         </div>
         </div>
     </div>
@@ -245,7 +245,6 @@ if(isset($_GET['id']))
     
 
 
-    </div>
 
 
 <?php
@@ -291,6 +290,20 @@ if(!empty($_SESSION['username'])){
 <?php
 }
 ?>
+
+<div id = "Comment-Section">
+<div id = "Comment-Header">
+<div id = "Username">User</div>
+<div id = "Comment">Comment</div>
+</div>
+<div id = "Comment-1">
+<div id = "User">Robert</div>
+<div id = "User-Comment">CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite </div>
+
+
+</div>
+</div>
+
 <table border="1" align = "Center" >
 
     <tr>

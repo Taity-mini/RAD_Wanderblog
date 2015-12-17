@@ -297,7 +297,7 @@ if(!empty($_SESSION['username'])){
      echo '<tr>';
      echo '<td>'. strip_tags($row1['userName']) .'</td>';
      echo '<td>'. strip_tags($row['comment']) .'</td>';
-     echo '<td><a href="./?page=edit_comment&id='. $row1['commentID'] .'">Edit</a></td>';
+     echo '<td><a href="./?page=edit_comment&id='. $row['commentID'] .'">Edit</a></td>';
      echo '</tr>';
 
 

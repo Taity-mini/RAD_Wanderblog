@@ -11,7 +11,7 @@ $queryPages = "SELECT * FROM pages";
 $resultPages = mysqli_query($db, $queryPages);
 $queryPages  = "SELECT * FROM votes GROUP BY ";
 
-$vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc");
+$vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc limit 5");
 
 
 
@@ -56,18 +56,6 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 					}
 				}
 				?>
-				<img src="./Res/temp3.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp1.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp2.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp4.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp3.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp2.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp3.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp1.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp2.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp4.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp3.jpg" alt="Coffee Shop" >
-				<img src="./Res/temp2.jpg" alt="Coffee Shop" >
 			</div>
 		</div>
 	</div>

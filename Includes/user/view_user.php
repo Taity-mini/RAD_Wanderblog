@@ -13,10 +13,11 @@ $profileQuery = mysqli_query($db, "SELECT * FROM users WHERE userID = '$UserID1'
 
 $pageDetails = mysqli_query($db, "SELECT * FROM pages WHERE userID = '$UserID1' ORDER BY PageID ASC" );
 
+$profilePic =  mysqli_query($db, "SELECT * FROM picture_gallery_users WHERE userID = '$UserID1'");
 
 $userDetails = mysqli_fetch_array($profileQuery);
 
-
+$fetchProfilePic = mysqli_fetch_array($profilePic);
 
 ?>
 
@@ -30,7 +31,9 @@ $userDetails = mysqli_fetch_array($profileQuery);
     	<div id = "Profile-Horizontal-Split-Right">
 
     	<div id = "Profile-Horizontal-Split-Left">
-    	<div id ="Profile-Picture"><img src="/Res/temp4.jpg"></div>
+    	<?php
+    	echo '<div id ="Profile-Picture"><img src='.$fetchProfilePic['filePath'].'></div>';
+    	?>
     	<div id ="Profile-bio"><h3>Bio</h3><?php echo $userDetails['bio']; ?></div>
     	</div>
 

@@ -255,6 +255,10 @@ else
 <!--Comment codes Goes here!-->
 <h2>Trip Comments</h2>
 <br/>
+<?php
+//Only registered users can comment
+if(!empty($_SESSION['username'])){
+ ?>
 <table border="1" align = "Center">
 <tr>
 <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
@@ -266,6 +270,9 @@ else
 </form>
 </tr>
 </table>
+<?php
+}
+?>
 <table border="1" align = "Center" >
 
     <tr>

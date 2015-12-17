@@ -22,7 +22,7 @@ if (isset($_POST["submit"]))
 {
     //Get data from form
 
-    $fields = array('username', 'password', 'password2', 'email', 'email2', 'FirstName', 'LastName', 'country');
+    $fields = array('username', 'password', 'password2', 'email', 'email2', 'FirstName', 'LastName', 'country', 'bio');
 
 
     foreach ($fields AS $fieldname) { //Loop trough each field
@@ -52,6 +52,7 @@ if (isset($_POST["submit"]))
         $FirstName = $data[5];
         $LastName = $data[6];
         $country = $data[7];
+        $bio = $data[8];
 
         //Check if userExisits
         $userExists = "SELECT userName FROM users WHERE userName='$username'";
@@ -86,7 +87,7 @@ if (isset($_POST["submit"]))
                 $password = md5($password);
 
                 //Finally add users to db
-                $insert = "INSERT INTO users (userName,password, first_Name, last_Name, country, email)VALUES ('$username','$password', '$FirstName' , '$LastName ',  '$country', '$email')";
+                $insert = "INSERT INTO users (userName,password, first_Name, last_Name, country, email, bio)VALUES ('$username','$password', '$FirstName' , '$LastName ',  '$country', '$email', '$bio')";
                 $result = mysqli_query($db, $insert);
 
                 if ($result) {
@@ -179,6 +180,10 @@ if (isset($_POST["submit"]))
 
                     </select>
                 </td>
+            </tr>
+            <tr>
+                <td>Bio</td>
+                <td><textarea rows="3" cols="22" name = "bio" id = "bio" maxlength = "500">Type here!</textarea></td>
             </tr>
             <tr>
                 <td>

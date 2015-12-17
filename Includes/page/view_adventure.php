@@ -152,7 +152,7 @@ if(isset($_GET['id']))
         }
     </script>
 
-        <h1><?php echo $content_header ?></h1>
+        <h1>Trip</h1>
         <h2></h2>
         <div id ="Content-inner">
 
@@ -164,7 +164,7 @@ if(isset($_GET['id']))
         <div id = "Profile-Horizontal-Split-Left">
         <div id ="Profile-Picture"><img src="/Res/temp4.jpg"></div>
         <div id ="Profile-bio">
-        <h3>Dave DoStff</h3>
+        <h3><?php echo $content_header ?></h3>
         <h2></h2>
         Trip Country:<br/><?php echo countryName($db,$info['trip_country']);?><br/>
         Tags:<br/><?php echo $info['tags'];?><br/>
@@ -210,14 +210,9 @@ if(isset($_GET['id']))
         </div>
 
 
-        <div id ="Information-Header"><h1>Dave DoStuff omg</h1><h2> </h2></div>
+        <div id ="Information-Header"><h1><?php echo $info['Title'];?></h1><h2> </h2></div>
         <div id ="Information-Content">
-        <div id ="Adventure-Bio"><h3>Content Description</h3>My adventures consist of germany and elgin because i'm wiiiiild. God is love, Rev, Rob.</div>
-          <div id ="Personal-Columns">
-            <div id = "Personal-Highest" ><img src="/Res/temp4.jpg" tabindex ="0"></div>
-            <div id = "Personal-Highest" ><img src="/Res/temp4.jpg" tabindex ="0"></div>
-            <div id = "Personal-Highest" ><img src="/Res/temp4.jpg" tabindex ="0"></div>
-          </div>
+        <div id ="Adventure-Bio"><h3>Content Description</h3><?php echo $info['pages'];?></div>
         </div>
         </div>
     </div>

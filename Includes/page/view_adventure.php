@@ -165,11 +165,12 @@ if(isset($_GET['id']))
         <div id ="Profile-Picture"><img src="/Res/temp4.jpg"></div>
         <div id ="Profile-bio">
         <h3>Dave DoStff</h3>
+        <h2></h2>
         Trip Country:<br/><?php echo countryName($db,$info['trip_country']);?><br/>
         Tags:<br/><?php echo $info['tags'];?><br/>
         Trip Date:<br/><?php echo $trip_Date;?><br/>
         Last Update:<br/><?php echo  $mod_date;?> <br/>
-        Votes:<br/>
+        
          <?php
                     //If user hasn't voted yet then display form
                     if(!empty($_SESSION['username'])){

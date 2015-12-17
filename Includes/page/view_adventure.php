@@ -234,6 +234,24 @@ if(isset($_GET['id']))
                 <img id = "Big" src="./Res/temp2.jpg">
     </div>
 
+        <div id = "Adventure-Profile-Content-0">
+    
+    <div id = "Small-Img">
+    <img id = "Big" src="./Res/temp2.jpg">
+        <img id = "Big" src="./Res/temp3.jpg">
+            <img id = "Big" src="./Res/temp2.jpg">
+                <img id = "Big" src="./Res/temp2.jpg">
+    </div>
+
+        <div id = "Adventure-Profile-Content-0">
+    
+    <div id = "Small-Img">
+    <img id = "Big" src="./Res/temp2.jpg">
+        <img id = "Big" src="./Res/temp.jpg">
+            <img id = "Big" src="./Res/temp3.jpg">
+                <img id = "Big" src="./Res/temp2.jpg">
+    </div>
+
     
 
 

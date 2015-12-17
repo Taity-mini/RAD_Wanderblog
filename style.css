@@ -423,7 +423,7 @@ body {
     box-shadow: 15px 0px 4px -1.7px grey;
 }
 
-form{
+#Profile-bio form{
     margin-top: -0.99em;
     float: right;
 }

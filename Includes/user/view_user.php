@@ -36,7 +36,7 @@ $userDetails = mysqli_fetch_array($profileQuery);
     	</div>
 
 
-    	<div id ="Information-Header"><h1><?php echo $userDetails['first_Name'] . " " . $userDetails['last_Name']; ?></h1></div>
+    	<div id ="Information-Header"><h1><?php echo $userDetails['first_Name'] . " " . $userDetails['last_Name']; ?></h1><h2></h2></div>
     	<div id ="Information-Content">
     	<div id ="Adventure-Bio"><h3>My Trips</h3></div>
     	  <div id ="Personal-Columns">

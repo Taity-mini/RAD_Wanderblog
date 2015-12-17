@@ -153,79 +153,31 @@ if(isset($_GET['id']))
     </script>
 
         <h1><?php echo $content_header ?></h1>
+        <h2></h2>
         <div id ="Content-inner">
 
-        <table border="1" align = "Center">
-            <tr>
-                <td>
-                    Author:</td>
-                <td>
-                    <?php echo $user_info['userName']; ?> </td>
-            </tr>
-            <tr>
-                <td>
-                    Trip Country</td>
+        <div id= "Profile-Content">
+        
 
-                    <?php echo countryName($db,$info['trip_country']);?>
-            </tr>
-            <tr>
-                <td>
-                    Tags</td>
-                <td>
-                    <?php echo $info['tags'];?></td>
-            </tr>
-            <tr>
-                <td>
-                    Trip Date</td>
-                <td>
-                    <?php echo $trip_Date;?> </td>
-            </tr>
-            <tr>
-                <td>
-                    Last Updated</td>
-                <td>
-                    <?php echo  $mod_date;?> </td>
-            </tr>
-            <tr>
-                <td>
-                    Votes:</td>
-                <td>
-                     <?php
-                    //If user hasn't voted yet then display form
-                    if(!empty($_SESSION['username'])){
-                    if (!hasUserVoted($db, $current_user, $pageID))
-                    {
-                    ?>
-                  <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
-                    <table class="auto-style1">
-                        <tr>
-                            <td class="auto-style2">
-                            <input type="submit" name="vote_up" alt="Vote UP" value="UP"/></td>
-                        </tr>
-                        <tr>
-                            <td class="auto-style2">Vote(s)[<?php echo $vote_count ?>]</td>
-                        </tr>
-                        <tr>
-                            <td><input type="submit" name="vote_down" alt="Vote Down" value="DOWN"/</td>
-                        </tr>
-                    </table>
-                    </form>
-                     <?php
-                     }
-                     else
-                     {
-                         echo "Vote(s)[$vote_count]";
-                     }
-                     }
-                     //Otherwise just show vote counter
-                    elseif((empty($_SESSION['username']))){
-                     echo "Vote(s)[$vote_count]";
-                    }
+        <div id = "Profile-Horizontal-Split-Right">
 
-                    ?>
-                </td>
-            </tr>
-        </table>
+        <div id = "Profile-Horizontal-Split-Left">
+        <div id ="Profile-Picture"><img src="/Res/temp4.jpg"></div>
+        <div id ="Profile-bio"><h3>Bio</h3>Yo dawg my name's dave and i do stuff, things and other stuff.</div>
+        </div>
+
+
+        <div id ="Information-Header"><h1>Dave DoStuff</h1><h2> </h2></div>
+        <div id ="Information-Content">
+        <div id ="Adventure-Bio"><h3>Content Description</h3>My adventures consist of germany and elgin because i'm wiiiiild. God is love, Rev, Rob.</div>
+          <div id ="Personal-Columns">
+            <div id = "Personal-Highest" ><img src="/Res/temp4.jpg" tabindex ="0"></div>
+            <div id = "Personal-Highest" ><img src="/Res/temp4.jpg" tabindex ="0"></div>
+            <div id = "Personal-Highest" ><img src="/Res/temp4.jpg" tabindex ="0"></div>
+          </div>
+        </div>
+        </div>
+    </div>
 
             <br />
  <h2>Tweets(based on trip tag)</h2>

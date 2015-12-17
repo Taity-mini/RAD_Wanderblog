@@ -31,12 +31,12 @@ body {
     margin: 5%;
     margin-left: 3%;
     padding: 2%;
-    padding-top: 0.98%;
+    /*padding-top: 0.98%;*/
     -webkit-column-break-inside: avoid;
     display: inline-block;
-    float: left;
+    /*float: left;*/
     max-height: auto;
-    min-height: 260px;
+    /*min-height: 260px;*/
     background-color: #ECECEA;
     max-width: 250px;
     box-shadow: -2px 2px 5px grey;

@@ -279,11 +279,12 @@ if(!empty($_SESSION['username'])){
         <td>User</td>
         <td>Comment</td>
         <?php
-          if(empty($_SESSION['username'])){
+          if(!empty($_SESSION['username'])){
          echo  '<td>Edit</td>';
          }
          ?>
-        <td>Edit</td>
+
+
     </tr>
 
     <?php

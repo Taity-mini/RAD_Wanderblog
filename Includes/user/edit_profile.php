@@ -56,9 +56,10 @@ if(isset($_POST['update'])) {
         $update_user = mysqli_query($db, ("UPDATE users SET  first_Name='$firstName', last_Name='$lastName', country='$country', email='$email', bio = '$bio' WHERE userID = '$id'"))or die(mysqli_error($db));
 
         if ($update_user) {
-            echo "User successfully updated!";
-            $page = "./?page=admin";
-            header("Refresh: 2; URL=\"" . $page . "\"");
+            echo "<script> alert('User Profile Updated Successfully');</script>";
+            $userID = $info['userID'];
+            $return = "./?page=view_user&id=".$userID;
+            header("Location:" .$return);
         } else {
             echo("<br>Input data is fail");
         }

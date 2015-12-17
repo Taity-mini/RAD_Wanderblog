@@ -46,8 +46,6 @@ if (isset($_POST["update"])) {
         $update_comment = mysqli_query($db, ("UPDATE `comments` SET `comment` = '$comment'  WHERE `commentID` = '$id'"));
 
         if ($update_comment) {
-            echo "ID:" + $id;
-            echo $comment;
             echo "<script> alert('Adventure comment Updated Successfully');</script>";
             $pageID = $info['pageID'];
             $return = "./?page=adventure&id=".$pageID;

@@ -30,7 +30,7 @@ if (isset($_POST['user'])) {
             $userID = $db->query("SELECT `groupID` FROM `group` WHERE groupName = '$field'")->fetch_object()-groupID;
             $field = $userID;
             echo $field;
-            $search_results = mysqli_query($db, "SELECT * FROM `pages` WHERE $field LIKE '%$find%'") or die(mysqli_error($db));
+            $search_results = mysqli_query($db, "SELECT * FROM `users` WHERE $field LIKE '%$find%'") or die(mysqli_error($db));
         }
 
         elseif($field == "country")
@@ -42,7 +42,7 @@ if (isset($_POST['user'])) {
 
         else
         {
-            $search_results = mysqli_query($db, "SELECT * FROM `pages` WHERE $field LIKE '%$find%'") or die(mysqli_error($db));
+            $search_results = mysqli_query($db, "SELECT * FROM `users` WHERE $field LIKE '%$find%'") or die(mysqli_error($db));
         }
 
 
@@ -69,11 +69,9 @@ if (isset($_POST['user'])) {
     <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
         Search for where: <Select name="field">
             <Option value="userName">Author UserName</option>
-            <Option value="FirstName">First Name</option>
-            <Option value="LastName">Last Name</option>
+            <Option value="first_Name">First Name</option>
+            <Option value="last_Name">Last Name</option>
             <Option value="country">Country</option>
-
-            <Option value="tags">Tags</option>
         </Select>
         = <input type="text" name="find" />
         <input type="submit" name="user" value="Search" />
@@ -87,20 +85,20 @@ if (isset($_POST['user'])) {
         <table border='1' cellspacing='0'>
             <tr>
                 <td>Author ID</td>
-                <td>Author Name</td>
-                <td>Author</td>
+                <td>Author Alias</td>
+                <td>Author First Name</td>
+                <td>Author Last Name</td>
                 <td>Trip Country</td>
-                <td>Tags</td>
                 <td>View Adventure</td>
             </tr>";
             while ($info = mysqli_fetch_array($search_results)) {
                 echo "<trstyle='background-color:#000000;'>";
-                echo "<td>" . $info['u'] . "</td>";
-                echo "<td>" . $info['title'] . "</td>";
                 echo "<td>" . $info['userID'] . "</td>";
-                echo countryName($db, $info['trip_country']);
-                echo "<td>" . $info['tags'] . "</td>";
-                echo '<td><a href="./?page=view_user&id=' . $info['userID'] . '"></a></td>';
+                echo "<td>" . $info['userName'] . "</td>";
+                echo "<td>" . $info['first_Name'] . "</td>";
+                echo "<td>" . $info['last_Name'] . "</td>";
+                echo countryName($db, $info['country']);
+                echo '<td><a href="./?page=view_user&id=' . $info['userID'] . '">Profile</a></td>';
                 echo "</tr>";
             }
             echo "</table>";

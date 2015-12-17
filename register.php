@@ -89,6 +89,14 @@ if (isset($_POST["submit"]))
                 //Finally add users to db
                 $insert = "INSERT INTO users (groupID,userName,password, first_Name, last_Name, country, email, bio)VALUES (21,'$username','$password', '$FirstName' , '$LastName ',  '$country', '$email', '$bio')";
                 $result = mysqli_query($db, $insert);
+                
+                $userQuery = "SELECT userID FROM users WHERE userName = '$username'";
+                $result1 = mysqli_query($db, $userQuery);
+                $resultFetchArray = mysqli_fetch_array($result1);
+                $userid = $resultFetchArray['userID'];
+                
+                $insert1 = "INSERT INTO picture_gallery_users (filePath, photoDesc, userID) VALUES ('$defaultImage','default image','$userid')";
+                $result1 = mysqli_query($db, $insert1);
 
                 if ($result) {
                     echo "Thank You! you are now registered.";

@@ -34,7 +34,9 @@ body {
     margin-left: 3%;
     padding: 2%;
     padding-top: 0.98%;
-    min-height: 260px;
+    display: inline-block;
+    max-height: 260px;
+    height: 260px;
     background-color: #ECECEA;
     box-shadow: -2px 2px 5px grey;
 
@@ -194,12 +196,9 @@ body {
 
 .Picture_Container{
 
-    position:relative;
+    position: relative;
     width: 250px;
-
-    max-height: 300px;
-    overflow:hidden;
-
+    overflow: hidden;
      
 
 }

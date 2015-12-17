@@ -79,6 +79,19 @@ include("./includes/functions.php");
                 <?php
                      }}
                 ?>
+                <?php if(!empty($_SESSION['username'])){
+
+
+                ?>
+                <li class ="Username"><a href = "#"><?php echo $_SESSION['username'] ?></a>
+                <ul>
+                    <li><a href="./?page=view_user&id= <?php echo $_SESSION['userID']?>">View Profile</a></li>
+                    <li><a href="./?page=edit_profile&id=<?php echo $_SESSION['userID']?>">Edit Profile</a></li>
+                </ul>
+                </li>
+                <?php
+                }
+                ?>
                 <li class="Search"><a href="#">Search</a>
                     <ul>
                         <li><a href="./?page=search_adventure">Search Adventure</a></li>

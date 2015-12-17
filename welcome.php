@@ -36,14 +36,13 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 	<div id = "Welcome-Content-blob">
 		<div id = "Banner_Container">
 			<div class = "Scroll_Banner">
-				<?php
-
+<!--				--><?php
+/*
 
 				while($pictures = mysqli_fetch_array($vote)) {
 					$picsID = $pictures['pageID'];
 					$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
-					for ($i = 0; $i <3;$i++)
-					{
+
 					while ($images = mysqli_fetch_array($getPics)) {
 						if ($count == 1) {
 							echo '<a href="./?page=adventure&id=' . $pictures['pageID'] . '"><img class="Begining-img" src="' . $images['filePath'] . '" alt = "' . $pictures['title'] . '"></a>';
@@ -51,10 +50,10 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 							echo '<a href="./?page=adventure&id=' . $pictures['pageID'] . '"><img src="' . $images['filePath'] . '" alt = "' . $pictures['title'] . '"></a>';
 						}
 						$count++;
-					}}
+					}
 				}
 
-				?>
+				*/?>
 			</div>
 		</div>
 	</div>

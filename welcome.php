@@ -33,30 +33,6 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 
 <div id ="Content-inner">
 
-
-<!--	<div id = "Welcome-Content-blob">
-		<div id = "Banner_Container">
-			<div class = "Scroll_Banner">
-			<img class ="Begining-img" src = "./Res/temp.jpg">
-			<img src="./Res/temp3.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp1.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp2.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp4.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp3.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp2.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp3.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp1.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp2.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp4.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp3.jpg" alt="Coffee Shop" >
-			<img src="./Res/temp2.jpg" alt="Coffee Shop" >
-			
-
-   		</div>
-   		</div>
-    </div>-->
-
-
 	<div id = "Welcome-Content-blob">
 		<div id = "Banner_Container">
 			<div class = "Scroll_Banner">

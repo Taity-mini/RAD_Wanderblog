@@ -27,7 +27,6 @@ include("./includes/functions.php");
     <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
     <script  src = "java/popup.js"></script>
     <script  src = "java/functions.js"></script>
-<!--  Tweets Node Js  -->
 </head>
 <body>
 
@@ -103,8 +102,14 @@ include("./includes/functions.php");
                     break;
 
                 case "admin":
-                    $content_header = "Admin Panel";
-                    include("./admin.php");
+                    if(!empty($_SESSION['username'])){
+                        if(isAdmin($db,$_SESSION['groupID'])){
+                            $content_header = "Admin Panel";
+                            include("./admin.php");
+                        }
+                    }
+                    //Not logged in + admin? Show 403 page
+                    header("Location: ./?page=403");
                     break;
 
                 //Adventure Pages
@@ -150,6 +155,12 @@ include("./includes/functions.php");
                     include("./Includes/page/edit_adventure.php");
                     break;
 
+                case "edit_comment":
+                    $content_header = "Edit Adventure";
+                    include("./Includes/page/edit_comment.php");
+                    break;
+
+
 
 
                 //Delete Functions
@@ -157,6 +168,7 @@ include("./includes/functions.php");
                     $content_header = "Delete Record";
                     include("./Includes/delete.php");
                     break;
+
 
                 //Search Functions
 

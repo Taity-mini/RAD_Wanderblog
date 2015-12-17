@@ -85,6 +85,7 @@ if (isset($_POST["submit"]))
 
                 //convert password to md5
                 $password = md5($password);
+                $defaultImage = "./Res/default-photo.jpg";
 
                 //Finally add users to db
                 $insert = "INSERT INTO users (groupID,userName,password, first_Name, last_Name, country, email, bio)VALUES (21,'$username','$password', '$FirstName' , '$LastName ',  '$country', '$email', '$bio')";

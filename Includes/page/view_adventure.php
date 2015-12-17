@@ -298,9 +298,12 @@ if(!empty($_SESSION['username'])){
 </div>
 <div id = "Comment-1">
 <div id = "User">Robert</div>
-<div id = "User-Comment">CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite </div>
+<div id = "User-Comment">CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite </div>
+</div>
 
-
+<div id = "Comment-1">
+<div id = "User">Dan</div>
+<div id = "User-Comment">CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace CSS is ace</div>
 </div>
 </div>
 

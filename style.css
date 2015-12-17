@@ -645,51 +645,60 @@ body {
 #Comment-Section{
     width: 100%;
     height: auto;
-    background-color:green;
+    display: inline-block;
+    float: left;
+    margin:2%;
+    box-shadow: -2px 2px 5px grey;
+
 }
 
 #Comment-Header{
     width: 100%;
-    background-color: orange;
-    height: 50px;
+
+    height: 80px;
+    float: left;
+    display: inline-block;
 
 }
 
 #Username{
-    width: 20%;
-    background-color: blue;
-    height: 100%
+    width: 15%;
+    height: 100%;
+    display: inline-block;
 
 
 
 }
 
 #Comment{
-    width: 80%;
-    background-color: red;
-    height: 100%
+    width: 84%;
+
+    height: 100%;
+    display: inline-block;
+
+    float: right;
 
 }
 
 #Comment-1{
     width: 100%;
-    background-color:white;
     height: auto;
+    display: inline-block;
 }
 
 
 #User{
-    width: 20%;
-    background-color: purple;
-    height: auto
+    width: 15%;
+    height: auto;
+    float: left;
 
 
 }
 
 #User-Comment{
-    width: 80%;
-    background-color: black;
-    height: auto
+    width: 84%;
+    height: auto;
+    float: right;
 
 
 }

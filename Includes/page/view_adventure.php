@@ -210,20 +210,32 @@ if(isset($_GET['id']))
         </div>
 
 
-        <div id ="Information-Header"><h1><?php echo $info['Title'];?></h1><h2> </h2></div>
+        <div id ="Information-Header"><h1>fix me<?php echo $info['title'];?></h1><h2> </h2></div>
         <div id ="Information-Content">
-        <div id ="Adventure-Bio"><h3>Content Description</h3><?php echo $info['pages'];?></div>
+        <div id ="Adventure-Bio"><h3>Content Description</h3>fix me<?php echo $info['bio'];?></div>
         </div>
         </div>
     </div>
 
             <br />
- <h2>Tweets(based on trip tag)</h2>
+ <h1>Tweets(based on trip tag)</h1><h2></h2>
             <ul id ="twitter">
             </ul>
 <!--Picture codes Goes here-->
 <br/>
-<h2>Trip Pictures</h2>
+<h1>Trip Pictures</h1><h2></h2>
+
+    <div id = "Adventure-Profile-Content-0">
+    
+    <div id = "Small-Img">
+    <img id = "Big" src="./Res/temp2.jpg">
+    </div>
+
+    
+
+
+    </div>
+
 <?php
 
 if (mysqli_num_rows($pictures) > 0)
@@ -247,7 +259,7 @@ else
  ?>
 
 <!--Comment codes Goes here!-->
-<h2>Trip Comments</h2>
+<h1>Trip Comments</h1><h2></h2>
 <br/>
 <?php
 //Only registered users can comment

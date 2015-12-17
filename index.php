@@ -140,6 +140,12 @@ include("./includes/functions.php");
                     include("./Includes/user/edit_user.php");
                     break;
 
+                case "edit_profile":
+                    $content_header = "Edit User Profile";
+                    include("./Includes/user/edit_profile.php");
+                    break;
+
+
                 case "edit_group":
                     $content_header = "Edit Group";
                     include("./Includes/group/edit_group.php");

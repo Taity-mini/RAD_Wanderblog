@@ -417,14 +417,21 @@ body {
 #Profile-Horizontal-Split-Left{
     float: left;
     width: 15%;
+    overflow: hidden;
     height: 400px;
     background-color: #ECECEA;
     box-shadow: 15px 0px 4px -1.7px grey;
 }
 
+#form{
+    margin-top: -0.99em;
+    float: right;
+}
+
 #Profile-bio{
     margin: 7%;
     height: 93%;
+    font-size: 0.85em;
     width: auto;
     max-width: 100%;
     max-height: 100%;

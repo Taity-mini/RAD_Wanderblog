@@ -108,7 +108,6 @@ if (isset($_POST["submit"]))
 <div id="Content-inner">
 
 
-    <p>Register Form</p<br/>
     <br/>
 
     <form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">

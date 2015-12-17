@@ -229,15 +229,16 @@ if(isset($_GET['id']))
     
     <div id = "Small-Img">
     <img id = "Big" src="./Res/temp2.jpg">
+    </div>
         <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp2.jpg">
+    <img id = "Big" src="./Res/temp3.jpg">
+    </div>
         <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp2.jpg">
+    <img id = "Big" src="./Res/temp.jpg">
+    </div>
         <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp2.jpg">
-        <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp2.jpg">
-    
+    <img id = "Big" src="./Res/temp4.jpg">
+    </div>
 
     </div>
 

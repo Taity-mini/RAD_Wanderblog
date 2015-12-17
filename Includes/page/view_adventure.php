@@ -212,9 +212,13 @@ if(isset($_GET['id']))
                     </form>
                      <?php
                      }
+                     else
+                     {
+                         echo "Vote(s)[$vote_count]";
+                     }
                      }
                      //Otherwise just show vote counter
-                    elseif ((empty($_SESSION['username']))){
+                    elseif((empty($_SESSION['username']))){
                      echo "Vote(s)[$vote_count]";
                     }
 

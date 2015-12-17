@@ -152,7 +152,7 @@ if(isset($_GET['id']))
         }
     </script>
 
-        <h1><?php echo $content_header ?></h1>
+        <h1>Trip</h1>
         <h2></h2>
         <div id ="Content-inner">
 
@@ -164,7 +164,7 @@ if(isset($_GET['id']))
         <div id = "Profile-Horizontal-Split-Left">
         <div id ="Profile-Picture"><img src="/Res/temp4.jpg"></div>
         <div id ="Profile-bio">
-        <h3>Dave DoStff</h3>
+        <h3><?php echo $user_info['first_Name']. " ". $user_info['last_Name']; ?></h3>
         <h2></h2>
         Trip Country:<br/><?php echo countryName($db,$info['trip_country']);?><br/>
         Tags:<br/><?php echo $info['tags'];?><br/>
@@ -210,25 +210,43 @@ if(isset($_GET['id']))
         </div>
 
 
-        <div id ="Information-Header"><h1>Dave DoStuff omg</h1><h2> </h2></div>
+        <div id ="Information-Header"><h1><?php echo $info['title'];?></h1><h2> </h2></div>
         <div id ="Information-Content">
-        <div id ="Adventure-Bio"><h3>Content Description</h3>My adventures consist of germany and elgin because i'm wiiiiild. God is love, Rev, Rob.</div>
-          <div id ="Personal-Columns">
-            <div id = "Personal-Highest" ><img src="/Res/temp4.jpg" tabindex ="0"></div>
-            <div id = "Personal-Highest" ><img src="/Res/temp4.jpg" tabindex ="0"></div>
-            <div id = "Personal-Highest" ><img src="/Res/temp4.jpg" tabindex ="0"></div>
-          </div>
+        <div id ="Adventure-Bio"><h3>Content Description</h3><?php echo $info['bio'];?></div>
         </div>
         </div>
     </div>
 
             <br />
- <h2>Tweets(based on trip tag)</h2>
+ <h1>Tweets(based on trip tag)</h1><h2></h2>
             <ul id ="twitter">
             </ul>
 <!--Picture codes Goes here-->
 <br/>
-<h2>Trip Pictures</h2>
+<h1>Trip Pictures</h1><h2></h2>
+
+    <div id = "Adventure-Profile-Content-0">
+    
+    <div id = "Small-Img">
+    <img id = "Big" src="./Res/temp2.jpg">
+    </div>
+        <div id = "Small-Img">
+    <img id = "Big" src="./Res/temp3.jpg">
+    </div>
+        <div id = "Small-Img">
+    <img id = "Big" src="./Res/temp.jpg">
+    </div>
+        <div id = "Small-Img">
+    <img id = "Big" src="./Res/temp4.jpg">
+    </div>
+
+    </div>
+
+    
+
+
+
+
 <?php
 
 if (mysqli_num_rows($pictures) > 0)
@@ -252,7 +270,7 @@ else
  ?>
 
 <!--Comment codes Goes here!-->
-<h2>Trip Comments</h2>
+<h1>Trip Comments</h1><h2></h2>
 <br/>
 <?php
 //Only registered users can comment
@@ -272,6 +290,20 @@ if(!empty($_SESSION['username'])){
 <?php
 }
 ?>
+
+<div id = "Comment-Section">
+<div id = "Comment-Header">
+<div id = "Username">User</div>
+<div id = "Comment">Comment</div>
+</div>
+<div id = "Comment-1">
+<div id = "User">Robert</div>
+<div id = "User-Comment">CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite  CSS is shite </div>
+
+
+</div>
+</div>
+
 <table border="1" align = "Center" >
 
     <tr>

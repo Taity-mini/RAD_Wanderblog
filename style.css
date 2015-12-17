@@ -642,6 +642,60 @@ body {
 
 
 
+#Comment-Section{
+    width: 100%;
+    height: auto;
+    background-color:green;
+}
+
+#Comment-Header{
+    width: 100%;
+    background-color: orange;
+    height: 50px;
+
+}
+
+#Username{
+    width: 20%;
+    background-color: blue;
+    height: 100%
+
+
+
+}
+
+#Comment{
+    width: 80%;
+    background-color: red;
+    height: 100%
+
+}
+
+#Comment-1{
+    width: 100%;
+    background-color:white;
+    height: auto;
+}
+
+
+#User{
+    width: 20%;
+    background-color: purple;
+    height: auto
+
+
+}
+
+#User-Comment{
+    width: 80%;
+    background-color: black;
+    height: auto
+
+
+}
+
+
+
 
 
 

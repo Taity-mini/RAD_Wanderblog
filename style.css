@@ -424,7 +424,8 @@ body {
 }
 
 #Profile-bio #form{
-    float: left;
+    margin-top: -0.99em;
+    float: right;
 }
 
 #Profile-bio{

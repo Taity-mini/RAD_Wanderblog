@@ -210,7 +210,7 @@ if(isset($_GET['id']))
         </div>
 
 
-        <div id ="Information-Header"><h1>Dave DoStuff</h1><h2> </h2></div>
+        <div id ="Information-Header"><h1>Dave DoStuff omg</h1><h2> </h2></div>
         <div id ="Information-Content">
         <div id ="Adventure-Bio"><h3>Content Description</h3>My adventures consist of germany and elgin because i'm wiiiiild. God is love, Rev, Rob.</div>
           <div id ="Personal-Columns">

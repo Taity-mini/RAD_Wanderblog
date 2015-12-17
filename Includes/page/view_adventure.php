@@ -229,6 +229,9 @@ if(isset($_GET['id']))
     
     <div id = "Small-Img">
     <img id = "Big" src="./Res/temp2.jpg">
+        <img id = "Big" src="./Res/temp2.jpg">
+            <img id = "Big" src="./Res/temp2.jpg">
+                <img id = "Big" src="./Res/temp2.jpg">
     </div>
 
     

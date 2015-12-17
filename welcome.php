@@ -53,7 +53,7 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 						{
 							echo '<img src="'.$images['filePath'].'" alt = "' . $pictures['title'] . '">';
 						}
-
+						$count++;
 					}
 				}}
 				?>

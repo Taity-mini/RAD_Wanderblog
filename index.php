@@ -156,7 +156,7 @@ include("./includes/functions.php");
                     break;
 
                 case "edit_comment":
-                    $content_header = "Edit Adventure";
+                    $content_header = "Edit Comment";
                     include("./Includes/page/edit_comment.php");
                     break;
 

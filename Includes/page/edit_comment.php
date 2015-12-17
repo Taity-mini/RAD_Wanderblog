@@ -31,24 +31,31 @@ if (isset($_POST["update"])) {
         $data = array();
         foreach ($fields AS $fieldname) { //Loop trough each field
             $fieldname = $_POST[$fieldname]; //grab from form
-            echo $fieldname;
+            //echo $fieldname;
             $fieldname = mysqli_real_escape_string($db, $fieldname); //prevent from SQL injection
             $data[] = $fieldname;
         }
 
 
         $comment = $data[0];
-        $id = $info['PageID'];
+        $id = $info['commentID'];
+        echo "ID:" + $id;
+        //UPDATE  `rgu_1504693`.`comments` SET  `comment` =  'Nice trip lad test
+        //' WHERE  `comments`.`commentID` =131;
 
-        $update_comment = mysqli_query($db, ("UPDATE `comments` SET `comment` = '$title'  WHERE commentID = '$id'"));
+        $update_comment = mysqli_query($db, ("UPDATE `comments` SET `comment` = '$comment'  WHERE `commentID` = '$id'"));
 
         if ($update_comment) {
+            echo "ID:" + $id;
+            echo $comment;
             echo "<script> alert('Adventure comment Updated Successfully');</script>";
-            $return = $_SERVER['REQUEST_URI'];
+            $pageID = $info['pageID'];
+            $return = "./?page=adventure&id=" + $pageID;
             header("Refresh: 2; URL=\"" . $return . "\"");
         } else {
             echo "<script> alert('Adventure Comment Update Failed');</script>";
-            $return = $_SERVER['REQUEST_URI'];
+            $pageID = $info['pageID'];
+            $return = "./?page=adventure&id=" + $pageID;
             header("Refresh: 2; URL=\"" . $return . "\"");
         }
 
@@ -67,6 +74,4 @@ if (isset($_POST["update"])) {
         <td><textarea rows="4" cols="50" name = "comment"  value =""><?php echo htmlentities($info['comment']);?></textarea>
             <input type = "submit" name = "update"><br /></td>
     </form>
-
-
 </div>

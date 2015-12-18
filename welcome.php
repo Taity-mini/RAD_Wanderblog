@@ -36,8 +36,8 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 	<div id = "Welcome-Content-blob">
 		<div id = "Banner_Container">
 			<div class = "Scroll_Banner">
-<!--				--><?php
-/*
+<?php
+
 
 				while($pictures = mysqli_fetch_array($vote)) {
 					$picsID = $pictures['pageID'];
@@ -53,7 +53,7 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 					}
 				}
 
-				*/?>
+				?>
 			</div>
 		</div>
 	</div>

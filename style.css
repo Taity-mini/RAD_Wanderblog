@@ -594,7 +594,7 @@ body {
 
 
 
-.Trending_Picture_Container5 > header{
+.Trending_Picture_Container_Bob > header{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -606,7 +606,7 @@ body {
 
 }
 
-.Trending_Picture_Container5 > header::before {
+.Trending_Picture_Container_Bob > header::before {
   content: "";
   position: absolute;
   top: -5px;
@@ -619,7 +619,7 @@ body {
 }
 
 
-.Trending_Picture_Container5 > header > h4 {
+.Trending_Picture_Container_Bob > header > h4 {
   margin: 0;
   color: white;
   position: relative;
@@ -630,7 +630,7 @@ body {
 
 
 
-.Trending_Picture_Container5 img{
+.Trending_Picture_Container_Bob img{
     width: auto;
     height: auto;
     min-width: 10px;

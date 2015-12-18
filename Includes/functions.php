@@ -172,16 +172,10 @@ function isReader($db, $groupID)
 {
 
     $group_query = $db->query("SELECT `permissionID` FROM `group` WHERE groupID = '$groupID' limit 1")->fetch_object()->permissionID;
-    //$permID =  $group_query;
 
-    $count = 0;
 
-    $permissions = mysqli_query($db,"SELECT  `create_Content` ,  `create_Comments` ,  `vote` ,  `edit_Vote_Admin` ,  `edit_Content` ,  `edit_Comments` ,  `view_Content` , `view_Comments`  FROM `group_permissions` WHERE permissionID = '$group_query'");
 
-    $info = mysqli_fetch_array($permissions)  or die(mysqli_error($db));
-    $permid = $info['permissionID'];
-
-    if($permid == 21)
+    if($group_query = 21)
     {
         return true;
     }

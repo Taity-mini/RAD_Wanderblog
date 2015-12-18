@@ -237,10 +237,10 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
     print "<table border='1' cellspacing='0'>";
     while($pictures = mysqli_fetch_array($vote)) {
         $picsID = $pictures['pageID'];
-
+        echo "Before query";
         $getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID'");
 
-
+        echo "Test";
         while ($images2 = mysqli_fetch_array($getPics1))
         {
             echo "<trstyle='background-color:#000000;'>";
@@ -258,9 +258,6 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 
 </div>
 </body>
-    <div id ="Footer">
-        <p>© <?php echo date("Y");?> RAD | <a href ="https://github.com/Taity-mini/RAD_Wanderblog" >Github Repo</a> </p>
-    </div>
     <div id="popupBoxTwoPosition">
         <div class="popupBoxTwoWrapper">
             <div class="popupBoxContent">

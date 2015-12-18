@@ -235,21 +235,21 @@ $vote_side = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `vot
     <div id = "Content-outter">
     <?php
     print "<table border='1' cellspacing='0'>";
-    echo "<trstyle='background-color:#000000;'>";
+    echo "<tdstyle='background-color:#000000;'>";
     while($pictures1 = mysqli_fetch_array($vote_side)) {
         $picsID2 = $pictures1['pageID'];
         $getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID2'");
         while ($images2 = mysqli_fetch_array($getPics1))
         {
 
-            echo "<td>";
+            echo "<tr>";
             echo "<img style='width:100px; height:150px;' src='".$images2['filePath']."' /></br>";
-            echo "</td>";
+            echo "</tr>";
 
         }
 
     }
-    echo"</tr>";
+    echo"</td>";
     echo"</table>";
 
     ?>

@@ -246,7 +246,7 @@ $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` 
      					echo "<div  class = 'Trending_Picture_Container' id = '$pID' ><header><h4>". $images['filePath']."</h4></header></div>";
 					?>
 					<style>
-					<?php echo $pID.".Trending_Picture_Container" ?>
+					<?php echo "#".$pID.".Trending_Picture_Container" ?>
 					div { background-image: url(<?php echo $image; ?>); }
 					</style>
 					

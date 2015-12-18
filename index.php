@@ -234,8 +234,9 @@ $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` 
 <h2> </h2>
     <div id = "Content-outter">
     <?php
+    $i = 0;
     while($pictures = mysqli_fetch_array($vote1)) {
-    				$i = 0;
+    				
         			$picsID = $pictures['pageID'];
 					$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
 				    while ($images = mysqli_fetch_array($getPics)) {

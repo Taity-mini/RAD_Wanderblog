@@ -176,7 +176,7 @@ if(isset($_GET['id']))
         }
     </script>
 
-        <h1>Trip <?php echo $edit?></h1>
+        <h1>Trip <?php echo $edit . $delete?></h1>
         <h2></h2>
         <div id ="Content-inner">
 

@@ -36,7 +36,7 @@ $pages_table = mysqli_query (($db),("SELECT * FROM pages"));
         <table border='1' cellspacing='0'>
             <tr>
                 <td>Adventure ID</td>
-                <td>User ID</td>
+                <td>User</td>
                 <td>Title</td>
                 <td>Trip Country</td>
                 <td>bio</td>
@@ -48,11 +48,14 @@ $pages_table = mysqli_query (($db),("SELECT * FROM pages"));
             </tr>";
         while($info = mysqli_fetch_array($pages_table))
         {
+            $pageUser =  $info['userID'];
+            $userName = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$pageUser'");
+            $user_info2 = mysqli_fetch_array($userName) or die;
             $trip_Date =date('d/m/Y',strtotime($info['trip_Date']));
             $mod_date =date('d/m/Y',strtotime($info['mod_Date']));
             echo "<trstyle='background-color:#000000;'>";
             echo "<td>" . $info['PageID'] . "</td>";
-            echo "<td>" . $info['userID'] . "</td>";
+            echo "<td>" . $user_info2['userName'] . "</td>";
             echo "<td>" . $info['title'] . "</td>";
             echo countryName($db,$info['trip_country']);
             echo "<td>" . $info['bio'] . "</td>";

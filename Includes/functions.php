@@ -175,7 +175,7 @@ function isReader($db, $groupID)
 
 
 
-    if($group_query = 21)
+    if($group_query == 21)
     {
         return true;
     }

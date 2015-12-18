@@ -7,9 +7,7 @@
  * Welcome Page for top rated pages
  */
 
-$queryPages = "SELECT * FROM pages";
-$resultPages = mysqli_query($db, $queryPages);
-$queryPages  = "SELECT * FROM votes GROUP BY ";
+
 
 $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc");
 
@@ -17,16 +15,6 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 
 
 ?>
-
-<head>
-
-<title>
-	Home 
-</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-
 <div id = "Welcome_Inner_Wrap">
 <h1><?php echo $content_header ?></h1>
 <h2> </h2>
@@ -59,26 +47,8 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
 	</div>
 
 </div>
-
-
-
-
-
-
-
-
-
 </div>
-
-
 </div>
-
-
-
 <br />
-
 </body>
-
-
-
 </html>

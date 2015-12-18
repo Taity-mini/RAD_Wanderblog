@@ -905,7 +905,7 @@ Code obtained then modified via http://css-snippets.com/drop-down-navigation/
 
     @media screen and (max-width: 1400px) {
     #Personal-Columns{
-        -webkit-column-count: 1
+        -webkit-column-count: 1;
         -webkit-column-gap:1000px;
 
 

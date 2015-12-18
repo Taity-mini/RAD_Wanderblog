@@ -55,6 +55,7 @@ if(isset($_GET['id']))
         {
             if($current_user == $userID){
               $edit = '<a href="./?page=edit_adventure&id='. $pageID .'">[Edit]</a>';
+              $delete = '<a href ="#" onclick="deletePage('.$pageID.')">Delete</a>';
             }
 
         }

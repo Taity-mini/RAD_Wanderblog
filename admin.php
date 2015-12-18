@@ -60,7 +60,7 @@ $pages_table = mysqli_query (($db),("SELECT * FROM pages"));
             echo "<td>" . $trip_Date. "</td>";
             echo "<td>" . $mod_date. "</td>";
             echo '<td><a href="./?page=edit_adventure&id='. $info['PageID'] .'">Edit</a></td>';
-            echo '<td><a href ="#" onclick="deletePage('.$id.')">Delete</a></td>';
+            echo '<td><a href ="#" onclick="deletePage('.$info['PageID'].')">Delete</a></td>';
             echo "</tr>";
         }
         echo"</table>";

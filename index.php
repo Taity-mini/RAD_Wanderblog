@@ -239,15 +239,13 @@ $pictures1 = mysqli_fetch_array($vote1);
     	$i = 0;
     	$pic = "";
 	$getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID1'");
-	$images1 = mysqli_fetch_array($getPics1);
+	//$images1 = mysqli_fetch_array($getPics1);
     while($data = mysqli_fetch_array($getPics1)) {
         $array_result[] = $data;
     }
-	//print_r($images1);
-    //$images_1 = $images1[0];
-    //$images_2 = $images1[1];
+    echo $array_result[0];
     ?>
-     	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo  $array_result[0]; ?> );'><header><h4>test</h4></header></div>
+     	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo   $array_result[0]; ?> );'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container1' style = 'background-image: url(<?php echo  $array_result[1]; ?> );'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container2' style = 'background-image: url(<?php echo  $array_result[2]; ?> );'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container3' style = 'background-image: url(<?php echo  $array_result[3]; ?> );'><header><h4>test</h4></header></div>

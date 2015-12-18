@@ -34,7 +34,8 @@ if (!$error) {
         $fieldname = mysqli_real_escape_string($db, $fieldname); //prevent from SQL injection
         $data[] = $fieldname;
     }
-
+    
+    //Code for error checking photo
     $title = $data[0];
     $trip_country = $data[1];
     $trip_Date = date('Y-m-d', strtotime($data[2]));
@@ -43,7 +44,7 @@ if (!$error) {
         $userID = $_SESSION['userID'];
         echo $userID;
     }
-    
+    //Check if file is an image
      $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
      if($check !== false){
         echo "File is an image - " . $check["mime"] . ".";
@@ -54,17 +55,19 @@ if (!$error) {
         $uploadOk = 0;
      }
     
-    
+    //Check if photo exists
     if (file_exists($target_file)) {
         echo "Sorry, file already exists.";
         $uploadOk = 0;
     }
     
+    //Check if file size is greater than 500kb
     if ($_FILES["fileToUpload"]["size"] > 500000) {
         echo "Sorry, your file is too large.";
         $uploadOk = 0;
     }
     
+    //Check file extensions
     if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
     && $imageFileType != "gif" ) {
         echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
@@ -76,6 +79,7 @@ if (!$error) {
 
     } 
     else {
+        //Add Adventure and Photo
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
             echo "Entered lol";
             $insert = "INSERT INTO pages (title,trip_country, tags, userID, trip_Date, mod_Date)VALUES ('$title','$trip_country', NULL , '$userID',  '$trip_Date', '$mod_Date')";
@@ -94,6 +98,7 @@ if (!$error) {
             echo "Adventure Succesfully Added.";
             }
         }
+        //Error if above fails
         else{
              echo "User registration failed";
             }

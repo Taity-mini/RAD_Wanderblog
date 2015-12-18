@@ -57,8 +57,10 @@ include("./includes/functions.php");
                 <li class="Adventure"><a href="./?page=adventure">Adventure</a>
                     <ul>
                         <?php if(!empty($_SESSION['username'])){
-                           echo'<li><a href="./?page=add_adventure">Add Adventure</a></li>';
-                          // echo '<li><a href="./?page=edit_adventure">Edit Adventure</a></li>';
+                        if(!isReader($db,$_SESSION['groupID']))
+                        {
+                            echo'<li><a href="./?page=add_adventure">Add Adventure</a></li>';
+                        }
                         }
                         ?>
                     </ul>

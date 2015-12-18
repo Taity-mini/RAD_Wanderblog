@@ -38,11 +38,7 @@ if(isset($_GET['id']))
     $trip_Date =date('d/m/Y',strtotime($info['trip_Date']));
     $mod_date =date('d/m/Y',strtotime($info['mod_Date']));
 
-    $edit = "";
-    //Only registered users can comment
-    if(!empty($_SESSION['username'])){
-     $edit = '<a href="./?page=edit_adventure&id='. $pageID .'">[Edit]</a>';
-    }
+
 
 
     //User Variables
@@ -50,6 +46,21 @@ if(isset($_GET['id']))
     $user = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$userID'");
     $user_info = mysqli_fetch_array($user) or die(mysqli_error($db));
     $current_user = $_SESSION["userID"]; //Current user logged in - differs from $userID which is adventure author!
+
+      $edit = "";
+    //Only registered users can edit
+    if(!empty($_SESSION['username'])){
+        if(!isReader($db,$_SESSION['groupID']))
+        {
+            if($current_user == $userID){
+              $edit = '<a href="./?page=edit_adventure&id='. $pageID .'">[Edit]</a>';
+            }
+
+        }
+
+
+
+    }
 
        /*Voting Functions START*/
      $vote = mysqli_query($db,"SELECT SUM(vote_Count), userID, pageID FROM `votes` WHERE pageID = '$pageID'");

@@ -243,7 +243,7 @@ $vote_side = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `vot
         {
 
             echo "<tr>";
-            echo "<img style='width:100px; height:150px;' src='".$images2['filePath']."' /></br>";
+            echo "<img style='width:100%; height:100%;' src='".$images2['filePath']."' /></br>";
             echo "</tr>";
 
         }

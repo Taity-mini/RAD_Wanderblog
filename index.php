@@ -13,7 +13,7 @@ include("./includes/connect.php");
 include("./includes/global.php");
 include("./includes/functions.php");
 
-$vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count asc LIMIT 5");
+$vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count asc");
 
 ?>
 
@@ -238,18 +238,8 @@ $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` 
         			$picsID = $pictures['pageID'];
 					$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
 				    while ($images = mysqli_fetch_array($getPics)) {
-				    	     ?>
-				    	<style>
-  						.Trending_Picture_Container{ 
-  							background-image: url(<?php echo $images['filePath'];?>); 
-  							
-  						}
-					</style>
-                        	
 
-
-     <?php
-     	echo '<div class = "Trending_Picture_Container" ><header><h4>'. $pictures['photoID']. "yolo".'</h4></header></div>';
+     	echo '<div class = "Trending_Picture_Container" style = "background-image: url('echo $images['filePath'];')"><header><h4>'. $pictures['photoID']. "yolo".'</h4></header></div>';
 				    }
     }
     ?>

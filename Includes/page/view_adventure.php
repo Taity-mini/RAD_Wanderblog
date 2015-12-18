@@ -50,6 +50,7 @@ if(isset($_GET['id']))
       $edit = "";
     //Only registered users can edit
     if(!empty($_SESSION['username'])){
+    echo isReader($db,$_SESSION['groupID']);
         if(!isReader($db,$_SESSION['groupID']))
         {
             if($current_user == $userID){

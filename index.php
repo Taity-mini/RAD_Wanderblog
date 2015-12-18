@@ -246,12 +246,11 @@ $pictures1 = mysqli_fetch_array($vote1);
     $array_result = array();
     while($pictures = mysqli_fetch_array($vote)) {
     $picsID = $pictures['pageID'];
-    $getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID1'");
+    $getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID'");
 
     while ($images = mysqli_fetch_array($getPics1)) {
         $array_result[] = $images['filePath'];
     }
-    print_r($array_result);
     ?>
      	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo   $array_result[0]; ?> );'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container1' style = 'background-image: url(<?php echo  $array_result[1]; ?> );'><header><h4>test</h4></header></div>

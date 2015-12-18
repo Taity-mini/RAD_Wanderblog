@@ -241,16 +241,14 @@ $pictures1 = mysqli_fetch_array($vote1);
 	$getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID1'");
 	//$images1 = mysqli_fetch_array($getPics1);
     $array_result = array();
-    while($data = mysqli_fetch_array($getPics1)) {
-        $array_result[] = $data['filepath'];
-    }
-    echo $array_result[0];
+    while ($data1[] = mysqli_fetch_assoc($getPics1));
+    print_r($data1[0]);
     ?>
-     	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo   $array_result[0]; ?> );'><header><h4>test</h4></header></div>
-        <div  class = 'Trending_Picture_Container1' style = 'background-image: url(<?php echo  $array_result[1]; ?> );'><header><h4>test</h4></header></div>
-        <div  class = 'Trending_Picture_Container2' style = 'background-image: url(<?php echo  $array_result[2]; ?> );'><header><h4>test</h4></header></div>
-        <div  class = 'Trending_Picture_Container3' style = 'background-image: url(<?php echo  $array_result[3]; ?> );'><header><h4>test</h4></header></div>
-        <div  class = 'Trending_Picture_Container4' style = 'background-image: url(<?php echo  $array_result[4]; ?> );'><header><h4>test</h4></header></div>
+     	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo   $data1[0]; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container1' style = 'background-image: url(<?php echo  $data[1]; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container2' style = 'background-image: url(<?php echo  $data1[2]; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container3' style = 'background-image: url(<?php echo  $data1[3]; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container4' style = 'background-image: url(<?php echo  $data1[4]; ?> );'><header><h4>test</h4></header></div>
         <
 
     </div>

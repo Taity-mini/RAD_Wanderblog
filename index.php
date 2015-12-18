@@ -240,6 +240,15 @@ $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` 
 				    while ($images = mysqli_fetch_array($getPics)) {
 
      					echo "<div class = 'Trending_Picture_Container'><header><h4>". $pictures['photoID']. "yolo"."</h4></header></div>";
+			
+     ?>
+     					<style>
+  						#Trending_Picture_Container{ 
+  							background-image: url(<?php echo $images['filePath'];?>); 
+  						}
+					</style>
+     <?php
+				    	
 				    }
     }
     ?>

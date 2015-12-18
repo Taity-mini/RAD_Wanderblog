@@ -13,7 +13,7 @@ include("./includes/connect.php");
 include("./includes/global.php");
 include("./includes/functions.php");
 
-$vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc LIMIT 5");
+$vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc");
 $pictures1 = mysqli_fetch_array($vote1);
 
 ?>

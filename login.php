@@ -4,11 +4,14 @@ session_start();
 
 include("./includes/connect.php");
 
+//When login submit 
 if (isset($_POST['loginSubmit'])){
 
+	//Get submitted username and password
 	$user = $_POST['username'];
 	$pass = md5($_POST['password']);
-
+	
+	//Security Measuers
 	$username = stripslashes($user);
 	$password = stripslashes($pass);
 	$password = mysqli_real_escape_string($pass);

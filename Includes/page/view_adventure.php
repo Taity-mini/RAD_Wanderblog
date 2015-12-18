@@ -41,7 +41,7 @@ if(isset($_GET['id']))
     $edit = "";
     //Only registered users can comment
     if(!empty($_SESSION['username'])){
-     $edit = '<a href="./?page=edit_comment&id='. $row['commentID'] .'">[Edit]</a>';
+     $edit = '<a href="./?page=edit_comment&id='. $pageID .'">[Edit]</a>';
     }
 
 

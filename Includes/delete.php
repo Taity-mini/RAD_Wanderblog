@@ -88,9 +88,9 @@ if (isset($type)) {
             $delete_pages_pictures = mysqli_query($db,"DELETE FROM `picture_gallery_pages` WHERE pageID = '$getid'");
 
 
-            $msg = "Delete group permissions successful";
-            echo "<script> alert('Group Added Successfully');</script>";
-            $page = "./?page=admin";
+            $msg = "Delete Adventure successful";
+            echo "<script> alert('Adventure Delete Successfully');</script>";
+            $page = "./?page=adventure";
             header("Refresh: 2; URL=\"" . $page . "\"");
 
             break;

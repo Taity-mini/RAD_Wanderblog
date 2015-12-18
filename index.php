@@ -241,7 +241,7 @@ $pictures1 = mysqli_fetch_array($vote1);
 	$getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID1'");
 	$images1 = mysqli_fetch_array($getPics1);
     while($data = mysqli_fetch_array($getPics1)) {
-        $array_result[] = $row;
+        $array_result[] = $data;
     }
 	//print_r($images1);
     //$images_1 = $images1[0];

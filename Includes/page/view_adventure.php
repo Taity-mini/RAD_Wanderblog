@@ -254,7 +254,6 @@ else
     </tr>
 
     <?php
-    //Display Comments
     $query = "SELECT * FROM comments WHERE pageID = '$getid'";
     $result1 = mysqli_query($db, $query);
     while($row = mysqli_fetch_assoc($result1)){
@@ -265,16 +264,15 @@ else
     echo '<div id = "Comment-1">';
     echo '<div id = "User">'. strip_tags($row1['userName']) .'</div>';
     echo '<div id = "User-Comment">'. strip_tags($row['comment']) .'</div>';
-     
+
        if($username == $current_user){
             echo '<a href="./?page=edit_comment&id='. $row['commentID'] .'">Edit</a>';
-            
+
         }
     echo '</div>';
     }
     ?>
     <?php
-    //Check if a user is logged in 
     if(!empty($_SESSION['username'])){
         ?>
     <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
@@ -285,7 +283,7 @@ else
         <?php
             }
             ?>
-        
+
     </form>
     </div>
     </div>
@@ -321,9 +319,8 @@ else
 
 
 <div id = "columns">
-	
+
 <?php
-    //Display all adventures on view_adventures page	
     $queryPages = "SELECT * FROM pages";
     $resultPages = mysqli_query($db, $queryPages);
     while($rowPages = mysqli_fetch_assoc($resultPages)){

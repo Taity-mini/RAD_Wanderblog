@@ -54,7 +54,7 @@ if (isset($_POST["update"])) {
         } else {
             echo "<script> alert('Adventure Comment Update Failed');</script>";
             $pageID = $info['pageID'];
-            $return = "./?page=adventure&id=" + $pageID;
+            $return = "./?page=adventure&id=".$pageID;
             header("Refresh: 2; URL=\"" . $return . "\"");
         }
 
@@ -63,7 +63,6 @@ if (isset($_POST["update"])) {
 
 
 }
-
 
 ?>
 <h1><?php echo $content_header . "ID :" . $getid ?></h1>

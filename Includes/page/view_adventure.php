@@ -15,7 +15,11 @@
  * Date: 08/12/2015
  * Time: 11:53
  */
-//session_start(); //comment out for now - session already started in index.php
+
+
+
+
+
 if(isset($_GET['id']))
 {
 
@@ -33,6 +37,13 @@ if(isset($_GET['id']))
     $content_header = $info['title'];
     $trip_Date =date('d/m/Y',strtotime($info['trip_Date']));
     $mod_date =date('d/m/Y',strtotime($info['mod_Date']));
+
+    $edit = "";
+    //Only registered users can comment
+    if(!empty($_SESSION['username'])){
+     $edit = '<a href="./?page=edit_comment&id='. $row['commentID'] .'">[Edit]</a>';
+    }
+
 
     //User Variables
     $userID = $info['userID'];
@@ -152,7 +163,7 @@ if(isset($_GET['id']))
         }
     </script>
 
-        <h1>Trip</h1>
+        <h1>Trip <?php echo $edit?></h1>
         <h2></h2>
         <div id ="Content-inner">
 
@@ -225,22 +236,22 @@ if(isset($_GET['id']))
 <br/>
 <h1>Trip Pictures</h1><h2></h2>
 
-    <div id = "Adventure-Profile-Content-0">
-    
-    <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp2.jpg">
-    </div>
-        <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp3.jpg">
-    </div>
-        <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp.jpg">
-    </div>
-        <div id = "Small-Img">
-    <img id = "Big" src="./Res/temp4.jpg">
-    </div>
-
-    </div>
+<!--    <div id = "Adventure-Profile-Content-0">-->
+<!--    -->
+<!--    <div id = "Small-Img">-->
+<!--    <img id = "Big" src="./Res/temp2.jpg">-->
+<!--    </div>-->
+<!--        <div id = "Small-Img">-->
+<!--    <img id = "Big" src="./Res/temp3.jpg">-->
+<!--    </div>-->
+<!--        <div id = "Small-Img">-->
+<!--    <img id = "Big" src="./Res/temp.jpg">-->
+<!--    </div>-->
+<!--        <div id = "Small-Img">-->
+<!--    <img id = "Big" src="./Res/temp4.jpg">-->
+<!--    </div>-->
+<!---->
+<!--    </div>-->
 
     
 

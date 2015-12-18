@@ -37,7 +37,7 @@ if (isset($_POST["submit"]))
         $data = array();
         foreach ($fields AS $fieldname) { //Loop trough each field
             $fieldname = $_POST[$fieldname]; //grab from form
-            echo $fieldname;
+            //echo $fieldname;
             $fieldname = mysqli_real_escape_string($db, $fieldname); //prevent from SQL injection
             $data[] = $fieldname;
         }

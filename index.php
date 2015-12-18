@@ -230,7 +230,7 @@ $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` 
 </div>
 </div>
 <div id = "Welcome_Outter_Wrap">
-<h1>Trending</h1>
+<h1>Top 5</h1>
 <h2> </h2>
     <div id = "Content-outter">
     <?php
@@ -238,7 +238,7 @@ $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` 
         			$picsID = $pictures['pageID'];
 					$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
 				    while ($images = mysqli_fetch_array($getPics)) {
-                        echo '<div class = "Trending_Picture_Container" style="background-color: red"><header><h4>'. $pictures['photoID']. "yolo".'</h4></header></div>';
+                        		echo '<div class = "Trending_Picture_Container" style="background-image: ('.$getPics['filePath']')"><header><h4>'. $pictures['photoID']. "yolo".'</h4></header></div>';
 				    }
     }
     ?>

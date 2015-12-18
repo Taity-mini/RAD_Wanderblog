@@ -242,10 +242,11 @@ $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` 
 					$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
 				    while ($images = mysqli_fetch_array($getPics)) {
 					$image = $images['filePath'];
-     					echo "<div  class = 'Trending_Picture_Container' id = '"P".$i' ><header><h4>". $images['filePath']."</h4></header></div>";
+					$pID = "P".$i;
+     					echo "<div  class = 'Trending_Picture_Container' id = '$pID' ><header><h4>". $images['filePath']."</h4></header></div>";
 					?>
 					<style>
-					<?php echo "#P".$i.".Trending_Picture_Container" ?>
+					<?php echo $pID".Trending_Picture_Container" ?>
 					div { background-image: url(<?php echo $image; ?>); }
 					</style>
 					

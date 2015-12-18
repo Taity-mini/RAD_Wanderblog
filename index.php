@@ -242,7 +242,7 @@ $pictures1 = mysqli_fetch_array($vote1);
 	//$images1 = mysqli_fetch_array($getPics1);
     $array_result = array();
     while ($data1[] = mysqli_fetch_assoc($getPics1));
-    print_r($data1[0]);
+    print_r($data1);
     ?>
      	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo   $data1[0]; ?> );'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container1' style = 'background-image: url(<?php echo  $data[1]; ?> );'><header><h4>test</h4></header></div>

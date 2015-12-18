@@ -13,7 +13,7 @@ include("./includes/connect.php");
 include("./includes/global.php");
 include("./includes/functions.php");
 
-
+$vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc");
 
 ?>
 
@@ -233,8 +233,15 @@ include("./includes/functions.php");
 <h1>Trending</h1>
 <h2> </h2>
     <div id = "Content-outter">
-    <div class = "Trending_Picture_Container"><header><h4>Votes</h4></header></div>
-    <div class = "Trending_Picture_Container"><header><h4>Votes</h4></header></div>
+    <?php
+    while($pictures = mysqli_fetch_assoc($vote1)) {
+        			$picsID = $pictures['pageID'];
+					$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
+				    while ($images = mysqli_fetch_array($getPics)) {
+                        echo '<div class = "Trending_Picture_Container" style="background-color: red"><header><h4>'. $pictures['photoID']. "yolo".'</h4></header></div>';
+				    }
+    }
+    ?>
     </div>
 
 </div>

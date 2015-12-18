@@ -240,6 +240,7 @@ $pictures1 = mysqli_fetch_array($vote1);
     	$pic = "";
 	$getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID1'");
 	$images1 = mysqli_fetch_array($getPics1);
+	print_r($images1);
     ?>
      	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo $images1[0]; ?> );'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container1' style = 'background-image: url(<?php echo $images1[1]; ?> );'><header><h4>test</h4></header></div>

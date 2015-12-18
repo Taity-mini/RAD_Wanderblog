@@ -228,7 +228,7 @@ if (mysqli_num_rows($pictures) > 0)
         echo "<div id =id='Personal-Highest'";
         echo "<img style='width:350px; height:350px;' src='".$images['filePath']."' /></br>";
         echo "<p>" .$images['photoDesc']. "</p>";
-        echo "</div";
+        echo "</div>";
         echo "</td>";
       }
      echo"</table>";

@@ -131,8 +131,10 @@ include("./includes/functions.php");
                  case "add_adventure":
                      //Login only for valid accounts
                      if(!empty($_SESSION['username'])){
-                         $content_header = "Add Adventure";
-                         include("./Includes/page/add_adventure.php");
+                         if(!isReader($db,$_SESSION['groupID'])){
+                             $content_header = "Add Adventure";
+                             include("./Includes/page/add_adventure.php");
+                         }
                      }
                      header("Location: index.php");
                     break;

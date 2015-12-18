@@ -14,6 +14,7 @@ include("./includes/global.php");
 include("./includes/functions.php");
 
 $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc LIMIT 5");
+$pictures1 = mysqli_fetch_array($vote1);
 
 ?>
 
@@ -233,30 +234,23 @@ $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` 
 <h1>Top 5</h1>
 <h2> </h2>
     <div id = "Content-outter">
-    <?php
-    $i = 0;
-	
-    while($pictures = mysqli_fetch_array($vote1)) {
-    				
-        			$picsID = $pictures['pageID'];
-					$getPics = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID'");
-				    while ($images = mysqli_fetch_array($getPics)) {
-					$image = $images['filePath'];
-					$pID = "P".$i;
-     					echo "<div  class = 'Trending_Picture_Container' id = '$pID' ><header><h4>". $images['filePath']."</h4></header></div>";
-					?>
-					<style>
-					<?php echo $pID".Trending_Picture_Container" ?>
-					div { background-image: url(<?php echo $image; ?>); }
-					</style>
-					
-					<?php
-					
-					$i++;
-				    	
-				    }
-    }
+    <?php 
+    $picsID1 = $pictures1['pageID'];
+	$getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID1'");
+	$images1 = mysqli_fetch_array($getPics1);
+	$pic1 = $images1[0];
+	$pic2 = $images1[1];
+	$pic3 = $images1[2];
+	$pic4 = $images1[3];
+	$pic5 = $images1[4];
     ?>
+     	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo $pic1; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container1' style = 'background-image: url(<?php echo $pic2; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container2' style = 'background-image: url(<?php echo $pic3; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container3' style = 'background-image: url(<?php echo $pic4; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container4' style = 'background-image: url(<?php echo $pic5; ?> );'><header><h4>test</h4></header></div>
+        <
+
     </div>
 
 </div>

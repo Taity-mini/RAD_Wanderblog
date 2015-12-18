@@ -335,6 +335,86 @@ body {
 
 }
 
+.Trending_Picture_Container1{
+    position:relative;
+    width: auto;
+    box-shadow: -2px 2px 5px grey;
+    min-width: 100px;
+    min-height:150px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: yellow;
+
+     
+
+}
+
+.Trending_Picture_Container2{
+    position:relative;
+    width: auto;
+    box-shadow: -2px 2px 5px grey;
+    min-width: 100px;
+    min-height:150px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: yellow;
+
+     
+
+}
+
+.Trending_Picture_Container3{
+    position:relative;
+    width: auto;
+    box-shadow: -2px 2px 5px grey;
+    min-width: 100px;
+    min-height:150px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: yellow;
+
+     
+
+}
+
+.Trending_Picture_Container4{
+    position:relative;
+    width: auto;
+    box-shadow: -2px 2px 5px grey;
+    min-width: 100px;
+    min-height:150px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: yellow;
+
+     
+
+}
+
+.Trending_Picture_Container_Bob{
+    position:relative;
+    width: auto;
+    box-shadow: -2px 2px 5px grey;
+    min-width: 100px;
+    min-height:150px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: yellow;
+
+     
+
+}
+
 .Trending_Picture_Container > header{
     position: absolute;
     bottom: 0;
@@ -372,6 +452,265 @@ body {
 
 
 .Trending_Picture_Container img{
+    width: auto;
+    height: auto;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 90%;
+    display: inline-block;
+
+
+
+}
+
+
+
+
+.Trending_Picture_Container1 > header{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 11px 10px;
+    background: inherit;
+    background-attachment: absolute;
+    overflow: hidden;
+
+}
+
+.Trending_Picture_Container1 > header::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background: inherit;
+  background-attachment: absolute;
+  -webkit-filter: blur(8px);
+}
+
+
+.Trending_Picture_Container1 > header > h4 {
+  margin: 0;
+  color: white;
+  position: relative;
+  text-shadow: 2px 2px 4px #000000;
+  
+}
+
+
+
+
+.Trending_Picture_Container1 img{
+    width: auto;
+    height: auto;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 90%;
+    display: inline-block;
+
+
+
+}
+
+
+.Trending_Picture_Container2 > header{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 11px 10px;
+    background: inherit;
+    background-attachment: absolute;
+    overflow: hidden;
+
+}
+
+.Trending_Picture_Container2 > header::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background: inherit;
+  background-attachment: absolute;
+  -webkit-filter: blur(8px);
+}
+
+
+.Trending_Picture_Container2 > header > h4 {
+  margin: 0;
+  color: white;
+  position: relative;
+  text-shadow: 2px 2px 4px #000000;
+  
+}
+
+
+
+
+.Trending_Picture_Container2 img{
+    width: auto;
+    height: auto;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 90%;
+    display: inline-block;
+
+
+
+}
+
+
+.Trending_Picture_Container3 > header{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 11px 10px;
+    background: inherit;
+    background-attachment: absolute;
+    overflow: hidden;
+
+}
+
+.Trending_Picture_Container3 > header::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background: inherit;
+  background-attachment: absolute;
+  -webkit-filter: blur(8px);
+}
+
+
+.Trending_Picture_Container3 > header > h4 {
+  margin: 0;
+  color: white;
+  position: relative;
+  text-shadow: 2px 2px 4px #000000;
+  
+}
+
+
+
+
+.Trending_Picture_Container3 img{
+    width: auto;
+    height: auto;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 90%;
+    display: inline-block;
+
+
+
+}
+
+
+
+.Trending_Picture_Container4 > header{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 11px 10px;
+    background: inherit;
+    background-attachment: absolute;
+    overflow: hidden;
+
+}
+
+.Trending_Picture_Container4 > header::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background: inherit;
+  background-attachment: absolute;
+  -webkit-filter: blur(8px);
+}
+
+
+.Trending_Picture_Container4 > header > h4 {
+  margin: 0;
+  color: white;
+  position: relative;
+  text-shadow: 2px 2px 4px #000000;
+  
+}
+
+
+
+
+.Trending_Picture_Container4 img{
+    width: auto;
+    height: auto;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 90%;
+    display: inline-block;
+
+
+
+}
+
+
+
+.Trending_Picture_Container_Bob > header{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 11px 10px;
+    background: inherit;
+    background-attachment: absolute;
+    overflow: hidden;
+
+}
+
+.Trending_Picture_Container_Bob > header::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 130%;
+  background: inherit;
+  background-attachment: absolute;
+  -webkit-filter: blur(8px);
+}
+
+
+.Trending_Picture_Container_Bob > header > h4 {
+  margin: 0;
+  color: white;
+  position: relative;
+  text-shadow: 2px 2px 4px #000000;
+  
+}
+
+
+
+
+.Trending_Picture_Container_Bob img{
     width: auto;
     height: auto;
     min-width: 10px;

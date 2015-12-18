@@ -198,7 +198,7 @@ if(isset($_GET['id']))
          <?php
                     //If user hasn't voted yet then display form
                     if(!empty($_SESSION['username'])){
-                    if (!hasUserVoted($db, $current_user, $pageID))
+                    if (!hasUserVoted($db, $current_user, $pageID) or isAdmin($db,$_SESSION['groupID']))
                     {
                     ?>
                   <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">

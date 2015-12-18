@@ -335,6 +335,86 @@ body {
 
 }
 
+.Trending_Picture_Container1{
+    position:relative;
+    width: auto;
+    box-shadow: -2px 2px 5px grey;
+    min-width: 100px;
+    min-height:150px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: yellow;
+
+     
+
+}
+
+.Trending_Picture_Container2{
+    position:relative;
+    width: auto;
+    box-shadow: -2px 2px 5px grey;
+    min-width: 100px;
+    min-height:150px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: yellow;
+
+     
+
+}
+
+.Trending_Picture_Container3{
+    position:relative;
+    width: auto;
+    box-shadow: -2px 2px 5px grey;
+    min-width: 100px;
+    min-height:150px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: yellow;
+
+     
+
+}
+
+.Trending_Picture_Container4{
+    position:relative;
+    width: auto;
+    box-shadow: -2px 2px 5px grey;
+    min-width: 100px;
+    min-height:150px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: yellow;
+
+     
+
+}
+
+.Trending_Picture_Container_Bob{
+    position:relative;
+    width: auto;
+    box-shadow: -2px 2px 5px grey;
+    min-width: 100px;
+    min-height:150px;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: yellow;
+
+     
+
+}
+
 .Trending_Picture_Container > header{
     position: absolute;
     bottom: 0;

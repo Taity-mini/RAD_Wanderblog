@@ -319,7 +319,7 @@ body {
 }
 
 
-#Trending_Picture_Container{
+.Trending_Picture_Container{
     position:relative;
     width: auto;
     box-shadow: -2px 2px 5px grey;
@@ -335,7 +335,7 @@ body {
 
 }
 
-#Trending_Picture_Container > header{
+.Trending_Picture_Container > header{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -347,7 +347,7 @@ body {
 
 }
 
-#Trending_Picture_Container > header::before {
+.Trending_Picture_Container > header::before {
   content: "";
   position: absolute;
   top: -5px;
@@ -360,7 +360,7 @@ body {
 }
 
 
-#Trending_Picture_Container > header > h4 {
+.Trending_Picture_Container > header > h4 {
   margin: 0;
   color: white;
   position: relative;
@@ -371,7 +371,7 @@ body {
 
 
 
-#Trending_Picture_Container img{
+.Trending_Picture_Container img{
     width: auto;
     height: auto;
     min-width: 10px;

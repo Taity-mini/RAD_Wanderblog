@@ -44,6 +44,7 @@ $pages_table = mysqli_query (($db),("SELECT * FROM pages"));
                 <td>Trip Date</td>
                 <td>Last Updated</td>
                 <td>Edit</td>
+                <td>Delete</td>
             </tr>";
         while($info = mysqli_fetch_array($pages_table))
         {
@@ -58,9 +59,8 @@ $pages_table = mysqli_query (($db),("SELECT * FROM pages"));
             echo "<td>" . $info['tags'] . "</td>";
             echo "<td>" . $trip_Date. "</td>";
             echo "<td>" . $mod_date. "</td>";
-
             echo '<td><a href="./?page=edit_adventure&id='. $info['PageID'] .'">Edit</a></td>';
-            //echo userMatch($info['userID'],$_SESSION["userID"]);
+            echo '<td><a href ="#" onclick="deletePage('.$id.')">Delete</a></td>';
             echo "</tr>";
         }
         echo"</table>";

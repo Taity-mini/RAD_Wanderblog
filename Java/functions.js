@@ -20,6 +20,12 @@
             window.location.href = '?page=delete&type=user&id=' + id;
         }
     }
+
+function deletePage(id) {
+    if(confirm("Are you sure you want to delete this record?")){
+        window.location.href = '?page=delete&type=page&id=' + id;
+    }
+}
 /*Date Picker*/
 $(function()
 {

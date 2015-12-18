@@ -254,6 +254,7 @@ else
     </tr>
 
     <?php
+    //Display Comments
     $query = "SELECT * FROM comments WHERE pageID = '$getid'";
     $result1 = mysqli_query($db, $query);
     while($row = mysqli_fetch_assoc($result1)){
@@ -273,6 +274,7 @@ else
     }
     ?>
     <?php
+    //Check if a user is logged in 
     if(!empty($_SESSION['username'])){
         ?>
     <form action="<?php echo htmlentities($_SERVER['REQUEST_URI']); ?>" method="post" style="text-align: center">
@@ -321,6 +323,7 @@ else
 <div id = "columns">
 	
 <?php
+    //Display all adventures on view_adventures page	
     $queryPages = "SELECT * FROM pages";
     $resultPages = mysqli_query($db, $queryPages);
     while($rowPages = mysqli_fetch_assoc($resultPages)){

@@ -234,25 +234,23 @@ $pictures1 = mysqli_fetch_array($vote1);
 <h1>Top 5</h1>
 <h2> </h2>
     <div id = "Content-outter">
-    <?php 
-    $picsID1 = $pictures1['pageID'];
-    while($pictures = mysqli_fetch_array($vote)) {
-        $picsID = $pictures['pageID'];
-    }
-
-
-
-	//$images1 = mysqli_fetch_array($getPics1);
-    $array_result = array();
+    <?php
+    print "<table border='1' cellspacing='0'>";
     while($pictures = mysqli_fetch_array($vote)) {
         $picsID = $pictures['pageID'];
         $getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID'");
 
-        while ($images2 = mysqli_fetch_array($getPics1)) {
-            $pic = $images2['filePath'];
-            print" <div class = 'Trending_Picture_Container' style = 'background-image: url($pic);'><header><h4>test</h4></header></div>";
+
+        while ($images2 = mysqli_fetch_array($getPics1))
+        {
+            echo "<trstyle='background-color:#000000;'>";
+            echo "<td>";
+            echo "<img style='width:100px; height:150px;' src='".$images2['filePath']."' /></br>";
+            echo "</td>";
         }
+
     }
+    echo"</table>";
 
     ?>
 

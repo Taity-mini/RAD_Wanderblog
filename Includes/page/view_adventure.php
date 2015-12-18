@@ -40,6 +40,25 @@ if(isset($_GET['id']))
      $fetchProfilePic = mysqli_fetch_array($profilePic);
      $vote = mysqli_query($db,"SELECT SUM(vote_Count), userID, pageID FROM `votes` WHERE pageID = '$pageID'");
      $vote_count = 0;
+
+
+     //Edit & Delete Adventure
+           $edit = "";
+    //Only registered users can edit
+    if(!empty($_SESSION['username'])){
+    echo isReader($db,$_SESSION['groupID']);
+        if(!isReader($db,$_SESSION['groupID']))
+        {
+            if($current_user == $userID){
+              $edit = '<a href="./?page=edit_adventure&id='. $pageID .'">[Edit]</a>';
+              $delete = '<a href ="#" onclick="deletePage('.$pageID.')"> [Delete]</a>';
+            }
+
+        }
+    }
+
+
+
      if(mysqli_num_rows($vote) > 0)
      {
         $vote_info = mysqli_fetch_array($vote) or die(mysqli_error($db));
@@ -122,7 +141,7 @@ if(isset($_GET['id']))
         }
     </script>
 
-        <h1>Trip</h1>
+        <h1>Trip<?php echo countryName($db,$info['trip_country']);?></h1>
         <h2></h2>
         <div id ="Content-inner">
 

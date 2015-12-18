@@ -225,7 +225,7 @@ if (mysqli_num_rows($pictures) > 0)
       {
         echo "<trstyle='background-color:#000000;'>";
         echo "<td>";
-        echo "<div id =id='Personal-Highest'";
+        echo "<div id ='Personal-Highest'>";
         echo "<img style='width:350px; height:350px;' src='".$images['filePath']."' /></br>";
         echo "<p>" .$images['photoDesc']. "</p>";
         echo "</div>";

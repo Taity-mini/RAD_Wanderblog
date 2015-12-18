@@ -19,7 +19,7 @@ include("./includes/functions.php");
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Wanderblog | Home Page</title>
+    <title>Wanderblog | by RAD</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./Java/jquery-ui.css" />
     <script  src = "java/jquery.min.js"</script>

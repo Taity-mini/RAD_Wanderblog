@@ -9,6 +9,6 @@
 ?>
 <h1><?php echo $content_header ?></h1>
 <div id ="Content-inner">
-<p>Forbidden resource accessed, try again!</p>
 <img src="https://http.cat/403"/>
+    <h2>Forbidden resource accessed, try again!</h2>
 </div>

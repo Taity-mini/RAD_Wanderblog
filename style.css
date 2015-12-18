@@ -320,7 +320,6 @@ body {
 
 
 .Trending_Picture_Container{
-    background: url(./Res/temp.jpg);
     position:relative;
     width: auto;
     box-shadow: -2px 2px 5px grey;

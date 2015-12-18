@@ -14,6 +14,7 @@ include("./includes/global.php");
 include("./includes/functions.php");
 
 $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc LIMIT 5");
+$pictures1 = mysqli_fetch_array($vote1);
 
 ?>
 
@@ -233,7 +234,13 @@ $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` 
 <h1>Top 5</h1>
 <h2> </h2>
     <div id = "Content-outter">
-     	<div  class = 'Trending_Picture_Container'><header><h4>test</h4></header></div>
+    <?php 
+    $picsID1 = $pictures1['pageID'];
+	$getPics1 = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID1'");
+	$images1 = mysqli_fetch_array($getPics1);
+	$pic1 = $images1[0]['filePath'];
+    ?>
+     	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo $pic1 ?> );'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container1'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container2'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container3'><header><h4>test</h4></header></div>

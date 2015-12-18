@@ -13,7 +13,7 @@ include("./includes/connect.php");
 include("./includes/global.php");
 include("./includes/functions.php");
 
-$vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc");
+$vote_side = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` group by pageID order by count desc");
 
 ?>
 
@@ -235,8 +235,8 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
     <div id = "Content-outter">
     <?php
     print "<table border='1' cellspacing='0'>";
-    while($pictures = mysqli_fetch_array($vote)) {
-        $picsID = $pictures['pageID'];
+    while($pictures1 = mysqli_fetch_array($vote_side)) {
+        $picsID = $pictures1['pageID'];
         echo "Before query";
         $getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID'");
 
@@ -247,6 +247,7 @@ $vote = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` g
             echo "<td>";
             echo "<img style='width:100px; height:150px;' src='".$images2['filePath']."' /></br>";
             echo "</td>";
+            echo"</td>";
         }
 
     }

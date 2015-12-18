@@ -244,7 +244,7 @@ $vote_side = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `vot
 
             echo "<tr>";
 
-            echo '<a href="./?page=adventure&id=' . $pictures1['pageID'] . '"><img style=\'width:100%; height:100%;\' src="' . $images2['filePath'] . '""></a>';
+            echo '<a href="./?page=adventure&id=' . $pictures1['pageID'] . '"><img style="width:100%; height:100%;" src="' . $images2['filePath'] . '" alt = "' . $pictures1['title'] . '""></a>';
             echo "</tr>";
 
         }

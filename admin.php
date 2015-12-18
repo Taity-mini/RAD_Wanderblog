@@ -20,10 +20,55 @@ $groups = mysqli_query($db, $groups_table);
 $permissions_table = ("SELECT * FROM group_permissions");
 $permissions = mysqli_query($db, $permissions_table);
 
+//Adventures
+$pages_table = mysqli_query (($db),("SELECT * FROM pages"));
+
 ?>
 
 <h1><?php echo $content_header ?></h1>
 <div id ="Content-inner">
+
+    <h2>Adventure Management</h2>
+    <?php
+    if (mysqli_num_rows($pages_table) > 0)
+    {
+        print "
+        <table border='1' cellspacing='0'>
+            <tr>
+                <td>Adventure ID</td>
+                <td>User ID</td>
+                <td>Title</td>
+                <td>Trip Country</td>
+                <td>bio</td>
+                <td>Trip Date</td>
+                <td>Last Updated</td>
+                <td>Edit</td>
+            </tr>";
+        while($info = mysqli_fetch_array($pages_table))
+        {
+            $trip_Date =date('d/m/Y',strtotime($info['trip_Date']));
+            $mod_date =date('d/m/Y',strtotime($info['mod_Date']));
+            echo "<trstyle='background-color:#000000;'>";
+            echo "<td>" . $info['PageID'] . "</td>";
+            echo "<td>" . $info['userID'] . "</td>";
+            echo "<td>" . $info['title'] . "</td>";
+            echo countryName($db,$info['trip_country']);
+            echo "<td>" . $info['bio'] . "</td>";
+            echo "<td>" . $info['tags'] . "</td>";
+            echo "<td>" . $trip_Date. "</td>";
+            echo "<td>" . $mod_date. "</td>";
+
+            echo '<td><a href="./?page=edit_adventure&id='. $info['PageID'] .'">Edit</a></td>';
+            //echo userMatch($info['userID'],$_SESSION["userID"]);
+            echo "</tr>";
+        }
+        echo"</table>";
+    }
+    else
+    {   //No users? Register then!
+        echo"<p>No adventures registered on the system, please <a href='./?page=add_adventure'>Add adventure</a></p>";
+    }
+    ?>
 
 
    <h2>User Management</h2>

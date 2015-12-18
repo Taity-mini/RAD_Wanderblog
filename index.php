@@ -250,7 +250,7 @@ $pictures1 = mysqli_fetch_array($vote1);
 
         while ($images2 = mysqli_fetch_array($getPics1)) {
             $pic = $images2['filePath'];
-            echo " <div  class = 'Trending_Picture_Container' style = 'background-image: url($pic);'><header><h4>test</h4></header></div>";
+            print" <div class = 'Trending_Picture_Container' style = 'background-image: url($pic);'><header><h4>test</h4></header></div>";
         }
     }
 

@@ -233,7 +233,13 @@ $vote1 = mysqli_query($db,"SELECT SUM(vote_Count) as count, pageID FROM `votes` 
 <h1>Top 5</h1>
 <h2> </h2>
     <div id = "Content-outter">
-  
+     	<div  class = 'Trending_Picture_Container'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container1'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container2'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container3'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container4'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container5'><header><h4>test</h4></header></div>
+
     </div>
 
 </div>

@@ -188,8 +188,11 @@ include("./includes/functions.php");
 
                 //Delete Functions
                     case "delete":
-                    $content_header = "Delete Record";
-                    include("./Includes/delete.php");
+                        if(!empty($_SESSION['username'])){
+                            $content_header = "Delete Record";
+                            include("./Includes/delete.php");
+                        }
+                        header("Location: ./?page=403");
                     break;
 
 

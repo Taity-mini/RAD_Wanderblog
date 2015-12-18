@@ -238,9 +238,9 @@ $pictures1 = mysqli_fetch_array($vote1);
     $picsID1 = $pictures1['pageID'];
 	$getPics1 = mysqli_query($db, "SELECT * FROM picture_gallery_pages WHERE pageID = '$picsID1'");
 	$images1 = mysqli_fetch_array($getPics1);
-	$pic1 = $images1[0]['filePath'];
+	$pic1 = $images1['filePath'];
     ?>
-     	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo $pic1 ?> );'><header><h4>test</h4></header></div>
+     	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo $pic1; ?> );'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container1'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container2'><header><h4>test</h4></header></div>
         <div  class = 'Trending_Picture_Container3'><header><h4>test</h4></header></div>

@@ -40,6 +40,7 @@ $pages_table = mysqli_query (($db),("SELECT * FROM pages"));
                 <td>Title</td>
                 <td>Trip Country</td>
                 <td>bio</td>
+                <td>tags</td>
                 <td>Trip Date</td>
                 <td>Last Updated</td>
                 <td>Edit</td>

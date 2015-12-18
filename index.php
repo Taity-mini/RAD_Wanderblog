@@ -240,15 +240,18 @@ $pictures1 = mysqli_fetch_array($vote1);
     	$pic = "";
 	$getPics1 = mysqli_query($db, "SELECT filePath FROM picture_gallery_pages WHERE pageID = '$picsID1'");
 	$images1 = mysqli_fetch_array($getPics1);
-	print_r($images1);
-    $images_1 = $images1[0];
-    $images_2 = $images1[1];
+    while($data = mysqli_fetch_array($getPics1)) {
+        $array_result[] = $row;
+    }
+	//print_r($images1);
+    //$images_1 = $images1[0];
+    //$images_2 = $images1[1];
     ?>
-     	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo $images_2; ?> );'><header><h4>test</h4></header></div>
-        <div  class = 'Trending_Picture_Container1' style = 'background-image: url(<?php echo $images_1; ?> );'><header><h4>test</h4></header></div>
-        <div  class = 'Trending_Picture_Container2' style = 'background-image: url(<?php echo $images1[2]; ?> );'><header><h4>test</h4></header></div>
-        <div  class = 'Trending_Picture_Container3' style = 'background-image: url(<?php echo $images1[3]; ?> );'><header><h4>test</h4></header></div>
-        <div  class = 'Trending_Picture_Container4' style = 'background-image: url(<?php echo $images1[4]; ?> );'><header><h4>test</h4></header></div>
+     	<div  class = 'Trending_Picture_Container' style = 'background-image: url(<?php echo  $array_result[0]; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container1' style = 'background-image: url(<?php echo  $array_result[1]; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container2' style = 'background-image: url(<?php echo  $array_result[2]; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container3' style = 'background-image: url(<?php echo  $array_result[3]; ?> );'><header><h4>test</h4></header></div>
+        <div  class = 'Trending_Picture_Container4' style = 'background-image: url(<?php echo  $array_result[4]; ?> );'><header><h4>test</h4></header></div>
         <
 
     </div>

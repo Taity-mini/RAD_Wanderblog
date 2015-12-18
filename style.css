@@ -418,7 +418,7 @@ body {
     float: left;
     width: 15%;
     overflow: hidden;
-    height: 400px;
+    height: 100%;
     background-color: #ECECEA;
     box-shadow: 15px 0px 4px -1.7px grey;
 }
@@ -480,7 +480,7 @@ body {
 #Profile-Horizontal-Split-Right{
     float: left;
     width: 100%;
-    height: 400px;
+    height: 500px;
     background-color: rgba(170, 170, 170, 0.59);
 
 }

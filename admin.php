@@ -47,7 +47,7 @@ $pages_table = mysqli_query (($db),("SELECT * FROM pages"));
                 <td>Delete</td>
             </tr>";
         while($info = mysqli_fetch_array($pages_table))
-        {
+        {   $deleteID = $info['PageID'];
             $pageUser =  $info['userID'];
             $userName = mysqli_query($db,"SELECT * FROM `users` WHERE userID = '$pageUser'");
             $user_info2 = mysqli_fetch_array($userName) or die;
@@ -63,7 +63,7 @@ $pages_table = mysqli_query (($db),("SELECT * FROM pages"));
             echo "<td>" . $trip_Date. "</td>";
             echo "<td>" . $mod_date. "</td>";
             echo '<td><a href="./?page=edit_adventure&id='. $info['PageID'] .'">Edit</a></td>';
-            echo '<td><a href ="#" onclick="deletePage('.$info['PageID'].')">Delete</a></td>';
+            echo '<td><a href ="#" onclick="deletePage('.$deleteID.')">Delete</a></td>';
             echo "</tr>";
         }
         echo"</table>";

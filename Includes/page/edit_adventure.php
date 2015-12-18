@@ -64,12 +64,14 @@ if (!$error) {
     $update_page = mysqli_query($db, ("UPDATE `pages` SET `title` = '$title', `trip_country`='$trip_country', `tags` = '$tags', `trip_Date` = '$trip_Date', `mod_Date` = '$mod_Date'  WHERE PageID = '$id'"));
     if ($update_page) {
         echo "<script> alert('Adventure Updated Successfully');</script>";
-        $return = $_SERVER['REQUEST_URI'];
-        header("Refresh: 2; URL=\"" . $return . "\"");
+        $pageID = $info['pageID'];
+        $return = "./?page=adventure&id=".$pageID;
+        header("Location:" .$return);
     } else {
         echo "<script> alert('Adventure Update Failed');</script>";
-        $return = $_SERVER['REQUEST_URI'];
-        header("Refresh: 2; URL=\"" . $return . "\"");
+        $pageID = $info['pageID'];
+        $return = "./?page=adventure&id=".$pageID;
+        header("Location:" .$return);
     }
 
 

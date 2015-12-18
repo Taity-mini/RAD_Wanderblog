@@ -223,8 +223,8 @@ if (mysqli_num_rows($pictures) > 0)
     print "<table border='1' cellspacing='0'>";
      while($images = mysqli_fetch_array($pictures))
       {
-        echo "<trstyle='background-color:#000000;'>";
-        echo "<td id='Personal-Highest'>";
+        echo "<trstyle='background-color:#000000;' id='Personal-Highest'>";
+        echo "<td>";
         echo "<img style='width:350px; height:350px;' src='".$images['filePath']."' /></br>";
         echo "<p>" .$images['photoDesc']. "</p>";
         echo "</td>";

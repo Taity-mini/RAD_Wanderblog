@@ -189,8 +189,10 @@ include("./includes/functions.php");
                 //Delete Functions
                     case "delete":
                         if(!empty($_SESSION['username'])){
-                            $content_header = "Delete Record";
-                            include("./Includes/delete.php");
+                            if(!isReader($db,$_SESSION['groupID'])){
+                                $content_header = "Delete Record";
+                                include("./Includes/delete.php");
+                            }
                         }
                         header("Location: ./?page=403");
                     break;

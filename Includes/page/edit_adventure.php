@@ -52,7 +52,7 @@ if (!$error) {
     $trip_country = $data[1];
     $tags = $data[2];
     $trip_Date = date('Y-m-d', strtotime($data[3]));
-    $bio = $data[3];
+    $bio = $data[4];
     echo $trip_Date;
     $mod_Date = date('Y-m-d');
 /*    if (!empty($_SESSION['userID'])) {
@@ -62,15 +62,15 @@ if (!$error) {
     $id = $info['PageID'];
 
     //update page
-    $update_page = mysqli_query($db, ("UPDATE `pages` SET `title` = '$title', `trip_country`='$trip_country', `tags` = '$tags', `trip_Date` = '$trip_Date', `mod_Date` = '$mod_Date' `bio` ='$bio'  WHERE PageID = '$id'"));
+    $update_page = mysqli_query($db, ("UPDATE `pages` SET `title` = '$title', `trip_country`='$trip_country', `tags` = '$tags', `trip_Date` = '$trip_Date', `mod_Date` = '$mod_Date', `bio` ='$bio'  WHERE PageID = '$id'"));
     if ($update_page) {
         echo "<script> alert('Adventure Updated Successfully');</script>";
-        $pageID = $info['pageID'];
+        $pageID = $info['PageID'];
         $return = "./?page=adventure&id=".$pageID;
         header("Location:" .$return);
     } else {
         echo "<script> alert('Adventure Update Failed');</script>";
-        $pageID = $info['pageID'];
+        $pageID = $info['PageID'];
         $return = "./?page=adventure&id=".$pageID;
         header("Location:" .$return);
     }
